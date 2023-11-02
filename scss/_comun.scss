@@ -1,7 +1,8 @@
 *{
     margin: 0;
     padding: 0;
-    box-sizing: border-box;  
+    box-sizing: border-box;
+    text-transform: uppercase;  
 }
 
 body {
@@ -21,12 +22,13 @@ body {
 
 //HEADER
 header {
+    height: 180px;
     background-color: white;
 
     .textoNavbar {
         color: rgb(1, 1, 1);
     }
-    .logo {
+    .logoPrincipal {
         width: 200px;
         margin-left: 100px;
     }
@@ -200,3 +202,19 @@ footer {
         color: black;
     }
 }
+
+/*Iconos*/
+.containerIconos {
+    .iconos {
+        color: black;
+        &:hover{
+            color: rgb(116, 115, 115);
+        }
+        
+     }
+     .textIconos{
+        font-size: $textMd;
+        font-weight: $textRegular;
+     }
+
+ }

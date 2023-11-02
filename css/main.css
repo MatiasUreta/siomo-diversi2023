@@ -4,6 +4,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  text-transform: uppercase;
 }
 
 body {
@@ -20,13 +21,14 @@ body {
 }
 
 header {
+  height: 180px;
   background-color: white;
   border-radius: 10px;
 }
 header .textoNavbar {
   color: rgb(1, 1, 1);
 }
-header .logo {
+header .logoPrincipal {
   width: 200px;
   margin-left: 100px;
 }
@@ -191,6 +193,108 @@ footer .logoInsta {
 }
 .logoWsp:hover {
   color: black;
+}
+
+/*Iconos*/
+.containerIconos .iconos {
+  color: black;
+}
+.containerIconos .iconos:hover {
+  color: rgb(116, 115, 115);
+}
+.containerIconos .textIconos {
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  background-color: gray;
+}
+
+header h1 {
+  background-color: gray;
+  color: black;
+}
+
+aside {
+  padding: 2rem;
+  color: white;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.logo {
+  font-weight: 400;
+  font-size: 1.3rem;
+}
+
+.texto-footer {
+  color: black;
+  font-size: 0.85rem;
+}
+
+main {
+  background-color: white;
+  margin: 1rem;
+  margin-left: 0;
+  border-radius: 2rem;
+  padding: 2rem;
+}
+
+.tituloPrincipal {
+  color: black;
+}
+
+.contendor-productos {
+  display: flex;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+
+.producto-imagen {
+  max-width: 100%;
+  border-radius: 1rem;
+  height: 350px;
+  width: 210px;
+}
+
+.productos-detalles {
+  background-color: black;
+  color: white;
+  padding: 0.5rem;
+  border-radius: 1rem;
+  margin-top: -2rem;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.producto-titulo {
+  font-size: 1rem;
+}
+
+.producto-agregar {
+  border: 0;
+  background-color: black;
+  color: white;
+  padding: 0.5rem;
+  text-transform: uppercase;
+  border-radius: 2rem;
+  cursor: pointer;
+  border: 2px solid white;
+}
+.producto-agregar:hover {
+  background-color: gray;
+  color: black;
+  border: 2px solid black;
+  transition: 0.5s;
 }
 
 /*# sourceMappingURL=main.css.map */
