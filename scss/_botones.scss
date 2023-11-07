@@ -4,11 +4,12 @@
     background-color: gray;
 }
 header h1 {
-    background-color: gray;
+    background-color:grey;
     color: black;
 }
 aside {
     padding: 2rem;
+    padding-right: 0;
     color: white;
     position: sticky;
     top: 0;
@@ -16,11 +17,83 @@ aside {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    overflow: auto;
 }
 
 .logo {
     font-weight: 400;
     font-size: 1.3rem;
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+}
+
+ul {
+    list-style: none;
+    text-decoration: none;
+}
+.boton-menu {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    background-color: transparent;
+    border: 0;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    font-weight: 600;
+    padding: 1rem;
+    font-size: 1rem;
+    border-top-left-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+    position: relative;
+}
+
+.boton-menu-active {
+    background-color: white;
+    color: black;
+    width: 100%;
+    &::before{
+        content: " ";
+        position: absolute;
+        width: 1rem;
+        height: 2rem;
+        bottom: 100%;
+        right: 0;
+        background-color: transparent;
+        border-bottom-right-radius: .5rem;
+        box-shadow: 0 1rem 0 white;
+    }
+    &::after{
+        content: " ";
+        position: absolute;
+        width: 1rem;
+        height: 2rem;
+        top: 100%;
+        right: 0;
+        background-color: transparent;
+        border-top-right-radius: .5rem;
+        box-shadow: 0 -1rem 0 white;
+    }
+
+}
+
+
+.bi-hand-index-fill{
+    transform: rotateZ(90deg);
+}
+
+.bi-hand-index {
+    transform: rotateZ(90deg);
+}
+
+.boton-carrito {
+    margin-top: 2rem;
+    background-color: white;
+    color: black;
 }
 
 .texto-footer {
@@ -38,10 +111,12 @@ main {
 
 .tituloPrincipal {
     color: black;
+    margin-bottom: 2rem;
 }
 
+
 .contendor-productos {
-    display: flex;
+    display: grid;
     grid-template-columns:repeat(4, 1fr);
     gap: 1rem;
 }
@@ -54,15 +129,15 @@ main {
   
 }
 
-.productos-detalles {
-    background-color: black;
-    color: white;
+.producto-detalles {
+    display: flex;
+    flex-direction: column;
+    background-color: gray;
+    color: black;
     padding: .5rem;
     border-radius: 1rem;
     margin-top: -2rem;
     position: relative;
-    display: flex;
-    flex-direction: column;
     gap: .25rem;
 }
 
@@ -72,16 +147,17 @@ main {
 
 .producto-agregar {
     border: 0;
-    background-color: black;
-    color: white;
-    padding: .5rem;
+    background-color: white;
+    color: black;
+    padding: .4rem;
     text-transform: uppercase;
     border-radius: 2rem;
     cursor: pointer;
     border: 2px solid white;
+    transition: background-color .2s color .2s;
     &:hover{
         background-color: gray;
-        color: black;
+        color: white;
         border: 2px solid black;
         transition: .5s;
     }

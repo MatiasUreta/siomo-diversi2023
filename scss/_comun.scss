@@ -81,16 +81,26 @@ header {
     text-align: center;
     margin: 0 10px;
     cursor: pointer;
-    border-radius: 5px;
+    border-radius: 10px;
     transition: .3s;
     &:hover {
-        background-color: gray;
+        background-color: rgb(184, 184, 184);
+
+
     }
 }
 
 .mostrador .fila .item img {
     width: 100%;
     margin: 10px 10px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    transition: transform .4s;
+    &:hover{
+        transform: scale(1.1);
+        transition: .5s ease;
+    }
 }
 
 .mostrador .fila .item .descripcion {
@@ -102,9 +112,14 @@ header {
 }
 
 .mostrador .fila .item .precio {
-    color: red;
+    color: rgb(190, 0, 0);
     font-weight: bold;
     font-size: 20px;
+    &:hover{
+        color: red;
+        font-weight: 500;
+        transition: .5s ease;
+    }
 }
 
 //CONTENEDOR DE ITEMS
