@@ -6,9 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="shortcut icon" href="./img/Logo SECUNDARIO.png" type="image/x-icon">
-    
+
 
     <!-- Bs -->
+    <link rel="stylesheet" href="./bootstrap-5.3.2-dist/css/bootstrap.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 
@@ -50,7 +51,12 @@
                             </ul>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link textoNavbar" href="./pages/sale.html">Sale</a>
+                            <a class="nav-link textoNavbar" href="./pages/sale.html"><svg
+                                    xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                                    class="bi bi-fire" viewBox="0 0 16 16">
+                                    <path
+                                        d="M8 16c3.314 0 6-2 6-5.5 0-1.5-.5-4-2.5-6 .25 1.5-1.25 2-1.25 2C11 4 9 .5 6 0c.357 2 .5 4-2 6-1.25 1-2 2.729-2 4.5C2 14 4.686 16 8 16Zm0-1c-1.657 0-3-1-3-2.75 0-.75.25-2 1.25-3C6.125 10 7 10.5 7 10.5c-.375-1.25.5-3.25 2-3.5-.179 1-.25 2 1 3 .625.5 1 1.364 1 2.25C11 14 9.657 15 8 15Z" />
+                                </svg> Sale</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link textoNavbar" href="./pages/pregustasfrecuentes.html">Preguntas
@@ -62,6 +68,37 @@
                     </ul>
                 </div>
             </div>
+            <div>
+
+                <!-- Botón para abrir el modal -->
+                <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#cartModal"><img
+                        class="zapatoPng" src="./img/zapato-removebg-preview.png" alt="">
+
+                </button>
+
+                <!-- Modal -->
+                <div class="modal fade" id="cartModal" tabindex="-1" aria-labelledby="cartModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="cartModalLabel">Carrito de compras</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <!-- Aquí puedes listar los productos en el carrito -->
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                                <button type="button" class="btn btn-primary">Comprar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
         </nav>
     </header>
 
@@ -81,7 +118,7 @@
                 <div class="carousel-item active">
                     <img src="./img/banner-zapatos.jpg" class="d-block w-100 imgCarousel" alt="...">
                     <div class="carousel-caption d-none d-md-block">
-                        <h2>Siomo Diversi</h2>
+                        <h2>Siamo Diversi</h2>
                         <p>Un'essenza Italiana con passione Argentina</p>
                     </div>
                 </div>
@@ -406,15 +443,13 @@
                         <span class="precio">$ 2000</span>
                     </div>
                 </div>
-
             </div>
-
         </div>
 
         <!-- contenedor del item selecionado -->
-        <div class="seleccion" id="seleccion">
+        <div class="seleccion" id="seleccion" style="position: sticky; top: 0;">
             <div class="cerrar" onclick="cerrar()">
-                &#x2715
+                ✕
             </div>
             <div class="info">
                 <img src="./img/zapato-uno.jpg" alt="" id="img">
@@ -440,6 +475,7 @@
                 </div>
             </div>
         </div>
+
     </section>
 
     <!-- Iconos -->
@@ -517,15 +553,14 @@
     </div>
 
 
-    
+
     <!-- Bs scrip -->
+    <script src="./bootstrap-5.3.2-dist/js/bootstrap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
         crossorigin="anonymous"></script>
     <!--  Js scrip -->
     <script src="./js/main.js"></script>
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 </body>
 
 </html>

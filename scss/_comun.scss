@@ -24,6 +24,7 @@ body {
 header {
     height: 180px;
     background-color: white;
+    overflow: visible;
 
     .textoNavbar {
         color: rgb(1, 1, 1);
@@ -47,6 +48,9 @@ header {
     }
     border-radius: 10px;
       
+}
+.zapatoPng {
+    width: 80px;
 }
 
 //Carousel
@@ -231,5 +235,23 @@ footer {
         font-size: $textMd;
         font-weight: $textRegular;
      }
-
  }
+
+ //Formulario
+ .contenedorFormulario {
+    background-color: gray;
+    border-radius: 10px;
+    box-shadow: 0px 10px 10px black;
+    background-image: url(../img/banner-zapatos.jpg);
+    color: rgb(235, 231, 227);
+    font-weight: 500;
+    
+ }
+.tituloContacto{
+    color: white;
+    font-weight: 800;
+}
+
+.textoEnviar {
+    color: white;
+}

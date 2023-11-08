@@ -5,55 +5,111 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="shortcut icon" href="../img/Logo SECUNDARIO.png" type="image/x-icon">
+
 
     <!-- Bs -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="../bootstrap-5.3.2-dist/css/bootstrap.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 
     <!-- Css -->
     <link rel="stylesheet" href="../css/main.css">
 </head>
 
 <body>
+    <!-- Marquee -->
+    <marquee class="marquee" direction="left" width="100%" scrollamount="3">
+        Tu texto aquí
+    </marquee>
+
+    <!-- Navbar -->
+    <header class="header">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+                <a class="navbar-brand titulo" href="../index.html"><img class="logoPrincipal"
+                        src="../img/Logo PRINCIPAL.png" alt="logo de siamo diversi"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav ms-auto m-1 ">
+                        <li class="nav-item">
+                            <a class="nav-link textoNavbar" aria-current="page" href="../index.html">Inicio</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle textoNavbar" href="#" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Hombres
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item " href="../pages/zapatos.html">Zapatos</a></li>
+                                <li><a class="dropdown-item " href="../pages/zapatillas.html">Zapatillas</a></li>
+                                <li><a class="dropdown-item " href="../pages/botinetas.html">Botinetas</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link textoNavbar" href="../pages/sale.html">Sale</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link textoNavbar" href="../pages/pregustasfrecuentes.html">Preguntas
+                                Frescuentes</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link textoNavbar" href="../pages/contacto.html">Contacto</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+
+
+
     <!-- Heroe || Contacto -->
-    <div class="container col-xl-10 col-xxl-8 px-4 py-5">
+    <div class="container col-xl-10 col-xxl-8 px-4 py-5 mt-5 contenedorFormulario ">
         <div class="row align-items-center g-lg-5 py-5">
             <div class="col-lg-7 text-center text-lg-start">
-                <h1 class="display-4 fw-bold lh-1 text-body-emphasis mb-3">Vertically centered hero sign-up form</h1>
-                <p class="col-lg-10 fs-4">Below is an example form built entirely with Bootstrap’s form controls. Each
-                    required form group has a validation state that can be triggered by attempting to submit the form
-                    without completing it.</p>
+                <h1 class="display-4 fw-bold lh-1  mb-3 tituloContacto">SIAMO DIVERSI CONTACTO</h1>
+                <p class="col-lg-10 fs-4 pFormulario">Contactácte con nosotros para realizar consultas o si necesitás información para VENTAS MAYORISTA</p>
             </div>
-            <div class="col-md-10 mx-auto col-lg-5">
-                <form class="p-4 p-md-5 border rounded-3 bg-body-tertiary">
+            <div class="col-md-10 mx-auto col-lg-5 formulario">
+                <form class="p-4 p-md-5 border rounded-3 ">
                     <div class="form-floating mb-3">
-                        <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
-                        <label for="floatingInput">Email address</label>
+                        <input type="text" class="form-control" id="floatingName" placeholder="Nombre">
+                        <label for="floatingName">Nombre</label>
                     </div>
                     <div class="form-floating mb-3">
-                        <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
-                        <label for="floatingPassword">Password</label>
+                        <textarea class="form-control" id="floatingConsulta" placeholder="Escribe tu consulta aquí"></textarea>
+                        <label for="floatingConsulta">Consulta</label>
                     </div>
-                    <div class="checkbox mb-3">
+                    <!-- <div class="checkbox mb-3">
                         <label>
-                            <input type="checkbox" value="remember-me"> Remember me
+                            <input type="checkbox" value="remember-me"> Recuérdame
                         </label>
-                    </div>
-                    <button class="w-100 btn btn-lg btn-primary" type="submit">Sign up</button>
+                    </div> -->
+                    <button class="w-100 btn btn-lg btnEnviar" type="submit">Enviar</button>
                     <hr class="my-4">
-                    <small class="text-body-secondary">By clicking Sign up, you agree to the terms of use.</small>
+                    <small class=" textoEnviar">Al hacer clic en Enviar, aceptas los términos de uso.</small>
                 </form>
             </div>
+            
         </div>
     </div>
 
 
 
 
-
-   <!-- Bs scrip -->
-   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-   <!-- Js scrip -->
-   <script src="../js/main.js"></script>
+    <!-- Bs scrip -->
+    <script src="../bootstrap-5.3.2-dist/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <!--  Js scrip -->
+    <script src="../js/main.js"></script>
 </body>
 
 </html>
