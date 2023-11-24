@@ -71,10 +71,15 @@
             <div>
 
                 <!-- Botón para abrir el modal -->
-                <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#cartModal"><img
-                        class="zapatoPng" src="./img/zapato-removebg-preview.png" alt="">
-
+                <button type="button" class="btn btnCarrito" data-bs-toggle="modal" data-bs-target="#cartModal">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-bag"
+                        viewBox="0 0 16 16">
+                        <path
+                            d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V5z" />
+                    </svg>
+                    <span id="contadorCarrito"></span>
                 </button>
+
 
                 <!-- Modal -->
                 <div class="modal fade" id="cartModal" tabindex="-1" aria-labelledby="cartModalLabel"
@@ -175,7 +180,7 @@
                 <div class="item col-lg-2 col-md-3 col-sm-4 col-6" onclick="cargar(this)">
                     <div class="contenedor-foto">
                         <img src="./img/Renato Verde.png" alt="Zapato amadeo">
-                        <p class="descripcion">Renato Verde</p>
+                        <p class="descripcion">Renato-Verde</p>
                         <span class="precio">$ 1000</span>
                     </div>
                 </div>
@@ -224,14 +229,6 @@
                     <div class="contenedor-foto">
                         <img src="./img/Filippo.png" alt="">
                         <p class="descripcion">Filippo</p>
-                        <span class="precio">$ 1000</span>
-                    </div>
-                </div>
-
-                <div class="item col-lg-2 col-md-3 col-sm-4 col-6" onclick="cargar(this)">
-                    <div class="contenedor-foto">
-                        <img src="./img/Amadeo.png" alt="Zapato amadeo">
-                        <p class="descripcion">Amadeo</p>
                         <span class="precio">$ 1000</span>
                     </div>
                 </div>
@@ -440,7 +437,7 @@
                     <div class="contenedor-foto">
                         <img src="./img/Bruno picado negro.png" alt="">
                         <p class="descripcion">Bruno Picado-Negro</p>
-                        <span class="precio">$ 2000</span>
+                        <span class="precio">$ 8000</span>
                     </div>
                 </div>
             </div>
@@ -454,7 +451,22 @@
             <div class="info">
                 <img src="./img/zapato-uno.jpg" alt="" id="img">
                 <h2 id="modelo">Modelo 1</h2>
-                <p id="descripcion">Descripcion modelo </p>
+                <p id="descripcion">Descripcion modelo</p>
+
+                <!-- Aquí agregamos los círculos -->
+                <div class="circulos">
+                    <p>Colores disponibles</p>
+                    <div class="circulo" style="background-color: black;"></div>
+                    <div class="circulo" style="background-color: brown;"></div>
+                    <div class="circulo" style="background-color: blue;"></div>
+                </div>
+                <div class="circulos">
+                    <p>Color de zuela</p>
+                    <div class="circulo" style="background-color: #d2691e ;"></div>
+                    <div class="circulo" style="background-color: black;"></div>
+                    <div class="circulo" style="background-color: blue;"></div>
+                    <div class="circulo" style="background-color: #800000;"></div>
+                </div>
 
                 <span class="precio" id="precio">$ 1000</span>
 
@@ -471,7 +483,7 @@
                             <option value="">45</option>
                         </select>
                     </div>
-                    <button>AGREGAR AL CARRITO</button>
+                    <button class="btnAgregarCarrito">AGREGAR AL CARRITO</button>
                 </div>
             </div>
         </div>

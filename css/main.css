@@ -85,7 +85,7 @@ header ul li:hover {
   transition: 0.3s;
 }
 .mostrador .fila .item:hover {
-  background-color: rgb(184, 184, 184);
+  background-color: white;
 }
 
 .mostrador .fila .item img {
@@ -106,7 +106,7 @@ header ul li:hover {
   font-weight: bold;
 }
 .mostrador .fila .item .descripcion:hover {
-  color: white;
+  color: gray;
 }
 
 .mostrador .fila .item .precio {
@@ -184,14 +184,6 @@ header ul li:hover {
   margin-right: 30px;
 }
 
-.info .fila button {
-  height: 40px;
-  border: none;
-  padding: 0 10px;
-  color: white;
-  background-color: black;
-}
-
 .seleccion {
   height: auto; /* Esto ajustará la altura del div a su contenido */
   max-height: 800px; /* Esto limitará la altura máxima del div */
@@ -243,6 +235,23 @@ footer .logoInsta {
   color: white;
 }
 
+.circulo {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 5px;
+  cursor: pointer;
+}
+
+.divPreguntas {
+  color: black;
+  background-color: white;
+}
+.divPreguntas:hover {
+  background-color: gray;
+}
+
 .btnEnviar {
   color: white;
   background-color: gray;
@@ -254,6 +263,22 @@ footer .logoInsta {
   background-color: transparent;
   transition: 0.5s ease;
   border: 2px solid white;
+}
+
+.btnAgregarCarrito {
+  align-items: center;
+  height: 40px;
+  border-radius: 10px;
+  color: white;
+  background-color: black;
+  padding: 0 10px;
+}
+.btnAgregarCarrito:hover {
+  border: 2px solid black;
+  background-color: white;
+  color: gray;
+  font-weight: bold;
+  transition: 0.5s ease;
 }
 
 /*# sourceMappingURL=main.css.map */
