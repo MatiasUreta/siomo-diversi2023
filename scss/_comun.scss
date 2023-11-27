@@ -6,7 +6,7 @@
 }
 
 body {
-    font-family: 'Martian Mono', monospace;
+    font-family: 'Cabina', sans-serif;
     text-align: center;
 }
 
@@ -60,6 +60,13 @@ header {
     height: 900px;
 }
 
+.textoConBorde {
+    border: 3px dashed rgba(255, 0, 0, 0.5); /* Red con 50% de opacidad */
+    display: inline-block;
+    padding: 10px;
+}
+
+
 //card
 .contenido {
     max-width: auto;
@@ -90,7 +97,8 @@ header {
     border-radius: 10px;
     transition: .3s;
     &:hover {
-        background-color: white;
+        background-color: white;  
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
     }
 }
 

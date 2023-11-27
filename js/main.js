@@ -38,7 +38,7 @@ function cerrar() {
 
 
 //Carrito
-let productos = [
+const productos = [
     {
         nombre: 'Amadeo',
         precio: 1000,
@@ -228,47 +228,57 @@ let productos = [
 
 ];
 
-let carrito = [];
+let carrito = []
 
-function agregarAlCarrito(indice) {
-    carrito.push(productos[indice]);
-    actualizarCarrito();
-  }
-  
+function Producto(nombre, descripcion, precio, imagen) {
+    this.nombre = nombre;
+    this.descripcion = descripcion;
+    this.precio = precio;
+    this.imagen = imagen;
+}
 
-  function actualizarCarrito() {
-    let contenedorCarrito = document.querySelector('.modal-body');
-    contenedorCarrito.innerHTML = ''; // Limpiar el carrito
-  
-    carrito.forEach((producto, indice) => {
-      let productoDiv = document.createElement('div');
-      productoDiv.innerHTML = `
-        <img src="${producto.imagen}" alt="${producto.nombre}" width="50" height="50">
-        <span>${producto.nombre}</span>
-        <span>${producto.precio}</span>
-        <button onclick="eliminarDelCarrito(${indice})">Eliminar</button>
-      `;
-      contenedorCarrito.appendChild(productoDiv);
-    });
-  }
-  
+function agregarAlCarrito(producto) {
+    carrito.push(producto);
+}
 
-  function eliminarDelCarrito(indice) {
-    carrito.splice(indice, 1); // Eliminar el producto del carrito
-    actualizarCarrito(); // Actualizar la interfaz de usuario
-  }
 
-  document.querySelector('.btnAgregarCarrito').addEventListener('click', () => {
-  agregarAlCarrito(indiceDelProductoActual);
+//agregar al modal
+function mostrarCarrito() {
+    let modalBody = document.querySelector('.modal-body');
+    modalBody.innerHTML = ''; // Limpiar el modal
+    for(let producto of carrito) {
+        // Crear el HTML para cada producto
+        let p = document.createElement('p');
+        p.textContent = producto.nombre + ': $' + producto.precio;
+        modalBody.appendChild(p);
+    }
+}
+
+function eliminarDelCarrito(producto) {
+    let index = carrito.indexOf(producto);
+    if(index > -1) {
+        carrito.splice(index, 1);
+    }
+}
+
+function actualizarContador() {
+    let contador = document.querySelector('#contador');
+    contador.textContent = carrito.length;
+}
+
+document.querySelector('.btnAgregarCarrito').addEventListener('click', function() {
+    let nombre = document.querySelector('#nombre').value;
+    let descripcion = document.querySelector('#descripcion').value;
+    let precio = document.querySelector('#precio').value;
+    let imagen = document.querySelector('#img').src;
+    let producto = new Producto(nombre, descripcion, precio, imagen);
+    agregarAlCarrito(producto);
 });
 
-
-function actualizarCarrito() {
-    // Actualizar el modal
-    // ...
-  
-    // Actualizar el contador de productos
-    let contador = document.querySelector('#contadorCarrito');
-    contador.textContent = carrito.length;
-  }
-  
+document.querySelector('.btnEliminarProducto').addEventListener('click', function() {
+    let nombre = document.querySelector('#nombre').value;
+    let producto = carrito.find(p => p.nombre === nombre);
+    if(producto) {
+        eliminarDelCarrito(producto);
+    }
+});

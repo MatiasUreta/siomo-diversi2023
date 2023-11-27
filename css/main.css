@@ -1,5 +1,5 @@
 @charset "UTF-8";
-@import url("https://fonts.googleapis.com/css2?family=Martian+Mono:wght@300&family=Oswald&family=Roboto+Slab:wght@400;900&family=Roboto:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cabin&family=Martian+Mono:wght@300&family=Oswald&family=Roboto+Slab:wght@400;900&family=Roboto:wght@300&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -8,7 +8,7 @@
 }
 
 body {
-  font-family: "Martian Mono", monospace;
+  font-family: "Cabina", sans-serif;
   text-align: center;
 }
 
@@ -55,6 +55,12 @@ header ul li:hover {
   height: 900px;
 }
 
+.textoConBorde {
+  border: 3px dashed rgba(255, 0, 0, 0.5); /* Red con 50% de opacidad */
+  display: inline-block;
+  padding: 10px;
+}
+
 .contenido {
   max-width: auto;
   width: 100%;
@@ -86,6 +92,7 @@ header ul li:hover {
 }
 .mostrador .fila .item:hover {
   background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
 }
 
 .mostrador .fila .item img {
@@ -279,6 +286,14 @@ footer .logoInsta {
   color: gray;
   font-weight: bold;
   transition: 0.5s ease;
+}
+
+.btnTalles {
+  background-color: white;
+  color: black;
+}
+.btnTalles:hover {
+  background-color: gray;
 }
 
 /*# sourceMappingURL=main.css.map */

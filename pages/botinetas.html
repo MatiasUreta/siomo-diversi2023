@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Siamo Diversi || Zapatos || Zapatillas || Botinetas || </title>
     <link rel="shortcut icon" href="../img/Logo SECUNDARIO.png" type="image/x-icon">
 
 
@@ -70,6 +70,88 @@
             </div>
         </nav>
     </header>
+
+    <h1 class="titulo mt-4">Siamo Diversi, Nueva Temporada 2024</h1>
+
+    <!-- cards -->
+    <main class="contenido">
+        <div class="mostrador" id="mostrador">
+            <div class="fila row">
+                
+                <div class="item col-lg-2 col-md-3 col-sm-4 col-6" onclick="cargar(this)">
+                    <div class="contenedor-foto">
+                        <img src="../img/Giovanni Azul.png" alt="Giovanni-Azul">
+                        <p class="descripcion">Giovanni-Azul</p>
+                        <span class="precio">$ 1000</span>
+                    </div>
+                </div>
+
+                <div class="item col-lg-2 col-md-3 col-sm-4 col-6" onclick="cargar(this)">
+                    <div class="contenedor-foto">
+                        <img src="../img/Genaro.png" alt="Genaro">
+                        <p class="descripcion">Genaro</p>
+                        <span class="precio">$ 2000</span>
+                    </div>
+                </div>
+
+
+                <div class="item col-lg-2 col-md-3 col-sm-4 col-6" onclick="cargar(this)">
+                    <div class="contenedor-foto">
+                        <img src="../img/Giovanni Verde.png" alt="Giovanni-Verde">
+                        <p class="descripcion">Giovanni-Verde</p>
+                        <span class="precio">$ 2000</span>
+                    </div>
+                </div>
+>
+        </div>
+
+        <!-- contenedor del item selecionado -->
+        <div class="seleccion" id="seleccion" style="position: sticky; top: 0;">
+            <div class="cerrar" onclick="cerrar()">
+                ✕
+            </div>
+            <div class="info">
+                <img src="./img/zapato-uno.jpg" alt="" id="img">
+                <h2 id="modelo">Modelo 1</h2>
+                <p id="descripcion"></p>
+
+                <!-- Aquí agregamos los círculos
+                <div class="circulos">
+                    <p>Colores disponibles</p>
+                    <div class="circulo" style="background-color: black;"></div>
+                    <div class="circulo" style="background-color: brown;"></div>
+                    <div class="circulo" style="background-color: blue;"></div>
+                </div>
+                <div class="circulos">
+                    <p>Color de zuela</p>
+                    <div class="circulo" style="background-color: #d2691e ;"></div>
+                    <div class="circulo" style="background-color: black;"></div>
+                    <div class="circulo" style="background-color: blue;"></div>
+                    <div class="circulo" style="background-color: #800000;"></div>
+                </div> -->
+
+                <span class="precio" id="precio">$ 1000</span>
+
+                <div class="fila">
+                    <div class="size">
+                        <label for="SIZE"></label>
+                        <select name="" id="" class="class=" btnTalles"">
+                            <option class="btnTalles" value="">39</option>
+                            <option class="btnTalles" value="">40</option>
+                            <option class="btnTalles" value="">41</option>
+                            <option class="btnTalles" value="">42</option>
+                            <option class="btnTalles" value="">43</option>
+                            <option class="btnTalles" value="">44</option>
+                            <option class="btnTalles" value="">45</option>
+                        </select>
+                    </div>
+                    <button class="btnAgregarCarrito" onclick="agregarAlCarrito()">AGREGAR AL CARRITO</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+
 
 
 

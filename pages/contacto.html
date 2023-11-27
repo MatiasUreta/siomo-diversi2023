@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Contacto || Siamo Diversi</title>
     <link rel="shortcut icon" href="../img/Logo SECUNDARIO.png" type="image/x-icon">
 
 
@@ -52,11 +52,11 @@
                         </li>
                         <li class="nav-item">
                             <a class="nav-link textoNavbar" href="../pages/sale.html"><svg
-                                xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
-                                class="bi bi-fire" viewBox="0 0 16 16">
-                                <path
-                                    d="M8 16c3.314 0 6-2 6-5.5 0-1.5-.5-4-2.5-6 .25 1.5-1.25 2-1.25 2C11 4 9 .5 6 0c.357 2 .5 4-2 6-1.25 1-2 2.729-2 4.5C2 14 4.686 16 8 16Zm0-1c-1.657 0-3-1-3-2.75 0-.75.25-2 1.25-3C6.125 10 7 10.5 7 10.5c-.375-1.25.5-3.25 2-3.5-.179 1-.25 2 1 3 .625.5 1 1.364 1 2.25C11 14 9.657 15 8 15Z" />
-                            </svg>Sale</a>
+                                    xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                                    class="bi bi-fire" viewBox="0 0 16 16">
+                                    <path
+                                        d="M8 16c3.314 0 6-2 6-5.5 0-1.5-.5-4-2.5-6 .25 1.5-1.25 2-1.25 2C11 4 9 .5 6 0c.357 2 .5 4-2 6-1.25 1-2 2.729-2 4.5C2 14 4.686 16 8 16Zm0-1c-1.657 0-3-1-3-2.75 0-.75.25-2 1.25-3C6.125 10 7 10.5 7 10.5c-.375-1.25.5-3.25 2-3.5-.179 1-.25 2 1 3 .625.5 1 1.364 1 2.25C11 14 9.657 15 8 15Z" />
+                                </svg>Sale</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link textoNavbar" href="../pages/pregustasfrecuentes.html">Preguntas
@@ -74,7 +74,7 @@
 
 
 
-    <!-- Heroe || Contacto -->
+    <!-- Acordeon || Preguntas Frecuentes-->
     <div class="container col-xl-10 col-xxl-8 px-4 py-5 mt-5 contenedorFormulario ">
         <div class="row align-items-center g-lg-5 py-5">
             <div class="col-lg-7 text-center text-lg-start">
@@ -84,29 +84,24 @@
                     cambios o devoluciones completa este formulario y recibirás una respuesta</p>
             </div>
             <div class="col-md-10 mx-auto col-lg-5 formulario">
-                <form class="p-4 p-md-5 border rounded-3 ">
+                <form action="enviar.php" method="post" class="p-4 p-md-5 border rounded-3 ">
                     <div class="form-floating mb-3">
-                        <input type="text" class="form-control" id="floatingName" placeholder="Nombre">
+                        <input type="text" class="form-control" id="floatingName" name="nombre" placeholder="Nombre">
                         <label for="floatingName">Nombre</label>
                     </div>
                     <div class="form-floating mb-3">
-                        <textarea class="form-control" id="floatingConsulta"
+                        <textarea class="form-control" id="floatingConsulta" name="consulta"
                             placeholder="Escribe tu consulta aquí"></textarea>
                         <label for="floatingConsulta">Consulta</label>
                     </div>
-                    <!-- <div class="checkbox mb-3">
-                        <label>
-                            <input type="checkbox" value="remember-me"> Recuérdame
-                        </label>
-                    </div> -->
                     <button class="w-100 btn btn-lg btnEnviar" type="submit">Enviar</button>
                     <hr class="my-4">
                     <small class=" textoEnviar">Al hacer clic en Enviar, aceptas los términos de uso.</small>
                 </form>
             </div>
-
         </div>
     </div>
+
 
     <!-- Logo Whatsapp -->
     <nav>

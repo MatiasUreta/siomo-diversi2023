@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Siamo Diversi || Zapatos || Zapatillas || Botinetas || Sale</title>
     <link rel="shortcut icon" href="./img/Logo SECUNDARIO.png" type="image/x-icon">
 
 
@@ -20,7 +20,7 @@
 <body>
     <!-- Marquee -->
     <marquee class="marquee" direction="left" width="100%" scrollamount="3">
-        Tu texto aquí
+        Siamo Diversi Shoes
     </marquee>
 
     <!-- Navbar -->
@@ -68,10 +68,10 @@
                     </ul>
                 </div>
             </div>
-            <div>
-
+            <div class="contenedorCarrito">
                 <!-- Botón para abrir el modal -->
-                <button type="button" class="btn btnCarrito" data-bs-toggle="modal" data-bs-target="#cartModal">
+                <button onclick="actualizarContador()" type="button" class="btn btnCarrito" data-bs-toggle="modal"
+                    data-bs-target="#cartModal">
                     <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-bag"
                         viewBox="0 0 16 16">
                         <path
@@ -91,10 +91,12 @@
                                 <button type="button" class="btn-close" data-bs-dismiss="modal"
                                     aria-label="Close"></button>
                             </div>
-                            <div class="modal-body">
+                            <div onclick="mostrarCarrito()" class="modal-body">
                                 <!-- Aquí puedes listar los productos en el carrito -->
                             </div>
                             <div class="modal-footer">
+                                <button type="button" class="btn btn-primary" onclick="eliminarDelCarrito()">Limpiar
+                                    Carrito</button>
                                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
                                 <button type="button" class="btn btn-primary">Comprar</button>
                             </div>
@@ -130,15 +132,15 @@
                 <div class="carousel-item">
                     <img src="./img/banner-zapatosdos.jpg" class="d-block w-100 imgCarousel" alt="...">
                     <div class="carousel-caption d-none d-md-block">
-                        <h2>Second slide label</h2>
-                        <p>Some representative placeholder content for the second slide.</p>
+                        <h2>Siamo Diversi</h2>
+                        <p>Un'essenza Italiana con passione Argentina</p>
                     </div>
                 </div>
                 <div class="carousel-item">
                     <img src="./img/banner-zapatosenfoque.jpg" class="d-block w-100 imgCarousel" alt="...">
                     <div class="carousel-caption d-none d-md-block">
-                        <h2>Third slide label</h2>
-                        <p>Some representative placeholder content for the third slide.</p>
+                        <h2>Siamo Diversi</h2>
+                        <p>Un'essenza Italiana con passione Argentina</p>
                     </div>
                 </div>
             </div>
@@ -156,6 +158,12 @@
     </main>
 
     <h1 class="titulo mt-4">Siamo Diversi, Nueva Temporada 2024</h1>
+    <div class="divColoresSuela mt-5" style="text-align: center;">
+        <span class="textoConBorde">
+            <h4>Todos los productos los podés pedir con la suela color Chocolate, Negro, Azul o Borgoña</h4>
+        </span>
+    </div>
+    
 
     <!-- cards -->
     <section class="contenido">
@@ -171,7 +179,7 @@
 
                 <div class="item col-lg-2 col-md-3 col-sm-4 col-6" onclick="cargar(this)">
                     <div class="contenedor-foto">
-                        <img src="./img/Aurelio.png" alt="Gianni-blanco">
+                        <img src="./img/Aurelio.png" alt="Zapato Aurelio">
                         <p class="descripcion">Aurelio</p>
                         <span class="precio">$ 2000</span>
                     </div>
@@ -179,7 +187,7 @@
 
                 <div class="item col-lg-2 col-md-3 col-sm-4 col-6" onclick="cargar(this)">
                     <div class="contenedor-foto">
-                        <img src="./img/Renato Verde.png" alt="Zapato amadeo">
+                        <img src="./img/Renato Verde.png" alt="Zapato Renato">
                         <p class="descripcion">Renato-Verde</p>
                         <span class="precio">$ 1000</span>
                     </div>
@@ -187,7 +195,7 @@
 
                 <div class="item col-lg-2 col-md-3 col-sm-4 col-6" onclick="cargar(this)">
                     <div class="contenedor-foto">
-                        <img src="./img/Terzo.png" alt="">
+                        <img src="./img/Terzo.png" alt="Zapato Terzo">
                         <p class="descripcion">Terzo</p>
                         <span class="precio">$ 3000</span>
                     </div>
@@ -195,7 +203,7 @@
 
                 <div class="item col-lg-2 col-md-3 col-sm-4 col-6" onclick="cargar(this)">
                     <div class="contenedor-foto">
-                        <img src="./img/Gaetano.png" alt="">
+                        <img src="./img/Gaetano.png" alt="Zapato Gaetano">
                         <p class="descripcion">Gaetano</p>
                         <span class="precio">$ 4000</span>
                     </div>
@@ -203,7 +211,7 @@
 
                 <div class="item col-lg-2 col-md-3 col-sm-4 col-6" onclick="cargar(this)">
                     <div class="contenedor-foto">
-                        <img src="./img/Romeo.png" alt="">
+                        <img src="./img/Romeo.png" alt="Zapato Romeo">
                         <p class="descripcion">Romeo</p>
                         <span class="precio">$ 1000</span>
                     </div>
@@ -211,7 +219,7 @@
 
                 <div class="item col-lg-2 col-md-3 col-sm-4 col-6" onclick="cargar(this)">
                     <div class="contenedor-foto">
-                        <img src="./img/Giovanni Azul.png" alt="">
+                        <img src="./img/Giovanni Azul.png" alt="Giovanni-Azul">
                         <p class="descripcion">Giovanni-Azul</p>
                         <span class="precio">$ 1000</span>
                     </div>
@@ -219,7 +227,7 @@
 
                 <div class="item col-lg-2 col-md-3 col-sm-4 col-6" onclick="cargar(this)">
                     <div class="contenedor-foto">
-                        <img src="./img/Donatto picado marron.png" alt="">
+                        <img src="./img/Donatto picado marron.png" alt="Zapato Picado-Marron">
                         <p class="descripcion">Donato Picado-Marron</p>
                         <span class="precio">$ 1000</span>
                     </div>
@@ -227,7 +235,7 @@
 
                 <div class="item col-lg-2 col-md-3 col-sm-4 col-6" onclick="cargar(this)">
                     <div class="contenedor-foto">
-                        <img src="./img/Filippo.png" alt="">
+                        <img src="./img/Filippo.png" alt="Zapato  Filippo">
                         <p class="descripcion">Filippo</p>
                         <span class="precio">$ 1000</span>
                     </div>
@@ -235,7 +243,7 @@
 
                 <div class="item col-lg-2 col-md-3 col-sm-4 col-6" onclick="cargar(this)">
                     <div class="contenedor-foto">
-                        <img src="./img/Rocco.png" alt="Gianni-blanco">
+                        <img src="./img/Rocco.png" alt="Zapato Rocco">
                         <p class="descripcion">Rocco</p>
                         <span class="precio">$ 2000</span>
                     </div>
@@ -243,7 +251,7 @@
 
                 <div class="item col-lg-2 col-md-3 col-sm-4 col-6" onclick="cargar(this)">
                     <div class="contenedor-foto">
-                        <img src="./img/Enzo.png" alt="Gianni-blanco">
+                        <img src="./img/Enzo.png" alt="Zapato Enzo">
                         <p class="descripcion">Enzo</p>
                         <span class="precio">$ 2000</span>
                     </div>
@@ -251,7 +259,7 @@
 
                 <div class="item col-lg-2 col-md-3 col-sm-4 col-6" onclick="cargar(this)">
                     <div class="contenedor-foto">
-                        <img src="./img/Dino.png" alt="Gianni-blanco">
+                        <img src="./img/Dino.png" alt="Zapato Dino">
                         <p class="descripcion">Dino</p>
                         <span class="precio">$ 2000</span>
                     </div>
@@ -259,7 +267,7 @@
 
                 <div class="item col-lg-2 col-md-3 col-sm-4 col-6" onclick="cargar(this)">
                     <div class="contenedor-foto">
-                        <img src="./img/Carmine.png" alt="Gianni-blanco">
+                        <img src="./img/Carmine.png" alt="Zapato Carmine">
                         <p class="descripcion">Carmine</p>
                         <span class="precio">$ 2000</span>
                     </div>
@@ -267,7 +275,7 @@
 
                 <div class="item col-lg-2 col-md-3 col-sm-4 col-6" onclick="cargar(this)">
                     <div class="contenedor-foto">
-                        <img src="./img/Greta Marron.png" alt="Gianni-blanco">
+                        <img src="./img/Greta Marron.png" alt="Zapato Greta-Marron">
                         <p class="descripcion">Greta-Marron</p>
                         <span class="precio">$ 2000</span>
                     </div>
@@ -275,7 +283,7 @@
 
                 <div class="item col-lg-2 col-md-3 col-sm-4 col-6" onclick="cargar(this)">
                     <div class="contenedor-foto">
-                        <img src="./img/Pascuale.png" alt="Gianni-blanco">
+                        <img src="./img/Pascuale.png" alt="Zapato Pascuale">
                         <p class="descripcion">Pascuale</p>
                         <span class="precio">$ 2000</span>
                     </div>
@@ -283,7 +291,7 @@
 
                 <div class="item col-lg-2 col-md-3 col-sm-4 col-6" onclick="cargar(this)">
                     <div class="contenedor-foto">
-                        <img src="./img/Luigi.png" alt="Gianni-blanco">
+                        <img src="./img/Luigi.png" alt="Zapato Luigi">
                         <p class="descripcion">Luigi</p>
                         <span class="precio">$ 2000</span>
                     </div>
@@ -291,7 +299,7 @@
 
                 <div class="item col-lg-2 col-md-3 col-sm-4 col-6" onclick="cargar(this)">
                     <div class="contenedor-foto">
-                        <img src="./img/Donna.png" alt="Gianni-blanco">
+                        <img src="./img/Donna.png" alt="Bota Donna">
                         <p class="descripcion">Donna</p>
                         <span class="precio">$ 2000</span>
                     </div>
@@ -299,7 +307,7 @@
 
                 <div class="item col-lg-2 col-md-3 col-sm-4 col-6" onclick="cargar(this)">
                     <div class="contenedor-foto">
-                        <img src="./img/Narciso.png" alt="">
+                        <img src="./img/Narciso.png" alt="Zapato Narciso">
                         <p class="descripcion">Narciso</p>
                         <span class="precio">$ 2000</span>
                     </div>
@@ -307,23 +315,23 @@
 
                 <div class="item col-lg-2 col-md-3 col-sm-4 col-6" onclick="cargar(this)">
                     <div class="contenedor-foto">
-                        <img src="./img/Isabel.png" alt="">
-                        <p class="descripcion">Isabell</p>
+                        <img src="./img/Isabel.png" alt="Bota Isabel">
+                        <p class="descripcion">Isabel</p>
                         <span class="precio">$ 2000</span>
                     </div>
                 </div>
 
                 <div class="item col-lg-2 col-md-3 col-sm-4 col-6" onclick="cargar(this)">
                     <div class="contenedor-foto">
-                        <img src="./img/Gino suela.png" alt="">
-                        <p class="descripcion">Ginno Suela</p>
+                        <img src="./img/Gino suela.png" alt="Zapatilla Gino">
+                        <p class="descripcion">Ginno - Suela</p>
                         <span class="precio">$ 2000</span>
                     </div>
                 </div>
 
                 <div class="item col-lg-2 col-md-3 col-sm-4 col-6" onclick="cargar(this)">
                     <div class="contenedor-foto">
-                        <img src="./img/Gianni Blanca.png" alt="">
+                        <img src="./img/Gianni Blanca.png" alt="Zapatilla Gianni- blanca">
                         <p class="descripcion">Gianni-Blanca</p>
                         <span class="precio">$ 2000</span>
                     </div>
@@ -331,7 +339,7 @@
 
                 <div class="item col-lg-2 col-md-3 col-sm-4 col-6" onclick="cargar(this)">
                     <div class="contenedor-foto">
-                        <img src="./img/Bruno Suela.png" alt="">
+                        <img src="./img/Bruno Suela.png" alt="Zapato  Bruno - suela">
                         <p class="descripcion">Bruno Suela</p>
                         <span class="precio">$ 2000</span>
                     </div>
@@ -339,7 +347,7 @@
 
                 <div class="item col-lg-2 col-md-3 col-sm-4 col-6" onclick="cargar(this)">
                     <div class="contenedor-foto">
-                        <img src="./img/Genaro.png" alt="">
+                        <img src="./img/Genaro.png" alt="Genaro">
                         <p class="descripcion">Genaro</p>
                         <span class="precio">$ 2000</span>
                     </div>
@@ -347,7 +355,7 @@
 
                 <div class="item col-lg-2 col-md-3 col-sm-4 col-6" onclick="cargar(this)">
                     <div class="contenedor-foto">
-                        <img src="./img/Gianni negra.png" alt="">
+                        <img src="./img/Gianni negra.png" alt="Zapatilla Gianni-Negro">
                         <p class="descripcion">Gianni-Negro</p>
                         <span class="precio">$ 2000</span>
                     </div>
@@ -355,7 +363,7 @@
 
                 <div class="item col-lg-2 col-md-3 col-sm-4 col-6" onclick="cargar(this)">
                     <div class="contenedor-foto">
-                        <img src="./img/Renato Suela.png" alt="">
+                        <img src="./img/Renato Suela.png" alt="Zapato Renato - suela">
                         <p class="descripcion">Renato Suela</p>
                         <span class="precio">$ 2000</span>
                     </div>
@@ -363,7 +371,7 @@
 
                 <div class="item col-lg-2 col-md-3 col-sm-4 col-6" onclick="cargar(this)">
                     <div class="contenedor-foto">
-                        <img src="./img/Greta Negro.png" alt="">
+                        <img src="./img/Greta Negro.png" alt="Bota Greta-Negro">
                         <p class="descripcion">Greta-Negro</p>
                         <span class="precio">$ 2000</span>
                     </div>
@@ -371,7 +379,7 @@
 
                 <div class="item col-lg-2 col-md-3 col-sm-4 col-6" onclick="cargar(this)">
                     <div class="contenedor-foto">
-                        <img src="./img/Placido.png" alt="">
+                        <img src="./img/Placido.png" alt="Zapato Placido">
                         <p class="descripcion">Placido</p>
                         <span class="precio">$ 2000</span>
                     </div>
@@ -379,7 +387,7 @@
 
                 <div class="item col-lg-2 col-md-3 col-sm-4 col-6" onclick="cargar(this)">
                     <div class="contenedor-foto">
-                        <img src="./img/Giovanni Verde.png" alt="">
+                        <img src="./img/Giovanni Verde.png" alt="Giovanni-Verde">
                         <p class="descripcion">Giovanni-Verde</p>
                         <span class="precio">$ 2000</span>
                     </div>
@@ -387,7 +395,7 @@
 
                 <div class="item col-lg-2 col-md-3 col-sm-4 col-6" onclick="cargar(this)">
                     <div class="contenedor-foto">
-                        <img src="./img/Gino negro.png" alt="">
+                        <img src="./img/Gino negro.png" alt="Zapatilla Gino-Negro">
                         <p class="descripcion">Gino-Negro</p>
                         <span class="precio">$ 2000</span>
                     </div>
@@ -395,7 +403,7 @@
 
                 <div class="item col-lg-2 col-md-3 col-sm-4 col-6" onclick="cargar(this)">
                     <div class="contenedor-foto">
-                        <img src="./img/Viccenzo.png" alt="">
+                        <img src="./img/Viccenzo.png" alt="Zapato Viccenzo">
                         <p class="descripcion">Vicenzo</p>
                         <span class="precio">$ 2000</span>
                     </div>
@@ -403,7 +411,7 @@
 
                 <div class="item col-lg-2 col-md-3 col-sm-4 col-6" onclick="cargar(this)">
                     <div class="contenedor-foto">
-                        <img src="./img/Seleccione.png" alt="">
+                        <img src="./img/Seleccione.png" alt="Zapatilla Seleccione">
                         <p class="descripcion">Seleccione</p>
                         <span class="precio">$ 2000</span>
                     </div>
@@ -411,7 +419,7 @@
 
                 <div class="item col-lg-2 col-md-3 col-sm-4 col-6" onclick="cargar(this)">
                     <div class="contenedor-foto">
-                        <img src="./img/Mauro.png" alt="">
+                        <img src="./img/Mauro.png" alt="Zapato Mauro">
                         <p class="descripcion">Mauro</p>
                         <span class="precio">$ 2000</span>
                     </div>
@@ -419,7 +427,7 @@
 
                 <div class="item col-lg-2 col-md-3 col-sm-4 col-6" onclick="cargar(this)">
                     <div class="contenedor-foto">
-                        <img src="./img/Gianni tabaco.png" alt="">
+                        <img src="./img/Gianni tabaco.png" alt="Zapatilla Gianni-Tabaco">
                         <p class="descripcion">Gianni-Tabaco</p>
                         <span class="precio">$ 2000</span>
                     </div>
@@ -427,7 +435,7 @@
 
                 <div class="item col-lg-2 col-md-3 col-sm-4 col-6" onclick="cargar(this)">
                     <div class="contenedor-foto">
-                        <img src="./img/Tino.png" alt="">
+                        <img src="./img/Tino.png" alt="Zapato Tino">
                         <p class="descripcion">Tino</p>
                         <span class="precio">$ 2000</span>
                     </div>
@@ -435,7 +443,7 @@
 
                 <div class="item col-lg-2 col-md-3 col-sm-4 col-6" onclick="cargar(this)">
                     <div class="contenedor-foto">
-                        <img src="./img/Bruno picado negro.png" alt="">
+                        <img src="./img/Bruno picado negro.png" alt="Zapato  Bruno Picado-Negro">
                         <p class="descripcion">Bruno Picado-Negro</p>
                         <span class="precio">$ 8000</span>
                     </div>
@@ -451,9 +459,9 @@
             <div class="info">
                 <img src="./img/zapato-uno.jpg" alt="" id="img">
                 <h2 id="modelo">Modelo 1</h2>
-                <p id="descripcion">Descripcion modelo</p>
+                <p id="descripcion"></p>
 
-                <!-- Aquí agregamos los círculos -->
+                <!-- Aquí agregamos los círculos
                 <div class="circulos">
                     <p>Colores disponibles</p>
                     <div class="circulo" style="background-color: black;"></div>
@@ -466,24 +474,24 @@
                     <div class="circulo" style="background-color: black;"></div>
                     <div class="circulo" style="background-color: blue;"></div>
                     <div class="circulo" style="background-color: #800000;"></div>
-                </div>
+                </div> -->
 
                 <span class="precio" id="precio">$ 1000</span>
 
                 <div class="fila">
                     <div class="size">
                         <label for="SIZE"></label>
-                        <select name="" id="">
-                            <option value="">39</option>
-                            <option value="">40</option>
-                            <option value="">41</option>
-                            <option value="">42</option>
-                            <option value="">43</option>
-                            <option value="">44</option>
-                            <option value="">45</option>
+                        <select name="" id="" class="class=" btnTalles"">
+                            <option class="btnTalles" value="">39</option>
+                            <option class="btnTalles" value="">40</option>
+                            <option class="btnTalles" value="">41</option>
+                            <option class="btnTalles" value="">42</option>
+                            <option class="btnTalles" value="">43</option>
+                            <option class="btnTalles" value="">44</option>
+                            <option class="btnTalles" value="">45</option>
                         </select>
                     </div>
-                    <button class="btnAgregarCarrito">AGREGAR AL CARRITO</button>
+                    <button class="btnAgregarCarrito" onclick="agregarAlCarrito()">AGREGAR AL CARRITO</button>
                 </div>
             </div>
         </div>
