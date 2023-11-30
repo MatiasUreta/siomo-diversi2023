@@ -1,126 +1,127 @@
-let productos = [
-    {
-      nombre: 'Amadeo',
-      precio: 1000,
-      imagen: './img/Amadeo.png',
-      talle: [39, 40, 41, 42, 43, 44, 45]
-    },
-    {
-      nombre: 'Aurelio',
-      precio: 2000,
-      imagen: './img/Aurelio.png',
-      talle: [39, 40, 41, 42, 43, 44, 45]
-    },
-    {
-      nombre: 'Renato Verde',
-      precio: 1000,
-      imagen: './img/Renato Verde.png',
-      talle: [39, 40, 41, 42, 43, 44, 45]
-    },
-    {
-      nombre: 'Terzo',
-      precio: 3000,
-      imagen: './img/Terzo.png',
-      talle: [39, 40, 41, 42, 43, 44, 45]
-    }
-  ];
-  
+const btnCart = document.querySelector('.container-cart-icon');
+const containerCartProducts = document.querySelector(
+	'.container-cart-products'
+);
 
+btnCart.addEventListener('click', () => {
+	containerCartProducts.classList.toggle('hidden-cart');
+});
 
-function agregarAlCarrito(producto) {
-    carrito.push(producto);
-    actualizarCarrito();
-  }
+/* ========================= */
+const cartInfo = document.querySelector('.cart-product');
+const rowProduct = document.querySelector('.row-product');
 
-  
-  function actualizarCarrito() {
-    let contenedorCarrito = document.querySelector('.modal-body');
-    contenedorCarrito.innerHTML = ''; // Limpiar el carrito
-  
-    carrito.forEach((producto, indice) => {
-      let productoDiv = document.createElement('div');
-      productoDiv.innerHTML = `
-        <img src="${producto.imagen}" alt="${producto.nombre}" width="50" height="50">
-        <span>${producto.nombre}</span>
-        <span>${producto.precio}</span>
-        <button onclick="eliminarDelCarrito(${indice})">Eliminar</button>
-      `;
-      contenedorCarrito.appendChild(productoDiv);
-    });
-  
-    // Actualizar el contador de productos
-    let contador = document.querySelector('#cartModalLabel');
-    contador.textContent = `Carrito de compras (${carrito.length} productos)`;
-  }
+// Lista de todos los contenedores de productos
+const productsList = document.querySelector('.container-items');
 
-  function eliminarDelCarrito(indice) {
-    carrito.splice(indice, 1); // Eliminar el producto del carrito
-    actualizarCarrito(); // Actualizar la interfaz de usuario
-  }
-  
+// Variable de arreglos de Productos
+let allProducts = [];
 
+const valorTotal = document.querySelector('.total-pagar');
 
-  function generarProductos() {
-    let contenedor = document.querySelector('.mostrador .fila');
-    contenedor.innerHTML = ''; // Limpiar el contenedor
-  
-    productos.forEach((producto, indice) => {
-      let productoDiv = document.createElement('div');
-      productoDiv.className = 'item col-lg-2 col-md-3 col-sm-4 col-6';
-      productoDiv.innerHTML = `
-        <div class="contenedor-foto">
-          <img src="${producto.imagen}" alt="${producto.nombre}">
-          <p class="descripcion">${producto.nombre}</p>
-          <span class="precio">$ ${producto.precio}</span>
-        </div>
-      `;
-      productoDiv.addEventListener('click', () => cargarProducto(indice));
-      contenedor.appendChild(productoDiv);
-    });
-  }
+const countProducts = document.querySelector('#contador-productos');
 
-  
-  function cargarProducto(indice) {
-    let producto = productos[indice];
-    let contenedor = document.querySelector('.seleccion .info');
-    contenedor.querySelector('img').src = producto.imagen;
-    contenedor.querySelector('#modelo').textContent = producto.nombre;
-    contenedor.querySelector('#descripcion').textContent = 'Descripcion ' + producto.nombre.toLowerCase();
-    contenedor.querySelector('#precio').textContent = '$ ' + producto.precio;
-    // Actualizar los talles disponibles
-    let selectTalle = contenedor.querySelector('select');
-    selectTalle.innerHTML = '';
-    producto.talle.forEach(talle => {
-      let option = document.createElement('option');
-      option.value = talle;
-      option.textContent = talle;
-      selectTalle.appendChild(option);
-    });
-  }
-  
+const cartEmpty = document.querySelector('.cart-empty');
+const cartTotal = document.querySelector('.cart-total');
 
-  // PARA ENVIAR POR WSP EL PEDIDO
-let producto = {
-  nombre: 'Zapato 1',
-  color: 'Negro',
-  talle: '42',
-  precio: '$1000'
+productsList.addEventListener('click', e => {
+	if (e.target.classList.contains('btn-add-cart')) {
+		const product = e.target.parentElement;
+
+		const infoProduct = {
+			quantity: 1,
+			title: product.querySelector('h2').textContent,
+			price: product.querySelector('p').textContent,
+		};
+
+		const exits = allProducts.some(
+			product => product.title === infoProduct.title
+		);
+
+		if (exits) {
+			const products = allProducts.map(product => {
+				if (product.title === infoProduct.title) {
+					product.quantity++;
+					return product;
+				} else {
+					return product;
+				}
+			});
+			allProducts = [...products];
+		} else {
+			allProducts = [...allProducts, infoProduct];
+		}
+
+		showHTML();
+	}
+});
+
+rowProduct.addEventListener('click', e => {
+	if (e.target.classList.contains('icon-close')) {
+		const product = e.target.parentElement;
+		const title = product.querySelector('p').textContent;
+
+		allProducts = allProducts.filter(
+			product => product.title !== title
+		);
+
+		console.log(allProducts);
+
+		showHTML();
+	}
+});
+
+// Funcion para mostrar  HTML
+const showHTML = () => {
+	if (!allProducts.length) {
+		cartEmpty.classList.remove('hidden');
+		rowProduct.classList.add('hidden');
+		cartTotal.classList.add('hidden');
+	} else {
+		cartEmpty.classList.add('hidden');
+		rowProduct.classList.remove('hidden');
+		cartTotal.classList.remove('hidden');
+	}
+
+	// Limpiar HTML
+	rowProduct.innerHTML = '';
+
+	let total = 0;
+	let totalOfProducts = 0;
+
+	allProducts.forEach(product => {
+		const containerProduct = document.createElement('div');
+		containerProduct.classList.add('cart-product');
+
+		containerProduct.innerHTML = `
+            <div class="info-cart-product">
+                <span class="cantidad-producto-carrito">${product.quantity}</span>
+                <p class="titulo-producto-carrito">${product.title}</p>
+                <span class="precio-producto-carrito">${product.price}</span>
+            </div>
+            <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="icon-close"
+            >
+                <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M6 18L18 6M6 6l12 12"
+                />
+            </svg>
+        `;
+
+		rowProduct.append(containerProduct);
+
+		total =
+			total + parseInt(product.quantity * product.price.slice(1));
+		totalOfProducts = totalOfProducts + product.quantity;
+	});
+
+	valorTotal.innerText = `$${total}`;
+	countProducts.innerText = totalOfProducts;
 };
-
-// Función para enviar el producto a WhatsApp
-function enviarAWhatsapp(producto) {
-  // Crea el mensaje que se enviará
-  let mensaje = `Hola, estoy interesado en el ${producto.nombre} de color ${producto.color}, talle ${producto.talle}. Su precio es ${producto.precio}.`;
-
-  // Codifica el mensaje para usarlo en una URL
-  let mensajeCodificado = encodeURIComponent(mensaje);
-
-  // Crea la URL de WhatsApp
-  let url = `https://wa.me/?text=${mensajeCodificado}`;
-
-  // Abre la URL de WhatsApp en una nueva ventana
-  window.open(url);
-}
-
-// Llama a la función para enviar el producto a WhatsApp
-enviarAWhatsapp(producto);

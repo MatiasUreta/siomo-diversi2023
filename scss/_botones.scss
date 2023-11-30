@@ -36,3 +36,15 @@
         background-color: gray;
     }
 }
+
+.btnVerMas {
+    border: 1px solid black;
+    border-radius: 10px;
+    color: black;
+    background-color: lightgray;
+    &:hover {
+        color: black;
+        font-weight: 500;
+        background-color: gray;
+    }
+}

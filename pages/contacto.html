@@ -84,16 +84,29 @@
                     cambios o devoluciones completa este formulario y recibirás una respuesta</p>
             </div>
             <div class="col-md-10 mx-auto col-lg-5 formulario">
-                <form action="enviar.php" method="post" class="p-4 p-md-5 border rounded-3 ">
+                <form action="https://formsubmit.co/matiasureta28@gmail.com" method="POST" class="p-4 p-md-5 border rounded-3 ">
+                    
                     <div class="form-floating mb-3">
                         <input type="text" class="form-control" id="floatingName" name="nombre" placeholder="Nombre">
                         <label for="floatingName">Nombre</label>
                     </div>
+
+                    <div class="form-floating mb-3">
+                        <label for="floatingMail">Mail</label>
+                        <input type="email" class="form-control" id="floatingMail" name="mail" placeholder="Ingresa tu Email">  
+                    </div>
+
+                    <div class="form-floating mb-3">
+                        <input type="tel" class="form-control" id="floatingTelefono" name="telefono" placeholder="Número de Teléfono">
+                        <label for="floatingTelefono">Número de Teléfono</label>
+                    </div>
+                                        
                     <div class="form-floating mb-3">
                         <textarea class="form-control" id="floatingConsulta" name="consulta"
                             placeholder="Escribe tu consulta aquí"></textarea>
                         <label for="floatingConsulta">Consulta</label>
                     </div>
+
                     <button class="w-100 btn btn-lg btnEnviar" type="submit">Enviar</button>
                     <hr class="my-4">
                     <small class=" textoEnviar">Al hacer clic en Enviar, aceptas los términos de uso.</small>

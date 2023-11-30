@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
@@ -27,14 +27,12 @@
     <header class="header">
         <nav class="navbar navbar-expand-lg">
             <div class="container-fluid">
-                <a class="navbar-brand titulo" href="./index.html"><img class="logoPrincipal"
-                        src="./img/Logo PRINCIPAL.png" alt="logo de siamo diversi"></a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
-                    aria-label="Toggle navigation">
+                <a class="navbar-brand titulo" href="../index.html"><img class="logoPrincipal"
+                        src="../img/Logo PRINCIPAL.png" alt="logo de siamo diversi"></a>
+                <button class="navbar-toggler" type="button" id="navbarButton">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <div class="navbar-collapse" id="navbarNavDropdown">
                     <ul class="navbar-nav ms-auto m-1 ">
                         <li class="nav-item">
                             <a class="nav-link textoNavbar" aria-current="page" href="./index.html">Inicio</a>
@@ -68,42 +66,39 @@
                     </ul>
                 </div>
             </div>
-            <div class="contenedorCarrito">
-                <!-- Botón para abrir el modal -->
-                <button onclick="actualizarContador()" type="button" class="btn btnCarrito" data-bs-toggle="modal"
-                    data-bs-target="#cartModal">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-bag"
-                        viewBox="0 0 16 16">
-                        <path
-                            d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V5z" />
+            <div class="container-icon">
+                <div class="container-cart-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" class="icon-cart">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M15.75 10.5V6a3.75 3.75 0 10-7.5 0v4.5m11.356-1.993l1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 01-1.12-1.243l1.264-12A1.125 1.125 0 015.513 7.5h12.974c.576 0 1.059.435 1.119 1.007zM8.625 10.5a.375.375 0 11-.75 0 .375.375 0 01.75 0zm7.5 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z" />
                     </svg>
-                    <span id="contadorCarrito"></span>
-                </button>
-
-
-                <!-- Modal -->
-                <div class="modal fade" id="cartModal" tabindex="-1" aria-labelledby="cartModalLabel"
-                    aria-hidden="true">
-                    <div class="modal-dialog">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h5 class="modal-title" id="cartModalLabel">Carrito de compras</h5>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                    aria-label="Close"></button>
-                            </div>
-                            <div onclick="mostrarCarrito()" class="modal-body">
-                                <!-- Aquí puedes listar los productos en el carrito -->
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-primary" onclick="eliminarDelCarrito()">Limpiar
-                                    Carrito</button>
-                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                                <button type="button" class="btn btn-primary">Comprar</button>
-                            </div>
-                        </div>
+                    <div class="count-products">
+                        <span id="contador-productos">0</span>
                     </div>
                 </div>
 
+                <div class="container-cart-products hidden-cart">
+                    <div class="row-product hidden">
+                        <div class="cart-product">
+                            <div class="info-cart-product">
+                                <span class="cantidad-producto-carrito">1</span>
+                                <p class="titulo-producto-carrito">Zapatos </p>
+                                <span class="precio-producto-carrito">$80</span>
+                            </div>
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor" class="icon-close">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                            </svg>
+                        </div>
+                    </div>
+
+                    <div class="cart-total hidden">
+                        <h3>Total:</h3>
+                        <span class="total-pagar">$200</span>
+                    </div>
+                    <p class="cart-empty">El carrito está vacío</p>
+                </div>
             </div>
 
         </nav>
@@ -123,21 +118,21 @@
             </div>
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img src="./img/banner-zapatos.jpg" class="d-block w-100 imgCarousel" alt="...">
+                    <img src="./img/zapato-negro.PNG" class="d-block w-100 imgCarousel" alt="...">
                     <div class="carousel-caption d-none d-md-block">
                         <h2>Siamo Diversi</h2>
                         <p>Un'essenza Italiana con passione Argentina</p>
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <img src="./img/banner-zapatosdos.jpg" class="d-block w-100 imgCarousel" alt="...">
+                    <img src="./img/zapatilla-azul.PNG" class="d-block w-100 imgCarousel" alt="...">
                     <div class="carousel-caption d-none d-md-block">
                         <h2>Siamo Diversi</h2>
                         <p>Un'essenza Italiana con passione Argentina</p>
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <img src="./img/banner-zapatosenfoque.jpg" class="d-block w-100 imgCarousel" alt="...">
+                    <img src="./img/banner-2.PNG" class="d-block w-100 imgCarousel" alt="...">
                     <div class="carousel-caption d-none d-md-block">
                         <h2>Siamo Diversi</h2>
                         <p>Un'essenza Italiana con passione Argentina</p>
@@ -157,147 +152,289 @@
         </div>
     </main>
 
-    <h1 class="titulo mt-4">Siamo Diversi, Nueva Temporada 2024</h1>
-    <div class="divColoresSuela mt-5" style="text-align: center;">
-        <span class="textoConBorde">
-            <h4>Todos los productos los podés pedir con la suela color Chocolate, Negro, Azul o Borgoña</h4>
-        </span>
+    <h1 class="titulo mt-4">Nueva Temporada 2024</h1>
+    <div class="d-flex justify-content-center flex-wrap">
+        <div class="card" style="width: 18rem;">
+            <a href="./pages/zapatos.html"><img src="./img/zapato-marron.PNG" class="card-img-top"
+                    alt="Tarjeta de zapato"></a>
+            <div class="card-body">
+                <h3 class="card-title">Zapatos</h3>
+                <a href="./pages/zapatos.html" class="btn btnVerMas">Ver más</a>
+            </div>
+        </div>
+
+        <div class="card" style="width: 18rem;">
+            <a href="./pages/zapatillas.html"><img src="./img/zapatilla-negra (1).PNG" class="card-img-top"
+                    alt="tarjeta de zapatillas"></a>
+            <div class="card-body">
+                <h3 class="card-title">Zapatillas</h3>
+                <a href="./pages/zapatillas.html" class="btn btnVerMas">Ver más</a>
+            </div>
+        </div>
+
+        <div class="card" style="width: 18rem;">
+            <a href="./pages/botinetas.html"><img src="./img/banner-1.jpeg" class="card-img-top"
+                    alt="Tarjeta botinetas"></a>
+            <div class="card-body">
+                <h3 class="card-title">botinetas</h3>
+                <a href="./pages/botinetas.html" class="btn btnVerMas">Ver más</a>
+            </div>
+        </div>
+
+        <div class="card" style="width: 18rem;">
+            <a href="./pages/sale.html"><img src="./img/Greta Marron.png" class="card-img-top" alt="Oulet mujer"></a>
+            <div class="card-body">
+                <h3 class="card-title">Oulet Mujer</h3>
+                <a href="./pages/sale.html" class="btn btnVerMas">Ver más</a>
+            </div>
+        </div>
     </div>
-    
 
     <!-- cards -->
-    <section class="contenido">
+    <section class="contenido" id="container-items">
         <div class="mostrador" id="mostrador">
             <div class="fila row">
-                <div class="item col-lg-2 col-md-3 col-sm-4 col-6" onclick="cargar(this)">
-                    <div class="contenedor-foto">
+                <div class="item col-xl-3 col-lg-3 col-md-4 col-sm-6 col-12" onclick="cargar(this)">
+                    <div class="contenedor-foto" id="btn-add-cart">
                         <img src="./img/Amadeo.png" alt="Zapato amadeo">
-                        <p class="descripcion">Amadeo</p>
+                        <p class="descripcion">Zapato Amadeo</p>
                         <span class="precio">$ 1000</span>
+                        <div class="circulos">
+                            <!-- <span>Color Suela: </span> -->
+                            <div class="circulo" style="background-color: #d2691e ;"></div>
+                            <div class="circulo" style="background-color: black;"></div>
+                            <div class="circulo" style="background-color: rgb(2, 2, 194);"></div>
+                            <div class="circulo" style="background-color: #800000;"></div>
+                        </div>
                     </div>
                 </div>
 
-                <div class="item col-lg-2 col-md-3 col-sm-4 col-6" onclick="cargar(this)">
+                <div class="item col-xl-3 col-lg-3 col-md-4 col-sm-6 col-12" onclick="cargar(this)">
                     <div class="contenedor-foto">
                         <img src="./img/Aurelio.png" alt="Zapato Aurelio">
-                        <p class="descripcion">Aurelio</p>
+                        <p class="descripcion">Zapato Aurelio</p>
                         <span class="precio">$ 2000</span>
+                        <div class="circulos">
+                            <!-- <span>Color Suela: </span> -->
+                            <div class="circulo" style="background-color: #d2691e ;"></div>
+                            <div class="circulo" style="background-color: black;"></div>
+                            <div class="circulo" style="background-color: rgb(2, 2, 194);"></div>
+                            <div class="circulo" style="background-color: #800000;"></div>
+                        </div>
                     </div>
                 </div>
 
-                <div class="item col-lg-2 col-md-3 col-sm-4 col-6" onclick="cargar(this)">
+                <div class="item col-xl-3 col-lg-3 col-md-4 col-sm-6 col-12" onclick="cargar(this)">
                     <div class="contenedor-foto">
                         <img src="./img/Renato Verde.png" alt="Zapato Renato">
-                        <p class="descripcion">Renato-Verde</p>
+                        <p class="descripcion">Zapato Renato</p>
                         <span class="precio">$ 1000</span>
+                        <div class="circulos">
+                            <!-- <span>Color Suela: </span> -->
+                            <div class="circulo" style="background-color: #d2691e ;"></div>
+                            <div class="circulo" style="background-color: black;"></div>
+                            <div class="circulo" style="background-color: rgb(2, 2, 194);"></div>
+                            <div class="circulo" style="background-color: #800000;"></div>
+                        </div>
                     </div>
                 </div>
 
-                <div class="item col-lg-2 col-md-3 col-sm-4 col-6" onclick="cargar(this)">
+                <div class="item col-xl-3 col-lg-3 col-md-4 col-sm-6 col-12" onclick="cargar(this)">
                     <div class="contenedor-foto">
                         <img src="./img/Terzo.png" alt="Zapato Terzo">
-                        <p class="descripcion">Terzo</p>
+                        <p class="descripcion">Zapato Terzo</p>
                         <span class="precio">$ 3000</span>
+                        <div class="circulos">
+                            <!-- <span>Color Suela: </span> -->
+                            <div class="circulo" style="background-color: #d2691e ;"></div>
+                            <div class="circulo" style="background-color: black;"></div>
+                            <div class="circulo" style="background-color: rgb(2, 2, 194);"></div>
+                            <div class="circulo" style="background-color: #800000;"></div>
+                        </div>
                     </div>
                 </div>
 
-                <div class="item col-lg-2 col-md-3 col-sm-4 col-6" onclick="cargar(this)">
+                <div class="item col-xl-3 col-lg-3 col-md-4 col-sm-6 col-12" onclick="cargar(this)">
                     <div class="contenedor-foto">
                         <img src="./img/Gaetano.png" alt="Zapato Gaetano">
-                        <p class="descripcion">Gaetano</p>
+                        <p class="descripcion">Zapato Gaetano</p>
                         <span class="precio">$ 4000</span>
+                        <div class="circulos">
+                            <!-- <span>Color Suela: </span> -->
+                            <div class="circulo" style="background-color: #d2691e ;"></div>
+                            <div class="circulo" style="background-color: black;"></div>
+                            <div class="circulo" style="background-color: rgb(2, 2, 194);"></div>
+                            <div class="circulo" style="background-color: #800000;"></div>
+                        </div>
                     </div>
                 </div>
 
-                <div class="item col-lg-2 col-md-3 col-sm-4 col-6" onclick="cargar(this)">
+                <div class="item col-xl-3 col-lg-3 col-md-4 col-sm-6 col-12" onclick="cargar(this)">
                     <div class="contenedor-foto">
                         <img src="./img/Romeo.png" alt="Zapato Romeo">
-                        <p class="descripcion">Romeo</p>
+                        <p class="descripcion">Zapato Romeo</p>
                         <span class="precio">$ 1000</span>
+                        <div class="circulos">
+                            <!-- <span>Color Suela: </span> -->
+                            <div class="circulo" style="background-color: #d2691e ;"></div>
+                            <div class="circulo" style="background-color: black;"></div>
+                            <div class="circulo" style="background-color: rgb(2, 2, 194);"></div>
+                            <div class="circulo" style="background-color: #800000;"></div>
+                        </div>
                     </div>
                 </div>
 
-                <div class="item col-lg-2 col-md-3 col-sm-4 col-6" onclick="cargar(this)">
+                <div class="item col-xl-3 col-lg-3 col-md-4 col-sm-6 col-12" onclick="cargar(this)">
                     <div class="contenedor-foto">
                         <img src="./img/Giovanni Azul.png" alt="Giovanni-Azul">
-                        <p class="descripcion">Giovanni-Azul</p>
+                        <p class="descripcion">Giovanni</p>
                         <span class="precio">$ 1000</span>
+                        <div class="circulos">
+                            <!-- <span>Color Suela: </span> -->
+                            <div class="circulo" style="background-color: #d2691e ;"></div>
+                            <div class="circulo" style="background-color: black;"></div>
+                            <div class="circulo" style="background-color: rgb(2, 2, 194);"></div>
+                            <div class="circulo" style="background-color: #800000;"></div>
+                        </div>
                     </div>
                 </div>
 
-                <div class="item col-lg-2 col-md-3 col-sm-4 col-6" onclick="cargar(this)">
+                <div class="item col-xl-3 col-lg-3 col-md-4 col-sm-6 col-12" onclick="cargar(this)">
                     <div class="contenedor-foto">
                         <img src="./img/Donatto picado marron.png" alt="Zapato Picado-Marron">
-                        <p class="descripcion">Donato Picado-Marron</p>
+                        <p class="descripcion">Zapato Donato Picado</p>
                         <span class="precio">$ 1000</span>
+                        <div class="circulos">
+                            <!-- <span>Color Suela: </span> -->
+                            <div class="circulo" style="background-color: #d2691e ;"></div>
+                            <div class="circulo" style="background-color: black;"></div>
+                            <div class="circulo" style="background-color: rgb(2, 2, 194);"></div>
+                            <div class="circulo" style="background-color: #800000;"></div>
+                        </div>
                     </div>
                 </div>
 
-                <div class="item col-lg-2 col-md-3 col-sm-4 col-6" onclick="cargar(this)">
+                <div class="item col-xl-3 col-lg-3 col-md-4 col-sm-6 col-12" onclick="cargar(this)">
                     <div class="contenedor-foto">
                         <img src="./img/Filippo.png" alt="Zapato  Filippo">
-                        <p class="descripcion">Filippo</p>
+                        <p class="descripcion">Zapato Filippo</p>
                         <span class="precio">$ 1000</span>
+                        <div class="circulos">
+                            <!-- <span>Color Suela: </span> -->
+                            <div class="circulo" style="background-color: #d2691e ;"></div>
+                            <div class="circulo" style="background-color: black;"></div>
+                            <div class="circulo" style="background-color: rgb(2, 2, 194);"></div>
+                            <div class="circulo" style="background-color: #800000;"></div>
+                        </div>
                     </div>
                 </div>
 
-                <div class="item col-lg-2 col-md-3 col-sm-4 col-6" onclick="cargar(this)">
+                <div class="item col-xl-3 col-lg-3 col-md-4 col-sm-6 col-12" onclick="cargar(this)">
                     <div class="contenedor-foto">
                         <img src="./img/Rocco.png" alt="Zapato Rocco">
-                        <p class="descripcion">Rocco</p>
+                        <p class="descripcion">Zapato Rocco</p>
                         <span class="precio">$ 2000</span>
+                        <div class="circulos">
+                            <!-- <span>Color Suela: </span> -->
+                            <div class="circulo" style="background-color: #d2691e ;"></div>
+                            <div class="circulo" style="background-color: black;"></div>
+                            <div class="circulo" style="background-color: rgb(2, 2, 194);"></div>
+                            <div class="circulo" style="background-color: #800000;"></div>
+                        </div>
                     </div>
                 </div>
 
-                <div class="item col-lg-2 col-md-3 col-sm-4 col-6" onclick="cargar(this)">
+                <div class="item col-xl-3 col-lg-3 col-md-4 col-sm-6 col-12" onclick="cargar(this)">
                     <div class="contenedor-foto">
                         <img src="./img/Enzo.png" alt="Zapato Enzo">
-                        <p class="descripcion">Enzo</p>
+                        <p class="descripcion">Zapato Enzo</p>
                         <span class="precio">$ 2000</span>
+                        <div class="circulos">
+                            <!-- <span>Color Suela: </span> -->
+                            <div class="circulo" style="background-color: #d2691e ;"></div>
+                            <div class="circulo" style="background-color: black;"></div>
+                            <div class="circulo" style="background-color: rgb(2, 2, 194);"></div>
+                            <div class="circulo" style="background-color: #800000;"></div>
+                        </div>
                     </div>
                 </div>
 
-                <div class="item col-lg-2 col-md-3 col-sm-4 col-6" onclick="cargar(this)">
+                <div class="item col-xl-3 col-lg-3 col-md-4 col-sm-6 col-12" onclick="cargar(this)">
                     <div class="contenedor-foto">
                         <img src="./img/Dino.png" alt="Zapato Dino">
-                        <p class="descripcion">Dino</p>
+                        <p class="descripcion">Zapato Dino</p>
                         <span class="precio">$ 2000</span>
+                        <div class="circulos">
+                            <!-- <span>Color Suela: </span> -->
+                            <div class="circulo" style="background-color: #d2691e ;"></div>
+                            <div class="circulo" style="background-color: black;"></div>
+                            <div class="circulo" style="background-color: rgb(2, 2, 194);"></div>
+                            <div class="circulo" style="background-color: #800000;"></div>
+                        </div>
                     </div>
                 </div>
 
-                <div class="item col-lg-2 col-md-3 col-sm-4 col-6" onclick="cargar(this)">
+                <div class="item col-xl-3 col-lg-3 col-md-4 col-sm-6 col-12" onclick="cargar(this)">
                     <div class="contenedor-foto">
                         <img src="./img/Carmine.png" alt="Zapato Carmine">
-                        <p class="descripcion">Carmine</p>
+                        <p class="descripcion">Zapato Carmine</p>
                         <span class="precio">$ 2000</span>
+                        <div class="circulos">
+                            <!-- <span>Color Suela: </span> -->
+                            <div class="circulo" style="background-color: #d2691e ;"></div>
+                            <div class="circulo" style="background-color: black;"></div>
+                            <div class="circulo" style="background-color: rgb(2, 2, 194);"></div>
+                            <div class="circulo" style="background-color: #800000;"></div>
+                        </div>
                     </div>
                 </div>
 
-                <div class="item col-lg-2 col-md-3 col-sm-4 col-6" onclick="cargar(this)">
+                <div class="item col-xl-3 col-lg-3 col-md-4 col-sm-6 col-12" onclick="cargar(this)">
                     <div class="contenedor-foto">
                         <img src="./img/Greta Marron.png" alt="Zapato Greta-Marron">
-                        <p class="descripcion">Greta-Marron</p>
+                        <p class="descripcion">Zapato Greta</p>
                         <span class="precio">$ 2000</span>
+                        <div class="circulos">
+                            <!-- <span>Color Suela: </span> -->
+                            <div class="circulo" style="background-color: #d2691e ;"></div>
+                            <div class="circulo" style="background-color: black;"></div>
+                            <div class="circulo" style="background-color: rgb(2, 2, 194);"></div>
+                            <div class="circulo" style="background-color: #800000;"></div>
+                        </div>
                     </div>
                 </div>
 
-                <div class="item col-lg-2 col-md-3 col-sm-4 col-6" onclick="cargar(this)">
+                <div class="item col-xl-3 col-lg-3 col-md-4 col-sm-6 col-12" onclick="cargar(this)">
                     <div class="contenedor-foto">
                         <img src="./img/Pascuale.png" alt="Zapato Pascuale">
-                        <p class="descripcion">Pascuale</p>
+                        <p class="descripcion">Zapato Pascuale</p>
                         <span class="precio">$ 2000</span>
+                        <div class="circulos">
+                            <!-- <span>Color Suela: </span> -->
+                            <div class="circulo" style="background-color: #d2691e ;"></div>
+                            <div class="circulo" style="background-color: black;"></div>
+                            <div class="circulo" style="background-color: rgb(2, 2, 194);"></div>
+                            <div class="circulo" style="background-color: #800000;"></div>
+                        </div>
                     </div>
                 </div>
 
-                <div class="item col-lg-2 col-md-3 col-sm-4 col-6" onclick="cargar(this)">
+                <div class="item col-xl-3 col-lg-3 col-md-4 col-sm-6 col-12" onclick="cargar(this)">
                     <div class="contenedor-foto">
                         <img src="./img/Luigi.png" alt="Zapato Luigi">
-                        <p class="descripcion">Luigi</p>
+                        <p class="descripcion">Zapato Luigi</p>
                         <span class="precio">$ 2000</span>
+                        <div class="circulos">
+                            <!-- <span>Color Suela: </span> -->
+                            <div class="circulo" style="background-color: #d2691e ;"></div>
+                            <div class="circulo" style="background-color: black;"></div>
+                            <div class="circulo" style="background-color: rgb(2, 2, 194);"></div>
+                            <div class="circulo" style="background-color: #800000;"></div>
+                        </div>
                     </div>
                 </div>
 
-                <div class="item col-lg-2 col-md-3 col-sm-4 col-6" onclick="cargar(this)">
+                <div class="item col-xl-3 col-lg-3 col-md-4 col-sm-6 col-12" onclick="cargar(this)">
                     <div class="contenedor-foto">
                         <img src="./img/Donna.png" alt="Bota Donna">
                         <p class="descripcion">Donna</p>
@@ -305,15 +442,22 @@
                     </div>
                 </div>
 
-                <div class="item col-lg-2 col-md-3 col-sm-4 col-6" onclick="cargar(this)">
+                <div class="item col-xl-3 col-lg-3 col-md-4 col-sm-6 col-12" onclick="cargar(this)">
                     <div class="contenedor-foto">
                         <img src="./img/Narciso.png" alt="Zapato Narciso">
-                        <p class="descripcion">Narciso</p>
+                        <p class="descripcion">Zapato Narciso</p>
                         <span class="precio">$ 2000</span>
+                        <div class="circulos">
+                            <!-- <span>Color Suela: </span> -->
+                            <div class="circulo" style="background-color: #d2691e ;"></div>
+                            <div class="circulo" style="background-color: black;"></div>
+                            <div class="circulo" style="background-color: rgb(2, 2, 194);"></div>
+                            <div class="circulo" style="background-color: #800000;"></div>
+                        </div>
                     </div>
                 </div>
 
-                <div class="item col-lg-2 col-md-3 col-sm-4 col-6" onclick="cargar(this)">
+                <div class="item col-xl-3 col-lg-3 col-md-4 col-sm-6 col-12" onclick="cargar(this)">
                     <div class="contenedor-foto">
                         <img src="./img/Isabel.png" alt="Bota Isabel">
                         <p class="descripcion">Isabel</p>
@@ -321,31 +465,38 @@
                     </div>
                 </div>
 
-                <div class="item col-lg-2 col-md-3 col-sm-4 col-6" onclick="cargar(this)">
+                <div class="item col-xl-3 col-lg-3 col-md-4 col-sm-6 col-12" onclick="cargar(this)">
                     <div class="contenedor-foto">
                         <img src="./img/Gino suela.png" alt="Zapatilla Gino">
-                        <p class="descripcion">Ginno - Suela</p>
+                        <p class="descripcion">Ginno</p>
                         <span class="precio">$ 2000</span>
                     </div>
                 </div>
 
-                <div class="item col-lg-2 col-md-3 col-sm-4 col-6" onclick="cargar(this)">
+                <div class="item col-xl-3 col-lg-3 col-md-4 col-sm-6 col-12" onclick="cargar(this)">
                     <div class="contenedor-foto">
                         <img src="./img/Gianni Blanca.png" alt="Zapatilla Gianni- blanca">
-                        <p class="descripcion">Gianni-Blanca</p>
+                        <p class="descripcion">Gianni</p>
                         <span class="precio">$ 2000</span>
                     </div>
                 </div>
 
-                <div class="item col-lg-2 col-md-3 col-sm-4 col-6" onclick="cargar(this)">
+                <div class="item col-xl-3 col-lg-3 col-md-4 col-sm-6 col-12" onclick="cargar(this)">
                     <div class="contenedor-foto">
                         <img src="./img/Bruno Suela.png" alt="Zapato  Bruno - suela">
-                        <p class="descripcion">Bruno Suela</p>
+                        <p class="descripcion">Zapato Bruno</p>
                         <span class="precio">$ 2000</span>
+                        <div class="circulos">
+                            <!-- <span>Color Suela: </span> -->
+                            <div class="circulo" style="background-color: #d2691e ;"></div>
+                            <div class="circulo" style="background-color: black;"></div>
+                            <div class="circulo" style="background-color: rgb(2, 2, 194);"></div>
+                            <div class="circulo" style="background-color: #800000;"></div>
+                        </div>
                     </div>
                 </div>
 
-                <div class="item col-lg-2 col-md-3 col-sm-4 col-6" onclick="cargar(this)">
+                <div class="item col-xl-3 col-lg-3 col-md-4 col-sm-6 col-12" onclick="cargar(this)">
                     <div class="contenedor-foto">
                         <img src="./img/Genaro.png" alt="Genaro">
                         <p class="descripcion">Genaro</p>
@@ -353,63 +504,84 @@
                     </div>
                 </div>
 
-                <div class="item col-lg-2 col-md-3 col-sm-4 col-6" onclick="cargar(this)">
+                <div class="item col-xl-3 col-lg-3 col-md-4 col-sm-6 col-12" onclick="cargar(this)">
                     <div class="contenedor-foto">
                         <img src="./img/Gianni negra.png" alt="Zapatilla Gianni-Negro">
-                        <p class="descripcion">Gianni-Negro</p>
+                        <p class="descripcion">Gianni</p>
                         <span class="precio">$ 2000</span>
                     </div>
                 </div>
 
-                <div class="item col-lg-2 col-md-3 col-sm-4 col-6" onclick="cargar(this)">
+                <div class="item col-xl-3 col-lg-3 col-md-4 col-sm-6 col-12" onclick="cargar(this)">
                     <div class="contenedor-foto">
                         <img src="./img/Renato Suela.png" alt="Zapato Renato - suela">
-                        <p class="descripcion">Renato Suela</p>
+                        <p class="descripcion">Zapato Renato</p>
                         <span class="precio">$ 2000</span>
+                        <div class="circulos">
+                            <!-- <span>Color Suela: </span> -->
+                            <div class="circulo" style="background-color: #d2691e ;"></div>
+                            <div class="circulo" style="background-color: black;"></div>
+                            <div class="circulo" style="background-color: rgb(2, 2, 194);"></div>
+                            <div class="circulo" style="background-color: #800000;"></div>
+                        </div>
                     </div>
                 </div>
 
-                <div class="item col-lg-2 col-md-3 col-sm-4 col-6" onclick="cargar(this)">
+                <div class="item col-xl-3 col-lg-3 col-md-4 col-sm-6 col-12" onclick="cargar(this)">
                     <div class="contenedor-foto">
                         <img src="./img/Greta Negro.png" alt="Bota Greta-Negro">
-                        <p class="descripcion">Greta-Negro</p>
+                        <p class="descripcion">Greta</p>
                         <span class="precio">$ 2000</span>
                     </div>
                 </div>
 
-                <div class="item col-lg-2 col-md-3 col-sm-4 col-6" onclick="cargar(this)">
+                <div class="item col-xl-3 col-lg-3 col-md-4 col-sm-6 col-12" onclick="cargar(this)">
                     <div class="contenedor-foto">
                         <img src="./img/Placido.png" alt="Zapato Placido">
-                        <p class="descripcion">Placido</p>
+                        <p class="descripcion">Zapato Placido</p>
                         <span class="precio">$ 2000</span>
+                        <div class="circulos">
+                            <!-- <span>Color Suela: </span> -->
+                            <div class="circulo" style="background-color: #d2691e ;"></div>
+                            <div class="circulo" style="background-color: black;"></div>
+                            <div class="circulo" style="background-color: rgb(2, 2, 194);"></div>
+                            <div class="circulo" style="background-color: #800000;"></div>
+                        </div>
                     </div>
                 </div>
 
-                <div class="item col-lg-2 col-md-3 col-sm-4 col-6" onclick="cargar(this)">
+                <div class="item col-xl-3 col-lg-3 col-md-4 col-sm-6 col-12" onclick="cargar(this)">
                     <div class="contenedor-foto">
                         <img src="./img/Giovanni Verde.png" alt="Giovanni-Verde">
-                        <p class="descripcion">Giovanni-Verde</p>
+                        <p class="descripcion">Giovanni</p>
                         <span class="precio">$ 2000</span>
                     </div>
                 </div>
 
-                <div class="item col-lg-2 col-md-3 col-sm-4 col-6" onclick="cargar(this)">
+                <div class="item col-xl-3 col-lg-3 col-md-4 col-sm-6 col-12" onclick="cargar(this)">
                     <div class="contenedor-foto">
                         <img src="./img/Gino negro.png" alt="Zapatilla Gino-Negro">
-                        <p class="descripcion">Gino-Negro</p>
+                        <p class="descripcion">Gino</p>
                         <span class="precio">$ 2000</span>
                     </div>
                 </div>
 
-                <div class="item col-lg-2 col-md-3 col-sm-4 col-6" onclick="cargar(this)">
+                <div class="item col-xl-3 col-lg-3 col-md-4 col-sm-6 col-12" onclick="cargar(this)">
                     <div class="contenedor-foto">
                         <img src="./img/Viccenzo.png" alt="Zapato Viccenzo">
-                        <p class="descripcion">Vicenzo</p>
+                        <p class="descripcion">Zapato Vicenzo</p>
                         <span class="precio">$ 2000</span>
+                        <div class="circulos">
+                            <!-- <span>Color Suela: </span> -->
+                            <div class="circulo" style="background-color: #d2691e ;"></div>
+                            <div class="circulo" style="background-color: black;"></div>
+                            <div class="circulo" style="background-color: rgb(2, 2, 194);"></div>
+                            <div class="circulo" style="background-color: #800000;"></div>
+                        </div>
                     </div>
                 </div>
 
-                <div class="item col-lg-2 col-md-3 col-sm-4 col-6" onclick="cargar(this)">
+                <div class="item col-xl-3 col-lg-3 col-md-4 col-sm-6 col-12" onclick="cargar(this)">
                     <div class="contenedor-foto">
                         <img src="./img/Seleccione.png" alt="Zapatilla Seleccione">
                         <p class="descripcion">Seleccione</p>
@@ -417,35 +589,56 @@
                     </div>
                 </div>
 
-                <div class="item col-lg-2 col-md-3 col-sm-4 col-6" onclick="cargar(this)">
+                <div class="item col-xl-3 col-lg-3 col-md-4 col-sm-6 col-12" onclick="cargar(this)">
                     <div class="contenedor-foto">
                         <img src="./img/Mauro.png" alt="Zapato Mauro">
-                        <p class="descripcion">Mauro</p>
+                        <p class="descripcion">Zapato Mauro</p>
                         <span class="precio">$ 2000</span>
+                        <div class="circulos">
+                            <!-- <span>Color Suela: </span> -->
+                            <div class="circulo" style="background-color: #d2691e ;"></div>
+                            <div class="circulo" style="background-color: black;"></div>
+                            <div class="circulo" style="background-color: rgb(2, 2, 194);"></div>
+                            <div class="circulo" style="background-color: #800000;"></div>
+                        </div>
                     </div>
                 </div>
 
-                <div class="item col-lg-2 col-md-3 col-sm-4 col-6" onclick="cargar(this)">
+                <div class="item col-xl-3 col-lg-3 col-md-4 col-sm-6 col-12" onclick="cargar(this)">
                     <div class="contenedor-foto">
                         <img src="./img/Gianni tabaco.png" alt="Zapatilla Gianni-Tabaco">
-                        <p class="descripcion">Gianni-Tabaco</p>
+                        <p class="descripcion">Gianni</p>
                         <span class="precio">$ 2000</span>
                     </div>
                 </div>
 
-                <div class="item col-lg-2 col-md-3 col-sm-4 col-6" onclick="cargar(this)">
+                <div class="item col-xl-3 col-lg-3 col-md-4 col-sm-6 col-12" onclick="cargar(this)">
                     <div class="contenedor-foto">
                         <img src="./img/Tino.png" alt="Zapato Tino">
-                        <p class="descripcion">Tino</p>
+                        <p class="descripcion">Zapato Tino</p>
                         <span class="precio">$ 2000</span>
+                        <div class="circulos">
+                            <!-- <span>Color Suela: </span> -->
+                            <div class="circulo" style="background-color: #d2691e ;"></div>
+                            <div class="circulo" style="background-color: black;"></div>
+                            <div class="circulo" style="background-color: rgb(2, 2, 194);"></div>
+                            <div class="circulo" style="background-color: #800000;"></div>
+                        </div>
                     </div>
                 </div>
 
-                <div class="item col-lg-2 col-md-3 col-sm-4 col-6" onclick="cargar(this)">
+                <div class="item col-xl-3 col-lg-3 col-md-4 col-sm-6 col-12" onclick="cargar(this)">
                     <div class="contenedor-foto">
                         <img src="./img/Bruno picado negro.png" alt="Zapato  Bruno Picado-Negro">
-                        <p class="descripcion">Bruno Picado-Negro</p>
+                        <p class="descripcion">Zapato Bruno Picado</p>
                         <span class="precio">$ 8000</span>
+                        <div class="circulos">
+                            <!-- <span>Color Suela: </span> -->
+                            <div class="circulo" style="background-color: #d2691e ;"></div>
+                            <div class="circulo" style="background-color: black;"></div>
+                            <div class="circulo" style="background-color: rgb(2, 2, 194);"></div>
+                            <div class="circulo" style="background-color: #800000;"></div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -467,30 +660,28 @@
                     <div class="circulo" style="background-color: black;"></div>
                     <div class="circulo" style="background-color: brown;"></div>
                     <div class="circulo" style="background-color: blue;"></div>
-                </div>
+                </div> -->
                 <div class="circulos">
-                    <p>Color de zuela</p>
+                    <span>Color del cuero: </span>
                     <div class="circulo" style="background-color: #d2691e ;"></div>
                     <div class="circulo" style="background-color: black;"></div>
                     <div class="circulo" style="background-color: blue;"></div>
                     <div class="circulo" style="background-color: #800000;"></div>
-                </div> -->
+                </div>
 
                 <span class="precio" id="precio">$ 1000</span>
 
                 <div class="fila">
                     <div class="size">
-                        <label for="SIZE"></label>
-                        <select name="" id="" class="class=" btnTalles"">
-                            <option class="btnTalles" value="">39</option>
-                            <option class="btnTalles" value="">40</option>
-                            <option class="btnTalles" value="">41</option>
-                            <option class="btnTalles" value="">42</option>
-                            <option class="btnTalles" value="">43</option>
-                            <option class="btnTalles" value="">44</option>
-                            <option class="btnTalles" value="">45</option>
-                        </select>
+                        <button class="btnTalles">39</button>
+                        <button class="btnTalles">40</button>
+                        <button class="btnTalles">41</button>
+                        <button class="btnTalles">42</button>
+                        <button class="btnTalles">43</button>
+                        <button class="btnTalles">44</button>
+                        <button class="btnTalles">45</button>
                     </div>
+
                     <button class="btnAgregarCarrito" onclick="agregarAlCarrito()">AGREGAR AL CARRITO</button>
                 </div>
             </div>
@@ -546,31 +737,95 @@
     </nav>
 
     <!-- Footer -->
-    <div class="container">
-        <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
-            <div class="col-md-4 d-flex align-items-center">
-                <a href="/" class="mb-3 me-2 mb-md-0 text-body-secondary text-decoration-none lh-1">
-                    <svg class="bi" width="30" height="24">
-                        <use xlink:href="#bootstrap" />
-                    </svg>
-                </a>
-                <span class="mb-3 mb-md-0 text-body-secondary">&copy; Siamo Diversi, 2023</span>
-            </div>
+    <footer >
+        <div class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+            <div class="container">
+                <section class="py-5">
+                    <div class="row">
+                        <div class="col-6 col-md-2 mb-3">
+                            <h5>Productos</h5>
+                            <ul class="nav flex-column">
+                                <li class="nav-item mb-2"><a href="./index.html"
+                                        class="nav-link p-0 text-body-secondary">Home</a></li>
+                                <li class="nav-item mb-2"><a href="./pages/zapatos.html"
+                                        class="nav-link p-0 text-body-secondary">Zapatos</a></li>
+                                <li class="nav-item mb-2"><a href="./pages/zapatillas.html"
+                                        class="nav-link p-0 text-body-secondary">Zapatillas</a></li>
+                                <li class="nav-item mb-2"><a href="./pages/botinetas.html"
+                                        class="nav-link p-0 text-body-secondary">Botinetas</a></li>
+                                <li class="nav-item mb-2"><a href="./pages/sale.html"
+                                        class="nav-link p-0 text-body-secondary">Oulet</a></li>
+                            </ul>
+                        </div>
 
-            <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
-                <li class="ms-3"><a class="text-body-secondary"
-                        href="https://www.instagram.com/siamodiversi.shoes/?igshid=OGQ5ZDc2ODk2ZA%3D%3D&utm_source=qr"><svg
-                            xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor"
-                            class="bi bi-instagram logoInsta" viewBox="0 0 16 16">
-                            <path
-                                d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z" />
-                        </svg>
-                        <use xlink:href="#instagram" />
-                        </svg>
-                    </a></li>
-            </ul>
-        </footer>
-    </div>
+                        <div class="col-6 col-md-2 mb-3">
+                            <h5>Preguntas frecuentes</h5>
+                            <ul class="nav flex-column">
+                                <li class="nav-item mb-2"><a href="./pages/pregustasfrecuentes.html"
+                                        class="nav-link p-0 text-body-secondary">Como comprar</a></li>
+                                <li class="nav-item mb-2"><a href="./pages/pregustasfrecuentes.html"
+                                        class="nav-link p-0 text-body-secondary">Envíos</a></li>
+                                <li class="nav-item mb-2"><a href="./pages/pregustasfrecuentes.html"
+                                        class="nav-link p-0 text-body-secondary">Venta mayorista</a></li>
+                                <li class="nav-item mb-2"><a href="./pages/pregustasfrecuentes.html"
+                                        class="nav-link p-0 text-body-secondary">Formas de pago</a></li>
+                                <li class="nav-item mb-2"><a href="./pages/pregustasfrecuentes.html"
+                                        class="nav-link p-0 text-body-secondary">Tabla de talles</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="col-6 col-md-2 mb-3">
+                            <h5>Contacto</h5>
+                            <ul class="nav flex-column">
+                                <li class="nav-item mb-2"><a href="./pages/contacto.html"
+                                        class="nav-link p-0 text-body-secondary">Déjanos tu consulta</a></li>
+                                <li class="nav-item mb-2">
+                                    <a href="#suscripcion-form" class="nav-link p-0 text-body-secondary">Suscribirse</a>
+                                </li>
+                        </div>
+
+                        <div class="col-md-5 offset-md-1 mb-3">
+                            <form action="https://formsubmit.co/matiasureta28@gmail.com" method="POST">
+                                <h4>Déjanos tu mail para recibir todas las novedades</h4>
+                                <div class="d-flex flex-column flex-sm-row w-100 gap-2">
+                                    <label for="newsletter1" class="visually-hidden">Email address</label>
+                                    <input id="newsletter1" type="text" class="form-control" placeholder="Email address"
+                                        name="suscripcion">
+                                    <button class="w-100 btn btn-lg btnEnviar" type="submit">Enviar</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </section>
+
+                <div class="d-flex justify-content-between">
+                    <div class="col-md-4 d-flex align-items-center">
+                        <a href="/" class="mb-3 me-2 mb-md-0 text-body-secondary text-decoration-none lh-1">
+                            <svg class="bi" width="30" height="24">
+                                <use xlink:href="#bootstrap" />
+                            </svg>
+                        </a>
+                        <span class="mb-3 mb-md-0 text-body-secondary">© Siamo Diversi, 2023</span>
+                    </div>
+                    <div>
+                        <h4>Seguinos en nuestras redes</h4>
+                        <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+                            <li class="ms-3"><a class="text-body-secondary"
+                                    href="https://www.instagram.com/siamodiversi.shoes/?igshid=OGQ5ZDc2ODk2ZA%3D%3D&utm_source=qr"><svg
+                                        xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor"
+                                        class="bi bi-instagram logoInsta" viewBox="0 0 16 16">
+                                        <path
+                                            d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z" />
+                                    </svg>
+                                    <use xlink:href="#instagram" />
+                                    </svg>
+                                </a></li>
+                        </ul>
+                    </div>
+                </div>
+                
+            </div>
+    </footer>
 
 
 
