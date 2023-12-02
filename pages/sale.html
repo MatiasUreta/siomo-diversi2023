@@ -67,87 +67,135 @@
                         </li>
                     </ul>
                 </div>
+                 <!-- Icono Carrito -->
+             <div class="container-icon">
+                <div class="container-cart-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" class="icon-cart">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M15.75 10.5V6a3.75 3.75 0 10-7.5 0v4.5m11.356-1.993l1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 01-1.12-1.243l1.264-12A1.125 1.125 0 015.513 7.5h12.974c.576 0 1.059.435 1.119 1.007zM8.625 10.5a.375.375 0 11-.75 0 .375.375 0 01.75 0zm7.5 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z" />
+                    </svg>
+                    <div class="count-products">
+                        <span id="contador-productos">0</span>
+                    </div>
+                </div>
+
+                <div class="container-cart-products hidden-cart">
+                    <div class="row-product hidden">
+                        <div class="cart-product">
+                            <div class="info-cart-product">
+                                <span class="cantidad-producto-carrito">1</span>
+                                <p class="titulo-producto-carrito">Zapatos </p>
+                                <span class="precio-producto-carrito">$80</span>
+                            </div>
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor" class="icon-close">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                            </svg>
+                        </div>
+                    </div>
+
+                    <div class="cart-total hidden">
+                        <h3>Total:</h3>
+                        <span class="total-pagar">$200</span>
+                    </div>
+                    <p class="cart-empty">El carrito está vacío</p>
+                </div>
+            </div>
             </div>
         </nav>
     </header>
 
     <h1 class="titulo mt-4">Siamo Diversi, Sale Mujer</h1>
 
-    <!-- cards -->
-    <main class="contenido">
-        <div class="mostrador" id="mostrador">
-            <div class="fila row">
-                
+    <!-- card -->
+    <div class="container-items">
 
-                <div class="item col-lg-2 col-md-3 col-sm-4 col-6" onclick="cargar(this)">
-                    <div class="contenedor-foto">
-                        <img src="../img/Donna.png" alt="Bota Donna">
-                        <p class="descripcion">Donna</p>
-                        <span class="precio">$ 2000</span>
-                    </div>
+        <div class="item">
+            <figure>
+                <img src="../img/Donna.png" alt="Borcego Donna " />
+            </figure>
+            <div class="info-product">
+                <h2>Borcego Donna </h2>
+                <p class="price">$80</p>
+                <div class="size">
+                    <span class="btnTalles">39</span>
+                    <span class="btnTalles">40</span>
+                    <span class="btnTalles">41</span>
+                    <span class="btnTalles">42</span>
+                    <span class="btnTalles">43</span>
+                    <span class="btnTalles">44</span>
+                    <span class="btnTalles">45</span>
                 </div>
-
-                <div class="item col-lg-2 col-md-3 col-sm-4 col-6" onclick="cargar(this)">
-                    <div class="contenedor-foto">
-                        <img src="../img/Isabel.png" alt="Bota Isabel">
-                        <p class="descripcion">Isabel</p>
-                        <span class="precio">$ 2000</span>
-                    </div>
-                </div>
-
-                <div class="item col-lg-2 col-md-3 col-sm-4 col-6" onclick="cargar(this)">
-                    <div class="contenedor-foto">
-                        <img src="../img/Greta Negro.png" alt="Bota Greta-Negro">
-                        <p class="descripcion">Greta-Negro</p>
-                        <span class="precio">$ 2000</span>
-                    </div>
-                </div>
-
-        <!-- contenedor del item selecionado -->
-        <div class="seleccion" id="seleccion" style="position: sticky; top: 0;">
-            <div class="cerrar" onclick="cerrar()">
-                ✕
-            </div>
-            <div class="info">
-                <img src="./img/zapato-uno.jpg" alt="" id="img">
-                <h2 id="modelo">Modelo 1</h2>
-                <p id="descripcion"></p>
-
-                <!-- Aquí agregamos los círculos
-                <div class="circulos">
-                    <p>Colores disponibles</p>
-                    <div class="circulo" style="background-color: black;"></div>
-                    <div class="circulo" style="background-color: brown;"></div>
-                    <div class="circulo" style="background-color: blue;"></div>
-                </div>
-                <div class="circulos">
-                    <p>Color de zuela</p>
-                    <div class="circulo" style="background-color: #d2691e ;"></div>
-                    <div class="circulo" style="background-color: black;"></div>
-                    <div class="circulo" style="background-color: blue;"></div>
-                    <div class="circulo" style="background-color: #800000;"></div>
-                </div> -->
-
-                <span class="precio" id="precio">$ 1000</span>
-
-                <div class="fila">
-                    <div class="size">
-                        <label for="SIZE"></label>
-                        <select name="" id="" class="class=" btnTalles"">
-                            <option class="btnTalles" value="">39</option>
-                            <option class="btnTalles" value="">40</option>
-                            <option class="btnTalles" value="">41</option>
-                            <option class="btnTalles" value="">42</option>
-                            <option class="btnTalles" value="">43</option>
-                            <option class="btnTalles" value="">44</option>
-                            <option class="btnTalles" value="">45</option>
-                        </select>
-                    </div>
-                    <button class="btnAgregarCarrito" onclick="agregarAlCarrito()">AGREGAR AL CARRITO</button>
-                </div>
+                <button class="btn-add-cart">Añadir al carrito</button>
             </div>
         </div>
-    </main>
+
+        <div class="item">
+            <figure>
+                <img src="../img/Isabel.png" alt="Borvego Isabel " />
+            </figure>
+            <div class="info-product">
+                <h2>Borcego Isabel </h2>
+                <p class="price">$80</p>
+                <div class="size">
+                    <span class="btnTalles">39</span>
+                    <span class="btnTalles">40</span>
+                    <span class="btnTalles">41</span>
+                    <span class="btnTalles">42</span>
+                    <span class="btnTalles">43</span>
+                    <span class="btnTalles">44</span>
+                    <span class="btnTalles">45</span>
+                </div>
+                <button class="btn-add-cart">Añadir al carrito</button>
+            </div>
+        </div>
+
+        <div class="item">
+            <figure>
+                <img src="../img/Greta Negro.png" alt="Borcego Greta " />
+            </figure>
+            <div class="info-product">
+                <h2>Borcego Greta </h2>
+                <p class="price">$80</p>
+                <div class="size">
+                    <span class="btnTalles">39</span>
+                    <span class="btnTalles">40</span>
+                    <span class="btnTalles">41</span>
+                    <span class="btnTalles">42</span>
+                    <span class="btnTalles">43</span>
+                    <span class="btnTalles">44</span>
+                    <span class="btnTalles">45</span>
+                </div>
+                <button class="btn-add-cart">Añadir al carrito</button>
+            </div>
+        </div>
+
+        <div class="item">
+            <figure>
+                <img src="../img/Greta Marron.png" alt="Zapato container-items" />
+            </figure>
+            <div class="info-product">
+                <h2>Zapatos container-items</h2>
+                <p class="price">$80</p>
+                <div class="circulos">
+                    <!-- <span>Color Suela: </span> -->
+                    <div class="circulo" style="background-color: #d2691e ;"></div>
+                    <div class="circulo" style="background-color: black;"></div>
+                    <div class="circulo" style="background-color: rgb(2, 2, 194);"></div>
+                    <div class="circulo" style="background-color: #800000;"></div>
+                </div>
+                <button class="btn-add-cart">Añadir al carrito</button>
+            </div>
+        </div>
+
+
+
+
+
+
+        <!-- fin de seccion oulet -->
+    </div>
 
 
 

@@ -15,13 +15,17 @@
 
     <!-- Css -->
     <link rel="stylesheet" href="./css/main.css">
+
+
 </head>
 
 <body>
     <!-- Marquee -->
     <marquee class="marquee" direction="left" width="100%" scrollamount="3">
-        Siamo Diversi Shoes
+        Siamo Diversi Nueva Temporada 2024 <marquee class="marquee" direction="left" width="100%" scrollamount="3">
+            Envíos a todo el pais y GRATIS en CABA</marquee>
     </marquee>
+
 
     <!-- Navbar -->
     <header class="header">
@@ -29,16 +33,18 @@
             <div class="container-fluid">
                 <a class="navbar-brand titulo" href="../index.html"><img class="logoPrincipal"
                         src="../img/Logo PRINCIPAL.png" alt="logo de siamo diversi"></a>
-                <button class="navbar-toggler" type="button" id="navbarButton">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
+                    aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="navbar-collapse" id="navbarNavDropdown">
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
                     <ul class="navbar-nav ms-auto m-1 ">
                         <li class="nav-item">
-                            <a class="nav-link textoNavbar" aria-current="page" href="./index.html">Inicio</a>
+                            <a class="nav-link textoNavbar" aria-current="page" href="../index.html">Inicio</a>
                         </li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle textoNavbar" href="./pages/productos.html" role="button"
+                            <a class="nav-link dropdown-toggle textoNavbar" href="#" role="button"
                                 data-bs-toggle="dropdown" aria-expanded="false">
                                 Hombres
                             </a>
@@ -54,7 +60,7 @@
                                     class="bi bi-fire" viewBox="0 0 16 16">
                                     <path
                                         d="M8 16c3.314 0 6-2 6-5.5 0-1.5-.5-4-2.5-6 .25 1.5-1.25 2-1.25 2C11 4 9 .5 6 0c.357 2 .5 4-2 6-1.25 1-2 2.729-2 4.5C2 14 4.686 16 8 16Zm0-1c-1.657 0-3-1-3-2.75 0-.75.25-2 1.25-3C6.125 10 7 10.5 7 10.5c-.375-1.25.5-3.25 2-3.5-.179 1-.25 2 1 3 .625.5 1 1.364 1 2.25C11 14 9.657 15 8 15Z" />
-                                </svg> Sale</a>
+                                </svg>Sale</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link textoNavbar" href="./pages/pregustasfrecuentes.html">Preguntas
@@ -66,6 +72,7 @@
                     </ul>
                 </div>
             </div>
+            <!-- Icono Carrito -->
             <div class="container-icon">
                 <div class="container-cart-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
@@ -100,7 +107,6 @@
                     <p class="cart-empty">El carrito está vacío</p>
                 </div>
             </div>
-
         </nav>
     </header>
 
@@ -118,21 +124,24 @@
             </div>
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img src="./img/zapato-negro.PNG" class="d-block w-100 imgCarousel" alt="...">
+                    <img src="./img/banner-zapatos.jpg" class="d-block w-100 imgCarousel"
+                        alt="Portada ilustrativa de la marca">
                     <div class="carousel-caption d-none d-md-block">
                         <h2>Siamo Diversi</h2>
                         <p>Un'essenza Italiana con passione Argentina</p>
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <img src="./img/zapatilla-azul.PNG" class="d-block w-100 imgCarousel" alt="...">
+                    <img src="./img/banner-zapatosdos.jpg" class="d-block w-100 imgCarousel"
+                        alt="Portada ilustrativa de la marca">
                     <div class="carousel-caption d-none d-md-block">
                         <h2>Siamo Diversi</h2>
                         <p>Un'essenza Italiana con passione Argentina</p>
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <img src="./img/banner-2.PNG" class="d-block w-100 imgCarousel" alt="...">
+                    <img src="./img/zapatilla-azul.PNG" class="d-block w-100 imgCarousel"
+                        alt="Portada ilustrativa de la marca">
                     <div class="carousel-caption d-none d-md-block">
                         <h2>Siamo Diversi</h2>
                         <p>Un'essenza Italiana con passione Argentina</p>
@@ -152,542 +161,920 @@
         </div>
     </main>
 
+
+    <!-- CARDS GENERALES -->
     <h1 class="titulo mt-4">Nueva Temporada 2024</h1>
-    <div class="d-flex justify-content-center flex-wrap">
-        <div class="card" style="width: 18rem;">
-            <a href="./pages/zapatos.html"><img src="./img/zapato-marron.PNG" class="card-img-top"
-                    alt="Tarjeta de zapato"></a>
-            <div class="card-body">
-                <h3 class="card-title">Zapatos</h3>
-                <a href="./pages/zapatos.html" class="btn btnVerMas">Ver más</a>
-            </div>
-        </div>
+    <div class="row img-fluid justify-content-center ">
 
-        <div class="card" style="width: 18rem;">
-            <a href="./pages/zapatillas.html"><img src="./img/zapatilla-negra (1).PNG" class="card-img-top"
-                    alt="tarjeta de zapatillas"></a>
-            <div class="card-body">
-                <h3 class="card-title">Zapatillas</h3>
-                <a href="./pages/zapatillas.html" class="btn btnVerMas">Ver más</a>
+        <section class="col-xl-3 col-md-6 col-sm-12">
+            <div class="card mt-5">
+                <a href="./pages/zapatillas.html"><img src="./img/zapatilla-azul.PNG" class="img-fluid"
+                        alt="imagen de buzos"></a>
+                <div class="card-body">
+                    <h4 class="card-title">Zapatillas</h4>
+                    <p class="card-text">Talle 39 al 45</p>
+                </div>
             </div>
-        </div>
+        </section>
 
-        <div class="card" style="width: 18rem;">
-            <a href="./pages/botinetas.html"><img src="./img/banner-1.jpeg" class="card-img-top"
-                    alt="Tarjeta botinetas"></a>
-            <div class="card-body">
-                <h3 class="card-title">botinetas</h3>
-                <a href="./pages/botinetas.html" class="btn btnVerMas">Ver más</a>
-            </div>
-        </div>
 
-        <div class="card" style="width: 18rem;">
-            <a href="./pages/sale.html"><img src="./img/Greta Marron.png" class="card-img-top" alt="Oulet mujer"></a>
-            <div class="card-body">
-                <h3 class="card-title">Oulet Mujer</h3>
-                <a href="./pages/sale.html" class="btn btnVerMas">Ver más</a>
+        <section class="col-xl-3 col-md-6 col-sm-12">
+            <div class="card mt-5">
+                <a href="./pages/zapatos.html"><img src="./img/zapato-negro.PNG" class="img-fluid"
+                        alt="imagen de camisas"></a>
+                <div class="card-body">
+                    <h4 class="card-title">Zapatos</h4>
+                    <p class="card-text">Talle 39 al 45</p>
+                </div>
             </div>
-        </div>
+        </section>
+
+
+        <section class="col-xl-3 col-md-6 col-sm-12">
+            <div class="card mt-5">
+                <a href="./pages/botinetas.html"><img src="./img/zapato-marron.PNG" class="img-fluid"
+                        alt="imagen de remeras"></a>
+                <div class="card-body">
+                    <h4 class="card-title">Botinetas</h4>
+                    <p class="card-text">Talle 39 al 45</p>
+                </div>
+            </div>
+        </section>
     </div>
 
-    <!-- cards -->
-    <section class="contenido" id="container-items">
-        <div class="mostrador" id="mostrador">
-            <div class="fila row">
-                <div class="item col-xl-3 col-lg-3 col-md-4 col-sm-6 col-12" onclick="cargar(this)">
-                    <div class="contenedor-foto" id="btn-add-cart">
-                        <img src="./img/Amadeo.png" alt="Zapato amadeo">
-                        <p class="descripcion">Zapato Amadeo</p>
-                        <span class="precio">$ 1000</span>
-                        <div class="circulos">
-                            <!-- <span>Color Suela: </span> -->
-                            <div class="circulo" style="background-color: #d2691e ;"></div>
-                            <div class="circulo" style="background-color: black;"></div>
-                            <div class="circulo" style="background-color: rgb(2, 2, 194);"></div>
-                            <div class="circulo" style="background-color: #800000;"></div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="item col-xl-3 col-lg-3 col-md-4 col-sm-6 col-12" onclick="cargar(this)">
-                    <div class="contenedor-foto">
-                        <img src="./img/Aurelio.png" alt="Zapato Aurelio">
-                        <p class="descripcion">Zapato Aurelio</p>
-                        <span class="precio">$ 2000</span>
-                        <div class="circulos">
-                            <!-- <span>Color Suela: </span> -->
-                            <div class="circulo" style="background-color: #d2691e ;"></div>
-                            <div class="circulo" style="background-color: black;"></div>
-                            <div class="circulo" style="background-color: rgb(2, 2, 194);"></div>
-                            <div class="circulo" style="background-color: #800000;"></div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="item col-xl-3 col-lg-3 col-md-4 col-sm-6 col-12" onclick="cargar(this)">
-                    <div class="contenedor-foto">
-                        <img src="./img/Renato Verde.png" alt="Zapato Renato">
-                        <p class="descripcion">Zapato Renato</p>
-                        <span class="precio">$ 1000</span>
-                        <div class="circulos">
-                            <!-- <span>Color Suela: </span> -->
-                            <div class="circulo" style="background-color: #d2691e ;"></div>
-                            <div class="circulo" style="background-color: black;"></div>
-                            <div class="circulo" style="background-color: rgb(2, 2, 194);"></div>
-                            <div class="circulo" style="background-color: #800000;"></div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="item col-xl-3 col-lg-3 col-md-4 col-sm-6 col-12" onclick="cargar(this)">
-                    <div class="contenedor-foto">
-                        <img src="./img/Terzo.png" alt="Zapato Terzo">
-                        <p class="descripcion">Zapato Terzo</p>
-                        <span class="precio">$ 3000</span>
-                        <div class="circulos">
-                            <!-- <span>Color Suela: </span> -->
-                            <div class="circulo" style="background-color: #d2691e ;"></div>
-                            <div class="circulo" style="background-color: black;"></div>
-                            <div class="circulo" style="background-color: rgb(2, 2, 194);"></div>
-                            <div class="circulo" style="background-color: #800000;"></div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="item col-xl-3 col-lg-3 col-md-4 col-sm-6 col-12" onclick="cargar(this)">
-                    <div class="contenedor-foto">
-                        <img src="./img/Gaetano.png" alt="Zapato Gaetano">
-                        <p class="descripcion">Zapato Gaetano</p>
-                        <span class="precio">$ 4000</span>
-                        <div class="circulos">
-                            <!-- <span>Color Suela: </span> -->
-                            <div class="circulo" style="background-color: #d2691e ;"></div>
-                            <div class="circulo" style="background-color: black;"></div>
-                            <div class="circulo" style="background-color: rgb(2, 2, 194);"></div>
-                            <div class="circulo" style="background-color: #800000;"></div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="item col-xl-3 col-lg-3 col-md-4 col-sm-6 col-12" onclick="cargar(this)">
-                    <div class="contenedor-foto">
-                        <img src="./img/Romeo.png" alt="Zapato Romeo">
-                        <p class="descripcion">Zapato Romeo</p>
-                        <span class="precio">$ 1000</span>
-                        <div class="circulos">
-                            <!-- <span>Color Suela: </span> -->
-                            <div class="circulo" style="background-color: #d2691e ;"></div>
-                            <div class="circulo" style="background-color: black;"></div>
-                            <div class="circulo" style="background-color: rgb(2, 2, 194);"></div>
-                            <div class="circulo" style="background-color: #800000;"></div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="item col-xl-3 col-lg-3 col-md-4 col-sm-6 col-12" onclick="cargar(this)">
-                    <div class="contenedor-foto">
-                        <img src="./img/Giovanni Azul.png" alt="Giovanni-Azul">
-                        <p class="descripcion">Giovanni</p>
-                        <span class="precio">$ 1000</span>
-                        <div class="circulos">
-                            <!-- <span>Color Suela: </span> -->
-                            <div class="circulo" style="background-color: #d2691e ;"></div>
-                            <div class="circulo" style="background-color: black;"></div>
-                            <div class="circulo" style="background-color: rgb(2, 2, 194);"></div>
-                            <div class="circulo" style="background-color: #800000;"></div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="item col-xl-3 col-lg-3 col-md-4 col-sm-6 col-12" onclick="cargar(this)">
-                    <div class="contenedor-foto">
-                        <img src="./img/Donatto picado marron.png" alt="Zapato Picado-Marron">
-                        <p class="descripcion">Zapato Donato Picado</p>
-                        <span class="precio">$ 1000</span>
-                        <div class="circulos">
-                            <!-- <span>Color Suela: </span> -->
-                            <div class="circulo" style="background-color: #d2691e ;"></div>
-                            <div class="circulo" style="background-color: black;"></div>
-                            <div class="circulo" style="background-color: rgb(2, 2, 194);"></div>
-                            <div class="circulo" style="background-color: #800000;"></div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="item col-xl-3 col-lg-3 col-md-4 col-sm-6 col-12" onclick="cargar(this)">
-                    <div class="contenedor-foto">
-                        <img src="./img/Filippo.png" alt="Zapato  Filippo">
-                        <p class="descripcion">Zapato Filippo</p>
-                        <span class="precio">$ 1000</span>
-                        <div class="circulos">
-                            <!-- <span>Color Suela: </span> -->
-                            <div class="circulo" style="background-color: #d2691e ;"></div>
-                            <div class="circulo" style="background-color: black;"></div>
-                            <div class="circulo" style="background-color: rgb(2, 2, 194);"></div>
-                            <div class="circulo" style="background-color: #800000;"></div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="item col-xl-3 col-lg-3 col-md-4 col-sm-6 col-12" onclick="cargar(this)">
-                    <div class="contenedor-foto">
-                        <img src="./img/Rocco.png" alt="Zapato Rocco">
-                        <p class="descripcion">Zapato Rocco</p>
-                        <span class="precio">$ 2000</span>
-                        <div class="circulos">
-                            <!-- <span>Color Suela: </span> -->
-                            <div class="circulo" style="background-color: #d2691e ;"></div>
-                            <div class="circulo" style="background-color: black;"></div>
-                            <div class="circulo" style="background-color: rgb(2, 2, 194);"></div>
-                            <div class="circulo" style="background-color: #800000;"></div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="item col-xl-3 col-lg-3 col-md-4 col-sm-6 col-12" onclick="cargar(this)">
-                    <div class="contenedor-foto">
-                        <img src="./img/Enzo.png" alt="Zapato Enzo">
-                        <p class="descripcion">Zapato Enzo</p>
-                        <span class="precio">$ 2000</span>
-                        <div class="circulos">
-                            <!-- <span>Color Suela: </span> -->
-                            <div class="circulo" style="background-color: #d2691e ;"></div>
-                            <div class="circulo" style="background-color: black;"></div>
-                            <div class="circulo" style="background-color: rgb(2, 2, 194);"></div>
-                            <div class="circulo" style="background-color: #800000;"></div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="item col-xl-3 col-lg-3 col-md-4 col-sm-6 col-12" onclick="cargar(this)">
-                    <div class="contenedor-foto">
-                        <img src="./img/Dino.png" alt="Zapato Dino">
-                        <p class="descripcion">Zapato Dino</p>
-                        <span class="precio">$ 2000</span>
-                        <div class="circulos">
-                            <!-- <span>Color Suela: </span> -->
-                            <div class="circulo" style="background-color: #d2691e ;"></div>
-                            <div class="circulo" style="background-color: black;"></div>
-                            <div class="circulo" style="background-color: rgb(2, 2, 194);"></div>
-                            <div class="circulo" style="background-color: #800000;"></div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="item col-xl-3 col-lg-3 col-md-4 col-sm-6 col-12" onclick="cargar(this)">
-                    <div class="contenedor-foto">
-                        <img src="./img/Carmine.png" alt="Zapato Carmine">
-                        <p class="descripcion">Zapato Carmine</p>
-                        <span class="precio">$ 2000</span>
-                        <div class="circulos">
-                            <!-- <span>Color Suela: </span> -->
-                            <div class="circulo" style="background-color: #d2691e ;"></div>
-                            <div class="circulo" style="background-color: black;"></div>
-                            <div class="circulo" style="background-color: rgb(2, 2, 194);"></div>
-                            <div class="circulo" style="background-color: #800000;"></div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="item col-xl-3 col-lg-3 col-md-4 col-sm-6 col-12" onclick="cargar(this)">
-                    <div class="contenedor-foto">
-                        <img src="./img/Greta Marron.png" alt="Zapato Greta-Marron">
-                        <p class="descripcion">Zapato Greta</p>
-                        <span class="precio">$ 2000</span>
-                        <div class="circulos">
-                            <!-- <span>Color Suela: </span> -->
-                            <div class="circulo" style="background-color: #d2691e ;"></div>
-                            <div class="circulo" style="background-color: black;"></div>
-                            <div class="circulo" style="background-color: rgb(2, 2, 194);"></div>
-                            <div class="circulo" style="background-color: #800000;"></div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="item col-xl-3 col-lg-3 col-md-4 col-sm-6 col-12" onclick="cargar(this)">
-                    <div class="contenedor-foto">
-                        <img src="./img/Pascuale.png" alt="Zapato Pascuale">
-                        <p class="descripcion">Zapato Pascuale</p>
-                        <span class="precio">$ 2000</span>
-                        <div class="circulos">
-                            <!-- <span>Color Suela: </span> -->
-                            <div class="circulo" style="background-color: #d2691e ;"></div>
-                            <div class="circulo" style="background-color: black;"></div>
-                            <div class="circulo" style="background-color: rgb(2, 2, 194);"></div>
-                            <div class="circulo" style="background-color: #800000;"></div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="item col-xl-3 col-lg-3 col-md-4 col-sm-6 col-12" onclick="cargar(this)">
-                    <div class="contenedor-foto">
-                        <img src="./img/Luigi.png" alt="Zapato Luigi">
-                        <p class="descripcion">Zapato Luigi</p>
-                        <span class="precio">$ 2000</span>
-                        <div class="circulos">
-                            <!-- <span>Color Suela: </span> -->
-                            <div class="circulo" style="background-color: #d2691e ;"></div>
-                            <div class="circulo" style="background-color: black;"></div>
-                            <div class="circulo" style="background-color: rgb(2, 2, 194);"></div>
-                            <div class="circulo" style="background-color: #800000;"></div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="item col-xl-3 col-lg-3 col-md-4 col-sm-6 col-12" onclick="cargar(this)">
-                    <div class="contenedor-foto">
-                        <img src="./img/Donna.png" alt="Bota Donna">
-                        <p class="descripcion">Donna</p>
-                        <span class="precio">$ 2000</span>
-                    </div>
-                </div>
-
-                <div class="item col-xl-3 col-lg-3 col-md-4 col-sm-6 col-12" onclick="cargar(this)">
-                    <div class="contenedor-foto">
-                        <img src="./img/Narciso.png" alt="Zapato Narciso">
-                        <p class="descripcion">Zapato Narciso</p>
-                        <span class="precio">$ 2000</span>
-                        <div class="circulos">
-                            <!-- <span>Color Suela: </span> -->
-                            <div class="circulo" style="background-color: #d2691e ;"></div>
-                            <div class="circulo" style="background-color: black;"></div>
-                            <div class="circulo" style="background-color: rgb(2, 2, 194);"></div>
-                            <div class="circulo" style="background-color: #800000;"></div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="item col-xl-3 col-lg-3 col-md-4 col-sm-6 col-12" onclick="cargar(this)">
-                    <div class="contenedor-foto">
-                        <img src="./img/Isabel.png" alt="Bota Isabel">
-                        <p class="descripcion">Isabel</p>
-                        <span class="precio">$ 2000</span>
-                    </div>
-                </div>
-
-                <div class="item col-xl-3 col-lg-3 col-md-4 col-sm-6 col-12" onclick="cargar(this)">
-                    <div class="contenedor-foto">
-                        <img src="./img/Gino suela.png" alt="Zapatilla Gino">
-                        <p class="descripcion">Ginno</p>
-                        <span class="precio">$ 2000</span>
-                    </div>
-                </div>
-
-                <div class="item col-xl-3 col-lg-3 col-md-4 col-sm-6 col-12" onclick="cargar(this)">
-                    <div class="contenedor-foto">
-                        <img src="./img/Gianni Blanca.png" alt="Zapatilla Gianni- blanca">
-                        <p class="descripcion">Gianni</p>
-                        <span class="precio">$ 2000</span>
-                    </div>
-                </div>
-
-                <div class="item col-xl-3 col-lg-3 col-md-4 col-sm-6 col-12" onclick="cargar(this)">
-                    <div class="contenedor-foto">
-                        <img src="./img/Bruno Suela.png" alt="Zapato  Bruno - suela">
-                        <p class="descripcion">Zapato Bruno</p>
-                        <span class="precio">$ 2000</span>
-                        <div class="circulos">
-                            <!-- <span>Color Suela: </span> -->
-                            <div class="circulo" style="background-color: #d2691e ;"></div>
-                            <div class="circulo" style="background-color: black;"></div>
-                            <div class="circulo" style="background-color: rgb(2, 2, 194);"></div>
-                            <div class="circulo" style="background-color: #800000;"></div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="item col-xl-3 col-lg-3 col-md-4 col-sm-6 col-12" onclick="cargar(this)">
-                    <div class="contenedor-foto">
-                        <img src="./img/Genaro.png" alt="Genaro">
-                        <p class="descripcion">Genaro</p>
-                        <span class="precio">$ 2000</span>
-                    </div>
-                </div>
-
-                <div class="item col-xl-3 col-lg-3 col-md-4 col-sm-6 col-12" onclick="cargar(this)">
-                    <div class="contenedor-foto">
-                        <img src="./img/Gianni negra.png" alt="Zapatilla Gianni-Negro">
-                        <p class="descripcion">Gianni</p>
-                        <span class="precio">$ 2000</span>
-                    </div>
-                </div>
-
-                <div class="item col-xl-3 col-lg-3 col-md-4 col-sm-6 col-12" onclick="cargar(this)">
-                    <div class="contenedor-foto">
-                        <img src="./img/Renato Suela.png" alt="Zapato Renato - suela">
-                        <p class="descripcion">Zapato Renato</p>
-                        <span class="precio">$ 2000</span>
-                        <div class="circulos">
-                            <!-- <span>Color Suela: </span> -->
-                            <div class="circulo" style="background-color: #d2691e ;"></div>
-                            <div class="circulo" style="background-color: black;"></div>
-                            <div class="circulo" style="background-color: rgb(2, 2, 194);"></div>
-                            <div class="circulo" style="background-color: #800000;"></div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="item col-xl-3 col-lg-3 col-md-4 col-sm-6 col-12" onclick="cargar(this)">
-                    <div class="contenedor-foto">
-                        <img src="./img/Greta Negro.png" alt="Bota Greta-Negro">
-                        <p class="descripcion">Greta</p>
-                        <span class="precio">$ 2000</span>
-                    </div>
-                </div>
-
-                <div class="item col-xl-3 col-lg-3 col-md-4 col-sm-6 col-12" onclick="cargar(this)">
-                    <div class="contenedor-foto">
-                        <img src="./img/Placido.png" alt="Zapato Placido">
-                        <p class="descripcion">Zapato Placido</p>
-                        <span class="precio">$ 2000</span>
-                        <div class="circulos">
-                            <!-- <span>Color Suela: </span> -->
-                            <div class="circulo" style="background-color: #d2691e ;"></div>
-                            <div class="circulo" style="background-color: black;"></div>
-                            <div class="circulo" style="background-color: rgb(2, 2, 194);"></div>
-                            <div class="circulo" style="background-color: #800000;"></div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="item col-xl-3 col-lg-3 col-md-4 col-sm-6 col-12" onclick="cargar(this)">
-                    <div class="contenedor-foto">
-                        <img src="./img/Giovanni Verde.png" alt="Giovanni-Verde">
-                        <p class="descripcion">Giovanni</p>
-                        <span class="precio">$ 2000</span>
-                    </div>
-                </div>
-
-                <div class="item col-xl-3 col-lg-3 col-md-4 col-sm-6 col-12" onclick="cargar(this)">
-                    <div class="contenedor-foto">
-                        <img src="./img/Gino negro.png" alt="Zapatilla Gino-Negro">
-                        <p class="descripcion">Gino</p>
-                        <span class="precio">$ 2000</span>
-                    </div>
-                </div>
-
-                <div class="item col-xl-3 col-lg-3 col-md-4 col-sm-6 col-12" onclick="cargar(this)">
-                    <div class="contenedor-foto">
-                        <img src="./img/Viccenzo.png" alt="Zapato Viccenzo">
-                        <p class="descripcion">Zapato Vicenzo</p>
-                        <span class="precio">$ 2000</span>
-                        <div class="circulos">
-                            <!-- <span>Color Suela: </span> -->
-                            <div class="circulo" style="background-color: #d2691e ;"></div>
-                            <div class="circulo" style="background-color: black;"></div>
-                            <div class="circulo" style="background-color: rgb(2, 2, 194);"></div>
-                            <div class="circulo" style="background-color: #800000;"></div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="item col-xl-3 col-lg-3 col-md-4 col-sm-6 col-12" onclick="cargar(this)">
-                    <div class="contenedor-foto">
-                        <img src="./img/Seleccione.png" alt="Zapatilla Seleccione">
-                        <p class="descripcion">Seleccione</p>
-                        <span class="precio">$ 2000</span>
-                    </div>
-                </div>
-
-                <div class="item col-xl-3 col-lg-3 col-md-4 col-sm-6 col-12" onclick="cargar(this)">
-                    <div class="contenedor-foto">
-                        <img src="./img/Mauro.png" alt="Zapato Mauro">
-                        <p class="descripcion">Zapato Mauro</p>
-                        <span class="precio">$ 2000</span>
-                        <div class="circulos">
-                            <!-- <span>Color Suela: </span> -->
-                            <div class="circulo" style="background-color: #d2691e ;"></div>
-                            <div class="circulo" style="background-color: black;"></div>
-                            <div class="circulo" style="background-color: rgb(2, 2, 194);"></div>
-                            <div class="circulo" style="background-color: #800000;"></div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="item col-xl-3 col-lg-3 col-md-4 col-sm-6 col-12" onclick="cargar(this)">
-                    <div class="contenedor-foto">
-                        <img src="./img/Gianni tabaco.png" alt="Zapatilla Gianni-Tabaco">
-                        <p class="descripcion">Gianni</p>
-                        <span class="precio">$ 2000</span>
-                    </div>
-                </div>
-
-                <div class="item col-xl-3 col-lg-3 col-md-4 col-sm-6 col-12" onclick="cargar(this)">
-                    <div class="contenedor-foto">
-                        <img src="./img/Tino.png" alt="Zapato Tino">
-                        <p class="descripcion">Zapato Tino</p>
-                        <span class="precio">$ 2000</span>
-                        <div class="circulos">
-                            <!-- <span>Color Suela: </span> -->
-                            <div class="circulo" style="background-color: #d2691e ;"></div>
-                            <div class="circulo" style="background-color: black;"></div>
-                            <div class="circulo" style="background-color: rgb(2, 2, 194);"></div>
-                            <div class="circulo" style="background-color: #800000;"></div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="item col-xl-3 col-lg-3 col-md-4 col-sm-6 col-12" onclick="cargar(this)">
-                    <div class="contenedor-foto">
-                        <img src="./img/Bruno picado negro.png" alt="Zapato  Bruno Picado-Negro">
-                        <p class="descripcion">Zapato Bruno Picado</p>
-                        <span class="precio">$ 8000</span>
-                        <div class="circulos">
-                            <!-- <span>Color Suela: </span> -->
-                            <div class="circulo" style="background-color: #d2691e ;"></div>
-                            <div class="circulo" style="background-color: black;"></div>
-                            <div class="circulo" style="background-color: rgb(2, 2, 194);"></div>
-                            <div class="circulo" style="background-color: #800000;"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- contenedor del item selecionado -->
-        <div class="seleccion" id="seleccion" style="position: sticky; top: 0;">
-            <div class="cerrar" onclick="cerrar()">
-                ✕
-            </div>
-            <div class="info">
-                <img src="./img/zapato-uno.jpg" alt="" id="img">
-                <h2 id="modelo">Modelo 1</h2>
-                <p id="descripcion"></p>
-
-                <!-- Aquí agregamos los círculos
+    <!-- CARDS -->
+    <div class="container-items">
+        <div class="item ">
+            <figure>
+                <img src="../img/Amadeo.png" alt="Zapato Amadeo" />
+            </figure>
+            <div class="info-product">
+                <h2>Zapatos Amadeo</h2>
+                <p class="price">$80</p>
                 <div class="circulos">
-                    <p>Colores disponibles</p>
-                    <div class="circulo" style="background-color: black;"></div>
-                    <div class="circulo" style="background-color: brown;"></div>
-                    <div class="circulo" style="background-color: blue;"></div>
-                </div> -->
-                <div class="circulos">
-                    <span>Color del cuero: </span>
+                    <!-- <span>Color Suela: </span> -->
                     <div class="circulo" style="background-color: #d2691e ;"></div>
                     <div class="circulo" style="background-color: black;"></div>
-                    <div class="circulo" style="background-color: blue;"></div>
+                    <div class="circulo" style="background-color: rgb(2, 2, 194);"></div>
                     <div class="circulo" style="background-color: #800000;"></div>
                 </div>
-
-                <span class="precio" id="precio">$ 1000</span>
-
-                <div class="fila">
-                    <div class="size">
-                        <button class="btnTalles">39</button>
-                        <button class="btnTalles">40</button>
-                        <button class="btnTalles">41</button>
-                        <button class="btnTalles">42</button>
-                        <button class="btnTalles">43</button>
-                        <button class="btnTalles">44</button>
-                        <button class="btnTalles">45</button>
-                    </div>
-
-                    <button class="btnAgregarCarrito" onclick="agregarAlCarrito()">AGREGAR AL CARRITO</button>
+                <div class="size">
+                    <span class="btnTalles">39</span>
+                    <span class="btnTalles">40</span>
+                    <span class="btnTalles">41</span>
+                    <span class="btnTalles">42</span>
+                    <span class="btnTalles">43</span>
+                    <span class="btnTalles">44</span>
+                    <span class="btnTalles">45</span>
                 </div>
+                <button class="btn-add-cart">Añadir al carrito</button>
             </div>
         </div>
 
-    </section>
+        <div class="item">
+            <figure>
+                <img src="../img/Aurelio.png" alt="Zapato Aurelio" />
+            </figure>
+            <div class="info-product">
+                <h2>Zapatos Aurelio</h2>
+                <p class="price">$80</p>
+                <div class="circulos">
+                    <!-- <span>Color Suela: </span> -->
+                    <div class="circulo" style="background-color: #d2691e ;"></div>
+                    <div class="circulo" style="background-color: black;"></div>
+                    <div class="circulo" style="background-color: rgb(2, 2, 194);"></div>
+                    <div class="circulo" style="background-color: #800000;"></div>
+                </div>
+                <div class="size">
+                    <span class="btnTalles">39</span>
+                    <span class="btnTalles">40</span>
+                    <span class="btnTalles">41</span>
+                    <span class="btnTalles">42</span>
+                    <span class="btnTalles">43</span>
+                    <span class="btnTalles">44</span>
+                    <span class="btnTalles">45</span>
+                </div>
+                <button class="btn-add-cart">Añadir al carrito</button>
+            </div>
+        </div>
+
+        <div class="item">
+            <figure>
+                <img src="./img/Renato Verde.png" alt="Zapato Renato" />
+            </figure>
+            <div class="info-product">
+                <h2>Zapatos Renato</h2>
+                <p class="price">$80</p>
+                <div class="circulos">
+                    <!-- <span>Color Suela: </span> -->
+                    <div class="circulo" style="background-color: #d2691e ;"></div>
+                    <div class="circulo" style="background-color: black;"></div>
+                    <div class="circulo" style="background-color: rgb(2, 2, 194);"></div>
+                    <div class="circulo" style="background-color: #800000;"></div>
+                </div>
+                <div class="size">
+                    <span class="btnTalles">39</span>
+                    <span class="btnTalles">40</span>
+                    <span class="btnTalles">41</span>
+                    <span class="btnTalles">42</span>
+                    <span class="btnTalles">43</span>
+                    <span class="btnTalles">44</span>
+                    <span class="btnTalles">45</span>
+                </div>
+                <button class="btn-add-cart">Añadir al carrito</button>
+            </div>
+        </div>
+
+        <div class="item">
+            <figure>
+                <img src="./img/Terzo.png" alt="Zapato Terzo" />
+            </figure>
+            <div class="info-product">
+                <h2>Zapatos Terzo</h2>
+                <p class="price">$80</p>
+                <div class="circulos">
+                    <!-- <span>Color Suela: </span> -->
+                    <div class="circulo" style="background-color: #d2691e ;"></div>
+                    <div class="circulo" style="background-color: black;"></div>
+                    <div class="circulo" style="background-color: rgb(2, 2, 194);"></div>
+                    <div class="circulo" style="background-color: #800000;"></div>
+                </div>
+                <div class="size">
+                    <span class="btnTalles">39</span>
+                    <span class="btnTalles">40</span>
+                    <span class="btnTalles">41</span>
+                    <span class="btnTalles">42</span>
+                    <span class="btnTalles">43</span>
+                    <span class="btnTalles">44</span>
+                    <span class="btnTalles">45</span>
+                </div>
+                <button class="btn-add-cart">Añadir al carrito</button>
+            </div>
+        </div>
+
+        <div class="item">
+            <figure>
+                <img src="./img/Gaetano.png" alt="Zapato Gaetano" />
+            </figure>
+            <div class="info-product">
+                <h2>Zapatos Gaetano</h2>
+                <p class="price">$80</p>
+                <div class="circulos">
+                    <!-- <span>Color Suela: </span> -->
+                    <div class="circulo" style="background-color: #d2691e ;"></div>
+                    <div class="circulo" style="background-color: black;"></div>
+                    <div class="circulo" style="background-color: rgb(2, 2, 194);"></div>
+                    <div class="circulo" style="background-color: #800000;"></div>
+                </div>
+                <div class="size">
+                    <span class="btnTalles">39</span>
+                    <span class="btnTalles">40</span>
+                    <span class="btnTalles">41</span>
+                    <span class="btnTalles">42</span>
+                    <span class="btnTalles">43</span>
+                    <span class="btnTalles">44</span>
+                    <span class="btnTalles">45</span>
+                </div>
+                <button class="btn-add-cart">Añadir al carrito</button>
+            </div>
+        </div>
+
+        <div class="item">
+            <figure>
+                <img src="./img/Romeo.png" alt="Zapato Romeo" />
+            </figure>
+            <div class="info-product">
+                <h2>Zapatos Romeo</h2>
+                <p class="price">$80</p>
+                <div class="circulos">
+                    <!-- <span>Color Suela: </span> -->
+                    <div class="circulo" style="background-color: #d2691e ;"></div>
+                    <div class="circulo" style="background-color: black;"></div>
+                    <div class="circulo" style="background-color: rgb(2, 2, 194);"></div>
+                    <div class="circulo" style="background-color: #800000;"></div>
+                </div>
+                <div class="size">
+                    <span class="btnTalles">39</span>
+                    <span class="btnTalles">40</span>
+                    <span class="btnTalles">41</span>
+                    <span class="btnTalles">42</span>
+                    <span class="btnTalles">43</span>
+                    <span class="btnTalles">44</span>
+                    <span class="btnTalles">45</span>
+                </div>
+                <button class="btn-add-cart">Añadir al carrito</button>
+            </div>
+        </div>
+
+        <div class="item">
+            <figure>
+                <img src="./img/Giovanni Azul.png" alt="Botineta Giovanni" />
+            </figure>
+            <div class="info-product">
+                <h2>Botineta Giovanni</h2>
+                <p class="price">$80</p>
+                <div class="size">
+                    <span class="btnTalles">39</span>
+                    <span class="btnTalles">40</span>
+                    <span class="btnTalles">41</span>
+                    <span class="btnTalles">42</span>
+                    <span class="btnTalles">43</span>
+                    <span class="btnTalles">44</span>
+                    <span class="btnTalles">45</span>
+                </div>
+                <button class="btn-add-cart">Añadir al carrito</button>
+            </div>
+        </div>
+
+        <div class="item">
+            <figure>
+                <img src="./img/Donatto picado marron.png" alt="Zapato Donato Picado" />
+            </figure>
+            <div class="info-product">
+                <h2>Zapatos Donato Picado</h2>
+                <p class="price">$80</p>
+                <div class="circulos">
+                    <!-- <span>Color Suela: </span> -->
+                    <div class="circulo" style="background-color: #d2691e ;"></div>
+                    <div class="circulo" style="background-color: black;"></div>
+                    <div class="circulo" style="background-color: rgb(2, 2, 194);"></div>
+                    <div class="circulo" style="background-color: #800000;"></div>
+                </div>
+                <div class="size">
+                    <span class="btnTalles">39</span>
+                    <span class="btnTalles">40</span>
+                    <span class="btnTalles">41</span>
+                    <span class="btnTalles">42</span>
+                    <span class="btnTalles">43</span>
+                    <span class="btnTalles">44</span>
+                    <span class="btnTalles">45</span>
+                </div>
+                <button class="btn-add-cart">Añadir al carrito</button>
+            </div>
+        </div>
+
+        <div class="item">
+            <figure>
+                <img src="./img/Filippo.png" alt="Zapato Filippo" />
+            </figure>
+            <div class="info-product">
+                <h2>Zapatos Filippo</h2>
+                <p class="price">$80</p>
+                <div class="circulos">
+                    <!-- <span>Color Suela: </span> -->
+                    <div class="circulo" style="background-color: #d2691e ;"></div>
+                    <div class="circulo" style="background-color: black;"></div>
+                    <div class="circulo" style="background-color: rgb(2, 2, 194);"></div>
+                    <div class="circulo" style="background-color: #800000;"></div>
+                </div>
+                <div class="size">
+                    <span class="btnTalles">39</span>
+                    <span class="btnTalles">40</span>
+                    <span class="btnTalles">41</span>
+                    <span class="btnTalles">42</span>
+                    <span class="btnTalles">43</span>
+                    <span class="btnTalles">44</span>
+                    <span class="btnTalles">45</span>
+                </div>
+                <button class="btn-add-cart">Añadir al carrito</button>
+            </div>
+        </div>
+
+        <div class="item">
+            <figure>
+                <img src="./img/Rocco.png" alt="Zapato Rocco" />
+            </figure>
+            <div class="info-product">
+                <h2>Zapatos Rocco</h2>
+                <p class="price">$80</p>
+                <div class="circulos">
+                    <!-- <span>Color Suela: </span> -->
+                    <div class="circulo" style="background-color: #d2691e ;"></div>
+                    <div class="circulo" style="background-color: black;"></div>
+                    <div class="circulo" style="background-color: rgb(2, 2, 194);"></div>
+                    <div class="circulo" style="background-color: #800000;"></div>
+                </div>
+                <div class="size">
+                    <span class="btnTalles">39</span>
+                    <span class="btnTalles">40</span>
+                    <span class="btnTalles">41</span>
+                    <span class="btnTalles">42</span>
+                    <span class="btnTalles">43</span>
+                    <span class="btnTalles">44</span>
+                    <span class="btnTalles">45</span>
+                </div>
+                <button class="btn-add-cart">Añadir al carrito</button>
+            </div>
+        </div>
+
+        <div class="item">
+            <figure>
+                <img src="./img/Enzo.png" alt="Zapato Enzo" />
+            </figure>
+            <div class="info-product">
+                <h2>Zapatos Enzo</h2>
+                <p class="price">$80</p>
+                <div class="circulos">
+                    <!-- <span>Color Suela: </span> -->
+                    <div class="circulo" style="background-color: #d2691e ;"></div>
+                    <div class="circulo" style="background-color: black;"></div>
+                    <div class="circulo" style="background-color: rgb(2, 2, 194);"></div>
+                    <div class="circulo" style="background-color: #800000;"></div>
+                </div>
+                <div class="size">
+                    <span class="btnTalles">39</span>
+                    <span class="btnTalles">40</span>
+                    <span class="btnTalles">41</span>
+                    <span class="btnTalles">42</span>
+                    <span class="btnTalles">43</span>
+                    <span class="btnTalles">44</span>
+                    <span class="btnTalles">45</span>
+                </div>
+                <button class="btn-add-cart">Añadir al carrito</button>
+            </div>
+        </div>
+
+        <div class="item">
+            <figure>
+                <img src="./img/Dino.png" alt="Zapato Dino" />
+            </figure>
+            <div class="info-product">
+                <h2>Zapatos Dino</h2>
+                <p class="price">$80</p>
+                <div class="circulos">
+                    <!-- <span>Color Suela: </span> -->
+                    <div class="circulo" style="background-color: #d2691e ;"></div>
+                    <div class="circulo" style="background-color: black;"></div>
+                    <div class="circulo" style="background-color: rgb(2, 2, 194);"></div>
+                    <div class="circulo" style="background-color: #800000;"></div>
+                </div>
+                <div class="size">
+                    <span class="btnTalles">39</span>
+                    <span class="btnTalles">40</span>
+                    <span class="btnTalles">41</span>
+                    <span class="btnTalles">42</span>
+                    <span class="btnTalles">43</span>
+                    <span class="btnTalles">44</span>
+                    <span class="btnTalles">45</span>
+                </div>
+                <button class="btn-add-cart">Añadir al carrito</button>
+            </div>
+        </div>
+
+        <div class="item">
+            <figure>
+                <img src="./img/Carmine.png" alt="Zapato Carmine" />
+            </figure>
+            <div class="info-product">
+                <h2>Zapatos Carmine</h2>
+                <p class="price">$80</p>
+                <div class="circulos">
+                    <!-- <span>Color Suela: </span> -->
+                    <div class="circulo" style="background-color: #d2691e ;"></div>
+                    <div class="circulo" style="background-color: black;"></div>
+                    <div class="circulo" style="background-color: rgb(2, 2, 194);"></div>
+                    <div class="circulo" style="background-color: #800000;"></div>
+                </div>
+                <div class="size">
+                    <span class="btnTalles">39</span>
+                    <span class="btnTalles">40</span>
+                    <span class="btnTalles">41</span>
+                    <span class="btnTalles">42</span>
+                    <span class="btnTalles">43</span>
+                    <span class="btnTalles">44</span>
+                    <span class="btnTalles">45</span>
+                </div>
+                <button class="btn-add-cart">Añadir al carrito</button>
+            </div>
+        </div>
+
+        <div class="item">
+            <figure>
+                <img src="./img/Greta Marron.png" alt="Zapato Greta" />
+            </figure>
+            <div class="info-product">
+                <h2>Zapatos Greta</h2>
+                <p class="price">$80</p>
+                <div class="circulos">
+                    <!-- <span>Color Suela: </span> -->
+                    <div class="circulo" style="background-color: #d2691e ;"></div>
+                    <div class="circulo" style="background-color: black;"></div>
+                    <div class="circulo" style="background-color: rgb(2, 2, 194);"></div>
+                    <div class="circulo" style="background-color: #800000;"></div>
+                </div>
+                <div class="size">
+                    <span class="btnTalles">39</span>
+                    <span class="btnTalles">40</span>
+                    <span class="btnTalles">41</span>
+                    <span class="btnTalles">42</span>
+                    <span class="btnTalles">43</span>
+                    <span class="btnTalles">44</span>
+                    <span class="btnTalles">45</span>
+                </div>
+                <button class="btn-add-cart">Añadir al carrito</button>
+            </div>
+        </div>
+
+        <div class="item">
+            <figure>
+                <img src="./img/Pascuale.png" alt="Zapato Pascuale" />
+            </figure>
+            <div class="info-product">
+                <h2>Zapatos Pascuale</h2>
+                <p class="price">$80</p>
+                <div class="circulos">
+                    <!-- <span>Color Suela: </span> -->
+                    <div class="circulo" style="background-color: #d2691e ;"></div>
+                    <div class="circulo" style="background-color: black;"></div>
+                    <div class="circulo" style="background-color: rgb(2, 2, 194);"></div>
+                    <div class="circulo" style="background-color: #800000;"></div>
+                </div>
+                <div class="size">
+                    <span class="btnTalles">39</span>
+                    <span class="btnTalles">40</span>
+                    <span class="btnTalles">41</span>
+                    <span class="btnTalles">42</span>
+                    <span class="btnTalles">43</span>
+                    <span class="btnTalles">44</span>
+                    <span class="btnTalles">45</span>
+                </div>
+                <button class="btn-add-cart">Añadir al carrito</button>
+            </div>
+        </div>
+
+        <div class="item">
+            <figure>
+                <img src="./img/Luigi.png" alt="Zapato Luigi" />
+            </figure>
+            <div class="info-product">
+                <h2>Zapatos Luigi</h2>
+                <p class="price">$80</p>
+                <div class="circulos">
+                    <!-- <span>Color Suela: </span> -->
+                    <div class="circulo" style="background-color: #d2691e ;"></div>
+                    <div class="circulo" style="background-color: black;"></div>
+                    <div class="circulo" style="background-color: rgb(2, 2, 194);"></div>
+                    <div class="circulo" style="background-color: #800000;"></div>
+                </div>
+                <div class="size">
+                    <span class="btnTalles">39</span>
+                    <span class="btnTalles">40</span>
+                    <span class="btnTalles">41</span>
+                    <span class="btnTalles">42</span>
+                    <span class="btnTalles">43</span>
+                    <span class="btnTalles">44</span>
+                    <span class="btnTalles">45</span>
+                </div>
+                <button class="btn-add-cart">Añadir al carrito</button>
+            </div>
+        </div>
+
+        <div class="item">
+            <figure>
+                <img src="./img/Donna.png" alt="Borcego Donna " />
+            </figure>
+            <div class="info-product">
+                <h2>Borcego Donna </h2>
+                <p class="price">$80</p>
+                <div class="size">
+                    <span class="btnTalles">39</span>
+                    <span class="btnTalles">40</span>
+                    <span class="btnTalles">41</span>
+                    <span class="btnTalles">42</span>
+                    <span class="btnTalles">43</span>
+                    <span class="btnTalles">44</span>
+                    <span class="btnTalles">45</span>
+                </div>
+                <button class="btn-add-cart">Añadir al carrito</button>
+            </div>
+        </div>
+
+        <div class="item">
+            <figure>
+                <img src="./img/Narciso.png" alt="Zapato Narciso" />
+            </figure>
+            <div class="info-product">
+                <h2>Zapatos Narciso</h2>
+                <p class="price">$80</p>
+                <div class="circulos">
+                    <!-- <span>Color Suela: </span> -->
+                    <div class="circulo" style="background-color: #d2691e ;"></div>
+                    <div class="circulo" style="background-color: black;"></div>
+                    <div class="circulo" style="background-color: rgb(2, 2, 194);"></div>
+                    <div class="circulo" style="background-color: #800000;"></div>
+                </div>
+                <div class="size">
+                    <span class="btnTalles">39</span>
+                    <span class="btnTalles">40</span>
+                    <span class="btnTalles">41</span>
+                    <span class="btnTalles">42</span>
+                    <span class="btnTalles">43</span>
+                    <span class="btnTalles">44</span>
+                    <span class="btnTalles">45</span>
+                </div>
+                <button class="btn-add-cart">Añadir al carrito</button>
+            </div>
+        </div>
+
+        <div class="item">
+            <figure>
+                <img src="./img/Isabel.png" alt="Borvego Isabel " />
+            </figure>
+            <div class="info-product">
+                <h2>Borcego Isabel </h2>
+                <p class="price">$80</p>
+                <div class="size">
+                    <span class="btnTalles">39</span>
+                    <span class="btnTalles">40</span>
+                    <span class="btnTalles">41</span>
+                    <span class="btnTalles">42</span>
+                    <span class="btnTalles">43</span>
+                    <span class="btnTalles">44</span>
+                    <span class="btnTalles">45</span>
+                </div>
+                <button class="btn-add-cart">Añadir al carrito</button>
+            </div>
+        </div>
+
+        <div class="item">
+            <figure>
+                <img src="./img/Gino suela.png" alt="Zapatilla Gino " />
+            </figure>
+            <div class="info-product">
+                <h2>Zapatilla Gino </h2>
+                <p class="price">$80</p>
+                <div class="size">
+                    <span class="btnTalles">39</span>
+                    <span class="btnTalles">40</span>
+                    <span class="btnTalles">41</span>
+                    <span class="btnTalles">42</span>
+                    <span class="btnTalles">43</span>
+                    <span class="btnTalles">44</span>
+                    <span class="btnTalles">45</span>
+                </div>
+                <button class="btn-add-cart">Añadir al carrito</button>
+            </div>
+        </div>
+
+        <div class="item">
+            <figure>
+                <img src="./img/Gianni Blanca.png" alt="Zapatilla Gianni " />
+            </figure>
+            <div class="info-product">
+                <h2>Zapatilla Gianni </h2>
+                <p class="price">$80</p>
+                <div class="size">
+                    <span class="btnTalles">39</span>
+                    <span class="btnTalles">40</span>
+                    <span class="btnTalles">41</span>
+                    <span class="btnTalles">42</span>
+                    <span class="btnTalles">43</span>
+                    <span class="btnTalles">44</span>
+                    <span class="btnTalles">45</span>
+                </div>
+                <button class="btn-add-cart">Añadir al carrito</button>
+            </div>
+        </div>
+
+        <div class="item">
+            <figure>
+                <img src="./img/Bruno Suela.png" alt="Zapato Bruno" />
+            </figure>
+            <div class="info-product">
+                <h2>Zapatos Bruno</h2>
+                <p class="price">$80</p>
+                <div class="circulos">
+                    <!-- <span>Color Suela: </span> -->
+                    <div class="circulo" style="background-color: #d2691e ;"></div>
+                    <div class="circulo" style="background-color: black;"></div>
+                    <div class="circulo" style="background-color: rgb(2, 2, 194);"></div>
+                    <div class="circulo" style="background-color: #800000;"></div>
+                </div>
+                <div class="size">
+                    <span class="btnTalles">39</span>
+                    <span class="btnTalles">40</span>
+                    <span class="btnTalles">41</span>
+                    <span class="btnTalles">42</span>
+                    <span class="btnTalles">43</span>
+                    <span class="btnTalles">44</span>
+                    <span class="btnTalles">45</span>
+                </div>
+                <button class="btn-add-cart">Añadir al carrito</button>
+            </div>
+        </div>
+
+        <div class="item">
+            <figure>
+                <img src="./img/Genaro.png" alt="Botineta Genaro" />
+            </figure>
+            <div class="info-product">
+                <h2>Botineta Genaro</h2>
+                <p class="price">$80</p>
+                <div class="circulos">
+                    <!-- <span>Color Suela: </span> -->
+                    <div class="circulo" style="background-color: #d2691e ;"></div>
+                    <div class="circulo" style="background-color: black;"></div>
+                    <div class="circulo" style="background-color: rgb(2, 2, 194);"></div>
+                    <div class="circulo" style="background-color: #800000;"></div>
+                </div>
+                <div class="size">
+                    <span class="btnTalles">39</span>
+                    <span class="btnTalles">40</span>
+                    <span class="btnTalles">41</span>
+                    <span class="btnTalles">42</span>
+                    <span class="btnTalles">43</span>
+                    <span class="btnTalles">44</span>
+                    <span class="btnTalles">45</span>
+                </div>
+                <button class="btn-add-cart">Añadir al carrito</button>
+            </div>
+        </div>
+
+        <div class="item">
+            <figure>
+                <img src="./img/Gianni negra.png" alt="Zapatilla Gianni" />
+            </figure>
+            <div class="info-product">
+                <h2>Zapatilla Gianni</h2>
+                <p class="price">$80</p>
+                <div class="size">
+                    <span class="btnTalles">39</span>
+                    <span class="btnTalles">40</span>
+                    <span class="btnTalles">41</span>
+                    <span class="btnTalles">42</span>
+                    <span class="btnTalles">43</span>
+                    <span class="btnTalles">44</span>
+                    <span class="btnTalles">45</span>
+                </div>
+                <button class="btn-add-cart">Añadir al carrito</button>
+            </div>
+        </div>
+
+        <div class="item">
+            <figure>
+                <img src="./img/Renato Suela.png" alt="Zapato Renato" />
+            </figure>
+            <div class="info-product">
+                <h2>Zapatos Renato</h2>
+                <p class="price">$80</p>
+                <div class="circulos">
+                    <!-- <span>Color Suela: </span> -->
+                    <div class="circulo" style="background-color: #d2691e ;"></div>
+                    <div class="circulo" style="background-color: black;"></div>
+                    <div class="circulo" style="background-color: rgb(2, 2, 194);"></div>
+                    <div class="circulo" style="background-color: #800000;"></div>
+                </div>
+                <div class="size">
+                    <span class="btnTalles">39</span>
+                    <span class="btnTalles">40</span>
+                    <span class="btnTalles">41</span>
+                    <span class="btnTalles">42</span>
+                    <span class="btnTalles">43</span>
+                    <span class="btnTalles">44</span>
+                    <span class="btnTalles">45</span>
+                </div>
+                <button class="btn-add-cart">Añadir al carrito</button>
+            </div>
+        </div>
+
+        <div class="item">
+            <figure>
+                <img src="./img/Greta Negro.png" alt="Borcego Greta " />
+            </figure>
+            <div class="info-product">
+                <h2>Borcego Greta </h2>
+                <p class="price">$80</p>
+                <div class="size">
+                    <span class="btnTalles">39</span>
+                    <span class="btnTalles">40</span>
+                    <span class="btnTalles">41</span>
+                    <span class="btnTalles">42</span>
+                    <span class="btnTalles">43</span>
+                    <span class="btnTalles">44</span>
+                    <span class="btnTalles">45</span>
+                </div>
+                <button class="btn-add-cart">Añadir al carrito</button>
+            </div>
+        </div>
+
+        <div class="item">
+            <figure>
+                <img src="./img/Placido.png" alt="Zapato  Placido" />
+            </figure>
+            <div class="info-product">
+                <h2>Zapatos Placido</h2>
+                <p class="price">$80</p>
+                <div class="circulos">
+                    <!-- <span>Color Suela: </span> -->
+                    <div class="circulo" style="background-color: #d2691e ;"></div>
+                    <div class="circulo" style="background-color: black;"></div>
+                    <div class="circulo" style="background-color: rgb(2, 2, 194);"></div>
+                    <div class="circulo" style="background-color: #800000;"></div>
+                </div>
+                <div class="size">
+                    <span class="btnTalles">39</span>
+                    <span class="btnTalles">40</span>
+                    <span class="btnTalles">41</span>
+                    <span class="btnTalles">42</span>
+                    <span class="btnTalles">43</span>
+                    <span class="btnTalles">44</span>
+                    <span class="btnTalles">45</span>
+                </div>
+                <button class="btn-add-cart">Añadir al carrito</button>
+            </div>
+        </div>
+
+        <div class="item">
+            <figure>
+                <img src="./img/Giovanni Verde.png" alt="Botineta Giovanni verde" />
+            </figure>
+            <div class="info-product">
+                <h2>Botineta Giovanni </h2>
+                <p class="price">$80</p>
+                <div class="size">
+                    <span class="btnTalles">39</span>
+                    <span class="btnTalles">40</span>
+                    <span class="btnTalles">41</span>
+                    <span class="btnTalles">42</span>
+                    <span class="btnTalles">43</span>
+                    <span class="btnTalles">44</span>
+                    <span class="btnTalles">45</span>
+                </div>
+                <button class="btn-add-cart">Añadir al carrito</button>
+            </div>
+        </div>
+
+        <div class="item">
+            <figure>
+                <img src="./img/Gino negro.png" alt="Zapatilla Gino " />
+            </figure>
+            <div class="info-product">
+                <h2>Zapatilla Gino </h2>
+                <p class="price">$21000</p>
+                <div class="size">
+                    <span class="btnTalles">39</span>
+                    <span class="btnTalles">40</span>
+                    <span class="btnTalles">41</span>
+                    <span class="btnTalles">42</span>
+                    <span class="btnTalles">43</span>
+                    <span class="btnTalles">44</span>
+                    <span class="btnTalles">45</span>
+                </div>
+                <button class="btn-add-cart">Añadir al carrito</button>
+            </div>
+        </div>
+
+        <div class="item">
+            <figure>
+                <img src="./img/Viccenzo.png" alt="Zapato Viccenzo" />
+            </figure>
+            <div class="info-product">
+                <h2>Zapatos Viccenzo</h2>
+                <p class="price">$2000</p>
+                <div class="circulos">
+                    <!-- <span>Color Suela: </span> -->
+                    <div class="circulo" style="background-color: #d2691e ;"></div>
+                    <div class="circulo" style="background-color: black;"></div>
+                    <div class="circulo" style="background-color: rgb(2, 2, 194);"></div>
+                    <div class="circulo" style="background-color: #800000;"></div>
+                </div>
+                <div class="size">
+                    <span class="btnTalles">39</span>
+                    <span class="btnTalles">40</span>
+                    <span class="btnTalles">41</span>
+                    <span class="btnTalles">42</span>
+                    <span class="btnTalles">43</span>
+                    <span class="btnTalles">44</span>
+                    <span class="btnTalles">45</span>
+                </div>
+                <button class="btn-add-cart">Añadir al carrito</button>
+            </div>
+        </div>
+
+        <div class="item">
+            <figure>
+                <img src="./img/Seleccione.png" alt="Zapatilla Seleccione " />
+            </figure>
+            <div class="info-product">
+                <h2>Zapatilla Seleccione </h2>
+                <p class="price">$80000</p>
+                <div class="size">
+                    <span class="btnTalles">39</span>
+                    <span class="btnTalles">40</span>
+                    <span class="btnTalles">41</span>
+                    <span class="btnTalles">42</span>
+                    <span class="btnTalles">43</span>
+                    <span class="btnTalles">44</span>
+                    <span class="btnTalles">45</span>
+                </div>
+                <button class="btn-add-cart">Añadir al carrito</button>
+            </div>
+        </div>
+
+        <div class="item">
+            <figure>
+                <img src="./img/Mauro.png" alt="Zapato Mauro" />
+            </figure>
+            <div class="info-product">
+                <h2>Zapatos Mauro</h2>
+                <p class="price">$12300</p>
+                <div class="circulos">
+                    <!-- <span>Color Suela: </span> -->
+                    <div class="circulo" style="background-color: #d2691e ;"></div>
+                    <div class="circulo" style="background-color: black;"></div>
+                    <div class="circulo" style="background-color: rgb(2, 2, 194);"></div>
+                    <div class="circulo" style="background-color: #800000;"></div>
+                </div>
+                <div class="size">
+                    <span class="btnTalles">39</span>
+                    <span class="btnTalles">40</span>
+                    <span class="btnTalles">41</span>
+                    <span class="btnTalles">42</span>
+                    <span class="btnTalles">43</span>
+                    <span class="btnTalles">44</span>
+                    <span class="btnTalles">45</span>
+                </div>
+                <button class="btn-add-cart">Añadir al carrito</button>
+            </div>
+        </div>
+
+        <div class="item">
+            <figure>
+                <img src="./img/Gianni tabaco.png" alt="Zapatilla Gianni tabaco" />
+            </figure>
+            <div class="info-product">
+                <h2>Zapatilla Gianni </h2>
+                <p class="price">$7000</p>
+                <div class="size">
+                    <span class="btnTalles">39</span>
+                    <span class="btnTalles">40</span>
+                    <span class="btnTalles">41</span>
+                    <span class="btnTalles">42</span>
+                    <span class="btnTalles">43</span>
+                    <span class="btnTalles">44</span>
+                    <span class="btnTalles">45</span>
+                </div>
+                <button class="btn-add-cart">Añadir al carrito</button>
+            </div>
+        </div>
+
+        <div class="item">
+            <figure>
+                <img src="./img/Tino.png" alt="Zapato Tino" />
+            </figure>
+            <div class="info-product">
+                <h2>Zapatos Tino</h2>
+                <p class="price">$8000</p>
+                <div class="circulos">
+                    <!-- <span>Color Suela: </span> -->
+                    <div class="circulo" style="background-color: #d2691e ;"></div>
+                    <div class="circulo" style="background-color: black;"></div>
+                    <div class="circulo" style="background-color: rgb(2, 2, 194);"></div>
+                    <div class="circulo" style="background-color: #800000;"></div>
+                </div>
+                <div class="size">
+                    <span class="btnTalles">39</span>
+                    <span class="btnTalles">40</span>
+                    <span class="btnTalles">41</span>
+                    <span class="btnTalles">42</span>
+                    <span class="btnTalles">43</span>
+                    <span class="btnTalles">44</span>
+                    <span class="btnTalles">45</span>
+                </div>
+                <button class="btn-add-cart">Añadir al carrito</button>
+            </div>
+        </div>
+
+        <div class="item">
+            <figure>
+                <img src="./img/Bruno picado negro.png" alt="Zapato Bruno Picado negro" />
+            </figure>
+            <div class="info-product">
+                <h2>Zapatos Bruno Picado</h2>
+                <p class="price">$80</p>
+                <div class="circulos">
+                    <!-- <span>Color Suela: </span> -->
+                    <div class="circulo" style="background-color: #d2691e ;"></div>
+                    <div class="circulo" style="background-color: black;"></div>
+                    <div class="circulo" style="background-color: rgb(2, 2, 194);"></div>
+                    <div class="circulo" style="background-color: #800000;"></div>
+                </div>
+                <div class="size">
+                    <span class="btnTalles">39</span>
+                    <span class="btnTalles">40</span>
+                    <span class="btnTalles">41</span>
+                    <span class="btnTalles">42</span>
+                    <span class="btnTalles">43</span>
+                    <span class="btnTalles">44</span>
+                    <span class="btnTalles">45</span>
+                </div>
+                <button class="btn-add-cart">Añadir al carrito</button>
+            </div>
+        </div>
+        <!-- fin de productos -->
+    </div>
+
+    <hr>
 
     <!-- Iconos -->
     <section class="container d-flex justify-content-center align-items-center mt-5 containerIconos">
@@ -704,11 +1091,11 @@
 
         <div>
             <svg xmlns="http://www.w3.org/2000/svg" width="120" height="120" fill="currentColor"
-                class="bi iconos bi-gift " viewBox="0 0 16 16">
+                class="bi bi-truck iconos" viewBox="0 0 16 16">
                 <path
-                    d="M3 2.5a2.5 2.5 0 0 1 5 0 2.5 2.5 0 0 1 5 0v.006c0 .07 0 .27-.038.494H15a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1v7.5a1.5 1.5 0 0 1-1.5 1.5h-11A1.5 1.5 0 0 1 1 14.5V7a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h2.038A2.968 2.968 0 0 1 3 2.506V2.5zm1.068.5H7v-.5a1.5 1.5 0 1 0-3 0c0 .085.002.274.045.43a.522.522 0 0 0 .023.07zM9 3h2.932a.56.56 0 0 0 .023-.07c.043-.156.045-.345.045-.43a1.5 1.5 0 0 0-3 0V3zM1 4v2h6V4H1zm8 0v2h6V4H9zm5 3H9v8h4.5a.5.5 0 0 0 .5-.5V7zm-7 8V7H2v7.5a.5.5 0 0 0 .5.5H7z" />
+                    d="M0 3.5A1.5 1.5 0 0 1 1.5 2h9A1.5 1.5 0 0 1 12 3.5V5h1.02a1.5 1.5 0 0 1 1.17.563l1.481 1.85a1.5 1.5 0 0 1 .329.938V10.5a1.5 1.5 0 0 1-1.5 1.5H14a2 2 0 1 1-4 0H5a2 2 0 1 1-3.998-.085A1.5 1.5 0 0 1 0 10.5zm1.294 7.456A1.999 1.999 0 0 1 4.732 11h5.536a2.01 2.01 0 0 1 .732-.732V3.5a.5.5 0 0 0-.5-.5h-9a.5.5 0 0 0-.5.5v7a.5.5 0 0 0 .294.456M12 10a2 2 0 0 1 1.732 1h.768a.5.5 0 0 0 .5-.5V8.35a.5.5 0 0 0-.11-.312l-1.48-1.85A.5.5 0 0 0 13.02 6H12zm-9 1a1 1 0 1 0 0 2 1 1 0 0 0 0-2m9 0a1 1 0 1 0 0 2 1 1 0 0 0 0-2" />
             </svg>
-            <p class="m-4 textIconos">Beneficios exclusivos</p>
+            <p class="m-4 textIconos">Envíos a todo el pais <br> envios GRATIS en CABA</p>
         </div>
 
 
@@ -737,7 +1124,7 @@
     </nav>
 
     <!-- Footer -->
-    <footer >
+    <footer>
         <div class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
             <div class="container">
                 <section class="py-5">
@@ -785,7 +1172,7 @@
                         </div>
 
                         <div class="col-md-5 offset-md-1 mb-3">
-                            <form action="https://formsubmit.co/matiasureta28@gmail.com" method="POST">
+                            <form action="https://formsubmit.co/siamodiversiventas@gmail.com" method="POST">
                                 <h4>Déjanos tu mail para recibir todas las novedades</h4>
                                 <div class="d-flex flex-column flex-sm-row w-100 gap-2">
                                     <label for="newsletter1" class="visually-hidden">Email address</label>
@@ -811,9 +1198,9 @@
                         <h4>Seguinos en nuestras redes</h4>
                         <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
                             <li class="ms-3"><a class="text-body-secondary"
-                                    href="https://www.instagram.com/siamodiversi.shoes/?igshid=OGQ5ZDc2ODk2ZA%3D%3D&utm_source=qr"><svg
-                                        xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor"
-                                        class="bi bi-instagram logoInsta" viewBox="0 0 16 16">
+                                    href="https://www.instagram.com/siamodiversi.shoes/?igshid=OGQ5ZDc2ODk2ZA%3D%3D&utm_source=qr"
+                                    target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40"
+                                        fill="currentColor" class="bi bi-instagram logoInsta" viewBox="0 0 16 16">
                                         <path
                                             d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z" />
                                     </svg>
@@ -823,13 +1210,16 @@
                         </ul>
                     </div>
                 </div>
-                
+
             </div>
     </footer>
 
 
 
     <!-- Bs scrip -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
     <script src="./bootstrap-5.3.2-dist/js/bootstrap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"

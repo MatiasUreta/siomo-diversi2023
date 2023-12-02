@@ -38,13 +38,17 @@
 }
 
 .btnVerMas {
-    border: 1px solid black;
+    border: 1px solid white;
     border-radius: 10px;
-    color: black;
-    background-color: lightgray;
+    color: white;
+    background-color: black;
     &:hover {
         color: black;
         font-weight: 500;
         background-color: gray;
     }
 }
+ .btn-add-cart {
+    border-radius: 20px;
+    width: 250px;
+ }
