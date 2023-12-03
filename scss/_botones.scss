@@ -51,4 +51,11 @@
  .btn-add-cart {
     border-radius: 20px;
     width: 250px;
+    padding: 10px;
+    &:hover {
+        color: black;
+        background-color: white;
+        border: 1.6px solid black;
+        transition: .5s ease;
+    }
  }

@@ -782,6 +782,13 @@ del {
 .btn-add-cart {
   border-radius: 20px;
   width: 250px;
+  padding: 10px;
+}
+.btn-add-cart:hover {
+  color: black;
+  background-color: white;
+  border: 1.6px solid black;
+  transition: 0.5s ease;
 }
 
 /*# sourceMappingURL=main.css.map */
