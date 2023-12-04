@@ -125,3 +125,22 @@ const showHTML = () => {
 	valorTotal.innerText = `$${total}`;
 	countProducts.innerText = totalOfProducts;
 };
+
+
+
+// Ordenar de menor a mayor
+allProducts.sort((a, b) => parseFloat(a.price.slice(1)) - parseFloat(b.price.slice(1)));
+
+// Ordenar de mayor a menor
+allProducts.sort((a, b) => parseFloat(b.price.slice(1)) - parseFloat(a.price.slice(1)));
+
+
+// Ordenar de más vendido a menos vendido
+allProducts.sort((a, b) => b.sold - a.sold);
+
+
+// Barra de búsqueda con texto predictivo
+var searchText = 'Zapatos';  // Reemplaza esto con el texto de búsqueda real
+var filteredProducts = allProducts.filter(product => product.title.includes(searchText));
+
+

@@ -59,3 +59,18 @@
         transition: .5s ease;
     }
  }
+
+ .btnComprar {
+    padding: 10px;
+    color: white;
+    background-color: black;
+    border-radius: 20px;
+    margin-bottom: 10px;
+    &:hover {
+        border: 1px solid black;
+        transition: .8 ease;
+        background-color: white;
+        color: black;
+        font-weight: 400;
+    }
+ }

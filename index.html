@@ -5,8 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Siamo Diversi || Zapatos || Zapatillas || Botinetas || Sale</title>
-    <link rel="shortcut icon" href="./img/Logo SECUNDARIO.png" type="image/x-icon"><meta name="description" content="Descubre nuestra amplia selección de zapatos de cuero, zapatillas de cuero, calzado de cuero. Calidad premium, estilos modernos.">
-    <meta name="keywords" content="Zapatos de cuero, Zapatillas de cuero, Calzado de cuero, Zapatos de alta calidad, Zapatillas modernas, Estilo de vida, Colorido, Kendall Jenner, Olivia Culpo, Vogue, Classy, Supreme, Artesano, Caballero, Complemento, Vestuario, Perneras, Cuero de plena flor, Cuero graso, Nobuk, Cuero aterciopelado, Cuero de ternero, Cuero Boxcalf, Impregna">
+    <link rel="shortcut icon" href="./img/Logo SECUNDARIO.png" type="image/x-icon">
+    <meta name="description"
+        content="Descubre nuestra amplia selección de zapatos de cuero, zapatillas de cuero, calzado de cuero. Calidad premium, estilos modernos.">
+    <meta name="keywords"
+        content="Zapatos de cuero, Zapatillas de cuero, Calzado de cuero, Zapatos de alta calidad, Zapatillas modernas, Estilo de vida, Colorido, Kendall Jenner, Olivia Culpo, Vogue, Classy, Supreme, Artesano, Caballero, Complemento, Vestuario, Perneras, Cuero de plena flor, Cuero graso, Nobuk, Cuero aterciopelado, Cuero de ternero, Cuero Boxcalf, Impregna">
 
 
 
@@ -33,13 +36,15 @@
     <header class="header">
         <nav class="navbar navbar-expand-lg">
             <div class="container-fluid">
-                <a class="navbar-brand titulo" href="../index.html"><img class="logoPrincipal"
-                        src="../img/Logo PRINCIPAL.png" alt="logo de siamo diversi"></a>
+                <a class="navbar-brand titulo" href="../index.html"><img class="logoPrincipal" src="./img/logo.png.png"
+                        alt="logo de siamo diversi"></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
                     aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
+                
+                
                 <div class="collapse navbar-collapse" id="navbarNavDropdown">
                     <ul class="navbar-nav ms-auto m-1 ">
                         <li class="nav-item">
@@ -74,6 +79,8 @@
                     </ul>
                 </div>
             </div>
+
+
             <!-- Icono Carrito -->
             <div class="container-icon">
                 <div class="container-cart-icon">
@@ -107,13 +114,26 @@
                         <span class="total-pagar">$200</span>
                     </div>
                     <p class="cart-empty">El carrito está vacío</p>
+                    <a href="https://wa.link/4vb8i2" target="_blank" class="btn btnComprar">
+                        Comprar
+                    </a>
                 </div>
             </div>
         </nav>
     </header>
 
+    <div class="filter-search-bar">
+        <select id="product-filter">
+            <option value="lower-to-higher">Price: Lower to Higher</option>
+            <option value="higher-to-lower">Price: Higher to Lower</option>
+            <option value="most-sold">Most Sold</option>
+        </select>
+        <input type="text" id="product-search" placeholder="Search products">
+    </div>
 
-    <main>
+
+
+    <section>
         <!-- Carousel -->
         <div id="carouselExampleCaptions" class="carousel slide">
             <div class="carousel-indicators">
@@ -161,12 +181,12 @@
                 <span class="visually-hidden">Next</span>
             </button>
         </div>
-    </main>
+    </section>
 
 
     <!-- CARDS GENERALES -->
     <h1 class="titulo mt-4">Nueva Temporada 2024</h1>
-    <div class="row img-fluid justify-content-center ">
+    <main class="row img-fluid justify-content-center ">
 
         <section class="col-xl-3 col-md-6 col-sm-12">
             <div class="card mt-5">
@@ -202,10 +222,11 @@
                 </div>
             </div>
         </section>
-    </div>
+    </main>
+
 
     <!-- CARDS -->
-    <div class="container-items">
+    <div class="container-items row">
         <div class="item ">
             <figure>
                 <img src="../img/Amadeo.png" alt="Zapato Amadeo" />
@@ -1123,7 +1144,7 @@
                 <path
                     d="M0 3.5A1.5 1.5 0 0 1 1.5 2h9A1.5 1.5 0 0 1 12 3.5V5h1.02a1.5 1.5 0 0 1 1.17.563l1.481 1.85a1.5 1.5 0 0 1 .329.938V10.5a1.5 1.5 0 0 1-1.5 1.5H14a2 2 0 1 1-4 0H5a2 2 0 1 1-3.998-.085A1.5 1.5 0 0 1 0 10.5zm1.294 7.456A1.999 1.999 0 0 1 4.732 11h5.536a2.01 2.01 0 0 1 .732-.732V3.5a.5.5 0 0 0-.5-.5h-9a.5.5 0 0 0-.5.5v7a.5.5 0 0 0 .294.456M12 10a2 2 0 0 1 1.732 1h.768a.5.5 0 0 0 .5-.5V8.35a.5.5 0 0 0-.11-.312l-1.48-1.85A.5.5 0 0 0 13.02 6H12zm-9 1a1 1 0 1 0 0 2 1 1 0 0 0 0-2m9 0a1 1 0 1 0 0 2 1 1 0 0 0 0-2" />
             </svg>
-            <p class="m-4 textIconos">Envíos a todo el pais <br> envios GRATIS en CABA</p>
+            <p class="m-4 textIconos">Envíos a todo el pais <br> envíos GRATIS en CABA</p>
         </div>
 
 
@@ -1150,8 +1171,8 @@
             </svg>
         </a>
     </nav>
-    
-    
+
+
 
     <!-- Footer -->
     <footer>

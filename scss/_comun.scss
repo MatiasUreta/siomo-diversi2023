@@ -23,6 +23,10 @@ body {
 
 //HEADER
 header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
     height: 180px;
     background-color: white;
     overflow: visible;
@@ -31,7 +35,9 @@ header {
         color: rgb(1, 1, 1);
     }
     .logoPrincipal {
+        max-width: 100%;
         width: 200px;
+        height: auto;
         margin-left: 100px;
     }
     ul li {
@@ -50,6 +56,8 @@ header {
     border-radius: 10px;
 
 }
+
+
 
 
 .zapatoPng {
@@ -120,73 +128,6 @@ header {
 }
 
 
-//card
-.contenido {
-    max-width: auto;
-    width: 100%;
-    margin: 40px auto;
-    display: flex;
-}
-
-.mostrador {
-    width: 100%;
-    transition: .5s ease;
-}
-
-.mostrador .fila {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between; 
-    margin-bottom: 40px;  
-}
-
-.mostrador .fila .item {
-    max-width: 280px;
-    padding: 25px;
-    height: 450px;
-    text-align: center;
-    margin: 0 10px;
-    cursor: pointer;
-    border-radius: 10px;
-    transition: .3s;
-    &:hover {
-        background-color: white;  
-        box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
-    }
-}
-
-.mostrador .fila .item img {
-    width: 100%;
-    margin: 10px 10px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    transition: transform .4s;
-    &:hover{
-        transform: scale(1.1);
-        transition: .5s ease;
-    }
-}
-
-.mostrador .fila .item .descripcion {
-    color: black;
-    font-weight: bold;
-    &:hover{
-        color: gray;
-    }
-}
-
-.mostrador .fila .item .precio {
-    color: black(190, 0, 0);
-    font-weight: 300;
-    font-size: 20px;
-    &:hover{
-        color: rgb(121, 3, 3);
-        font-weight: 500;
-        transition: .5s ease;
-    }
-}
-
 //TALLES
 .btnTalles {
     border: none;
@@ -206,77 +147,7 @@ header {
 }
 
 
-//CONTENEDOR DE ITEMS
-.seleccion {
-    transition: .5s ease;
-    opacity: 0;
-    border: 1px solid rgb(0, 0, 0);
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    overflow: hidden;
-}
 
-.cerrar {
-    position: absolute;
-    right: 20px;
-    top: 20px;
-    cursor: pointer;
-}
-
-.info {
-    padding: 20px;
-}
-
-.info img {
-    display: flex;
-    margin: 30px;
-    width: 80%;
-}
-
-.info h2 {
-    color: gray;
-    margin-bottom: 10px;
-}
-
-.info p {
-    font-size: 14px;
-    color: gray;
-    margin-bottom: 10px;
-}
-
-.precio {
-    font-size: 30px;
-    font-weight: 200;
-    color: black;
-    margin-bottom: 10px;
-    display: block;
-}
-
-.info .fila {
-    display: flex;
-    align-items: flex-end;   
-}
-
-.info .fila label {
-    display: block;
-    margin-bottom: 10px;
-}
-
-.info .fila select{
-    width: 100px;
-    font-size: 18px;
-    padding: 6px;
-    margin-right: 30px;
-}
-
-.seleccion {
-    height: auto; /* Esto ajustará la altura del div a su contenido */
-    max-height: 800px; /* Esto limitará la altura máxima del div */
-    overflow: auto; /* Esto agregará una barra de desplazamiento si el contenido supera la altura máxima */
-    /* Resto del código */
-}
 
 /*footer*/
 footer {
@@ -338,6 +209,7 @@ footer {
     display: inline-block;
     margin-right: 5px;
     cursor: pointer;
+    border: 1px solid black;
 }
 
 
@@ -360,10 +232,6 @@ footer {
 .icon-cart:hover{
     cursor: pointer;
 }
-
-// img{
-//     max-width: 100%;
-// }
 
 
 .container-icon{
@@ -695,10 +563,34 @@ del {
 
 
 /* Main */
-.container-items{
+.container-items {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+}
+
+@media (min-width: 1200px) { /* Pantallas xl y lg */
+    .container-items {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1199px) { /* Pantallas medianas */
+    .container-items {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (min-width: 576px) and (max-width: 767px) { /* Pantallas chicas */
+    .container-items {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 575px) { /* Pantallas muy chicas */
+    .container-items {
+        grid-template-columns: 1fr;
+    }
 }
 
 .item{
