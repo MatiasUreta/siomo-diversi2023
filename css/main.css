@@ -22,14 +22,15 @@ body {
 }
 
 header {
-  position: fixed;
+  position: sticky;
   top: 0;
   width: 100%;
   z-index: 1000;
-  height: 180px;
   background-color: white;
-  overflow: visible;
   border-radius: 10px;
+  /* Estilo para pantallas medianas */
+  /* Estilo para pantallas pequeñas (móviles) */
+  /* Estilo para pantallas medianas y pequeñas */
 }
 header .textoNavbar {
   color: rgb(1, 1, 1);
@@ -53,17 +54,53 @@ header ul li:hover {
   color: rgb(21, 36, 0);
   background-size: 100% 3px;
 }
+@media (max-width: 768px) {
+  header .logoPrincipal {
+    width: 150px;
+    /* Ajusta este valor según tus necesidades */
+    margin-left: 30px;
+  }
+}
+@media (max-width: 576px) {
+  header .logoPrincipal {
+    width: 100px;
+    /* Ajusta este valor según tus necesidades */
+    margin-left: 10px;
+  }
+}
+@media (max-width: 768px) {
+  header .container-fluid {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
 
 .zapatoPng {
   width: 80px;
 }
 
+/* Estilo para todas las pantallas */
 .imgCarousel {
-  height: 700px;
+  height: 500px; /* Ajusta este valor según tus necesidades */
+  object-fit: cover;
 }
 
+/* Estilo para pantallas medianas (tablets) */
+@media (max-width: 768px) {
+  .imgCarousel {
+    height: 300px; /* Ajusta este valor según tus necesidades */
+  }
+}
+/* Estilo para pantallas pequeñas (móviles) */
+@media (max-width: 576px) {
+  .imgCarousel {
+    height: 200px; /* Ajusta este valor según tus necesidades */
+  }
+}
 .textoConBorde {
-  border: 3px dashed black(255, 0, 0, 0.5); /* Red con 50% de opacidad */
+  border: 3px dashed black(255, 0, 0, 0.5);
+  /* Red con 50% de opacidad */
   display: inline-block;
   padding: 10px;
   transition: filter 0.3s ease, opacity 0.3s ease;
@@ -81,12 +118,6 @@ header ul li:hover {
   opacity: 0.5;
 }
 
-/*.card {
-    margin: 40px; 
-    border-radius: 10px;
-    width: 26rem; /* Ajusta este valor a tu gusto 
-    border: 1.5px solid black;
-}*/
 .row {
   display: flex;
   flex-wrap: wrap;
@@ -97,8 +128,10 @@ header ul li:hover {
   text-transform: uppercase;
   cursor: pointer;
   margin: 1rem;
-  display: flex; /* Esto hará que los elementos dentro de la tarjeta se estiren para ocupar todo el espacio disponible */
-  flex-direction: column; /* Esto hará que los elementos dentro de la tarjeta se apilen verticalmente */
+  display: flex;
+  /* Esto hará que los elementos dentro de la tarjeta se estiren para ocupar todo el espacio disponible */
+  flex-direction: column;
+  /* Esto hará que los elementos dentro de la tarjeta se apilen verticalmente */
   height: 30rem;
 }
 
@@ -108,13 +141,17 @@ header ul li:hover {
 }
 
 .card img {
-  width: 100%; /* Esto hará que la imagen ocupe todo el ancho de la tarjeta */
-  object-fit: cover; /* Esto hará que la imagen mantenga su proporción y cubra todo el espacio disponible, recortándola si es necesario */
-  flex-grow: 1; /* Esto hará que la imagen se estire para ocupar todo el espacio disponible */
+  width: 100%;
+  /* Esto hará que la imagen ocupe todo el ancho de la tarjeta */
+  object-fit: cover;
+  /* Esto hará que la imagen mantenga su proporción y cubra todo el espacio disponible, recortándola si es necesario */
+  flex-grow: 1;
+  /* Esto hará que la imagen se estire para ocupar todo el espacio disponible */
 }
 
 .card .card-body {
-  flex-shrink: 0; /* Esto evitará que el cuerpo de la tarjeta se encoja si la imagen necesita más espacio */
+  flex-shrink: 0;
+  /* Esto evitará que el cuerpo de la tarjeta se encoja si la imagen necesita más espacio */
   flex-grow: 1;
 }
 
@@ -201,117 +238,14 @@ footer .logoInsta {
   background-color: gray;
 }
 
-.icon-cart {
-  width: 40px;
-  height: 40px;
-  stroke: #000;
-}
-
-.icon-cart:hover {
-  cursor: pointer;
-}
-
-.container-icon {
-  position: relative;
-}
-
-.count-products {
-  position: absolute;
-  top: 55%;
-  right: 0;
-  background-color: #000;
-  color: #fff;
-  width: 25px;
-  height: 25px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 50%;
-}
-
-#contador-productos {
-  font-size: 12px;
-}
-
-.container-cart-products {
-  position: absolute;
-  top: 50px;
-  right: 0;
-  background-color: #fff;
-  width: 400px;
-  z-index: 1;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-  border-radius: 10px;
-}
-
-.cart-product {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 30px;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
-}
-
-.info-cart-product {
-  display: flex;
-  justify-content: space-between;
-  flex: 0.8;
-}
-
-.titulo-producto-carrito {
-  font-size: 20px;
-}
-
-.precio-producto-carrito {
-  font-weight: 700;
-  font-size: 20px;
-  margin-left: 10px;
-}
-
-.cantidad-producto-carrito {
-  font-weight: 400;
-  font-size: 20px;
-}
-
-.icon-close {
-  width: 25px;
-  height: 25px;
-}
-
-.icon-close:hover {
-  stroke: red;
-  cursor: pointer;
-}
-
-.cart-total {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 20px 0;
-  gap: 20px;
-}
-
-.cart-total h3 {
-  font-size: 20px;
-  font-weight: 700;
-}
-
-.total-pagar {
-  font-size: 20px;
-  font-weight: 900;
-}
-
-.hidden-cart {
-  display: none;
-}
-
 del {
   color: grey;
 }
 
 .contenido {
   width: 85%;
-  margin: 0 auto; /* Margen del 5% en los lados */
+  margin: 0 auto;
+  /* Margen del 5% en los lados */
 }
 
 .container-icon {
@@ -427,22 +361,26 @@ del {
   gap: 1rem;
 }
 
-@media (min-width: 1200px) { /* Pantallas xl y lg */
+@media (min-width: 1200px) {
+  /* Pantallas xl y lg */
   .container-items {
     grid-template-columns: repeat(4, 1fr);
   }
 }
-@media (min-width: 768px) and (max-width: 1199px) { /* Pantallas medianas */
+@media (min-width: 768px) and (max-width: 1199px) {
+  /* Pantallas medianas */
   .container-items {
     grid-template-columns: repeat(3, 1fr);
   }
 }
-@media (min-width: 576px) and (max-width: 767px) { /* Pantallas chicas */
+@media (min-width: 576px) and (max-width: 767px) {
+  /* Pantallas chicas */
   .container-items {
     grid-template-columns: repeat(2, 1fr);
   }
 }
-@media (max-width: 575px) { /* Pantallas muy chicas */
+@media (max-width: 575px) {
+  /* Pantallas muy chicas */
   .container-items {
     grid-template-columns: 1fr;
   }
@@ -517,22 +455,26 @@ del {
   gap: 1rem;
 }
 
-@media (min-width: 1200px) { /* Pantallas xl y lg */
+@media (min-width: 1200px) {
+  /* Pantallas xl y lg */
   .container-items {
     grid-template-columns: repeat(4, 1fr);
   }
 }
-@media (min-width: 768px) and (max-width: 1199px) { /* Pantallas medianas */
+@media (min-width: 768px) and (max-width: 1199px) {
+  /* Pantallas medianas */
   .container-items {
     grid-template-columns: repeat(3, 1fr);
   }
 }
-@media (min-width: 576px) and (max-width: 767px) { /* Pantallas chicas */
+@media (min-width: 576px) and (max-width: 767px) {
+  /* Pantallas chicas */
   .container-items {
     grid-template-columns: repeat(2, 1fr);
   }
 }
-@media (max-width: 575px) { /* Pantallas muy chicas */
+@media (max-width: 575px) {
+  /* Pantallas muy chicas */
   .container-items {
     grid-template-columns: 1fr;
   }
@@ -616,7 +558,8 @@ del {
   display: inline-block;
   border: 1px solid black;
   text-align: center;
-  line-height: 20px; /* Esto centrará verticalmente el texto dentro del botón */
+  line-height: 20px;
+  /* Esto centrará verticalmente el texto dentro del botón */
   background-color: white;
 }
 
