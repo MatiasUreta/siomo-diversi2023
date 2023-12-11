@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contacto || Siamo Diversi</title>
+    <title>Sale Mujer || Siamo Diversi</title>
     <link rel="shortcut icon" href="../img/Logo SECUNDARIO.png" type="image/x-icon">
     <meta name="description" content="Descubre nuestra amplia selección de zapatos de cuero, zapatillas de cuero, calzado de cuero. Calidad premium, estilos modernos.">
     <meta name="keywords" content="Zapatos de cuero, Zapatillas de cuero, Calzado de cuero, Zapatos de alta calidad, Zapatillas modernas, Estilo de vida, Colorido, Kendall Jenner, Olivia Culpo, Vogue, Classy, Supreme, Artesano, Caballero, Complemento, Vestuario, Perneras, Cuero de plena flor, Cuero graso, Nobuk, Cuero aterciopelado, Cuero de ternero, Cuero Boxcalf, Impregna">
@@ -31,7 +31,7 @@
     <header class="header">
         <nav class="navbar navbar-expand-lg">
             <div class="container-fluid">
-                <a class="navbar-brand titulo" href="../index.html"><img class="logoPrincipal"
+                <a class="navbar-brand titulo" href="./index.html"><img class="logoPrincipal"
                         src="../img/logo.png.png" alt="logo de siamo diversi"></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
@@ -44,7 +44,7 @@
                             <a class="nav-link textoNavbar" aria-current="page" href="../index.html">Inicio</a>
                         </li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle textoNavbar" href="#" role="button"
+                            <a class="nav-link dropdown-toggle textoNavbar" href="" role="button"
                                 data-bs-toggle="dropdown" aria-expanded="false">
                                 Hombres
                             </a>
@@ -74,56 +74,157 @@
                         </li>
                     </ul>
                 </div>
+                <!-- Icono Carrito -->
+                <div class="container-icon">
+                    <div class="container-cart-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" class="icon-cart">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M15.75 10.5V6a3.75 3.75 0 10-7.5 0v4.5m11.356-1.993l1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 01-1.12-1.243l1.264-12A1.125 1.125 0 015.513 7.5h12.974c.576 0 1.059.435 1.119 1.007zM8.625 10.5a.375.375 0 11-.75 0 .375.375 0 01.75 0zm7.5 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z" />
+                        </svg>
+                        <div class="count-products">
+                            <span id="contador-productos">0</span>
+                        </div>
+                    </div>
+
+                    <div class="container-cart-products hidden-cart">
+                        <div class="row-product hidden">
+                            <div class="cart-product">
+                                <div class="info-cart-product">
+                                    <span class="cantidad-producto-carrito">1</span>
+                                    <p class="titulo-producto-carrito">Zapatos </p>
+                                    <span class="precio-producto-carrito">$80</span>
+                                </div>
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke-width="1.5" stroke="currentColor" class="icon-close">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                                </svg>
+                            </div>
+                        </div>
+
+                        <div class="cart-total hidden">
+                            <h3>Total:</h3>
+                            <span class="total-pagar">$200</span>
+                        </div>
+                        <p class="cart-empty">El carrito está vacío</p>
+                        <a href="https://wa.link/4vb8i2" target="_blank" class="btn btnComprar">
+                            Comprar
+                        </a>
+                    </div>
+                </div>
             </div>
         </nav>
     </header>
 
+    <h1 class="titulo mt-4">Siamo Diversi, Sale Mujer</h1>
 
+    <!-- card -->
+    <div class="container-items row">
 
-
-    <!-- Acordeon || Preguntas Frecuentes-->
-    <div class="container col-xl-10 col-xxl-8 px-4 py-5 mt-5 contenedorFormulario ">
-        <div class="row align-items-center g-lg-5 py-5">
-            <div class="col-lg-7 text-center text-lg-start">
-                <h1 class="display-4 fw-bold lh-1  mb-3 tituloContacto">SIAMO DIVERSI CONTACTO</h1>
-                <p class="col-lg-10 fs-4 pFormulario">Contactácte con nosotros para realizar consultas sobre el
-                    funcionamiento de la tienda Online, realizar una compra, consultar por ventas mayoristas, gestionar
-                    cambios o devoluciones completa este formulario y recibirás una respuesta</p>
+        <div class="item">
+            <figure>
+                <img src="../img/Donna.png" alt="Borcego Donna " />
+            </figure>
+            <div class="info-product">
+                <h2>Borcego Donna </h2>
+                <p class="price">$100000</p>
+                <div class="circulos">
+                    <!-- <span>Color Suela: </span> -->
+                    <div class="circulo" style="background-color: #784212 ;"></div>
+                    <div class="circulo" style="background-color: black;"></div>
+                </div>
+                <div class="size">
+                    <span class="btnTalles">39</span>
+                    <span class="btnTalles">40</span>
+                    <span class="btnTalles">41</span>
+                    <span class="btnTalles">42</span>
+                    <span class="btnTalles">43</span>
+                    <span class="btnTalles">44</span>
+                    <span class="btnTalles">45</span>
+                </div>
+                <button class="btn-add-cart">Añadir al carrito</button>
             </div>
-            <div class="col-md-10 mx-auto col-lg-5 formulario">
-                <form action="https://formsubmit.co/siamodiversiventas@gmail.com" method="POST" class="p-4 p-md-5 border rounded-3 ">
-                    
-                    <div class="form-floating mb-3">
-                        <input type="text" class="form-control" id="floatingName" name="nombre" placeholder="Nombre">
-                        <label for="floatingName">Nombre</label>
-                    </div>
+        </div>
 
-                    <div class="form-floating mb-3">
-                        <label for="floatingMail">Mail</label>
-                        <input type="email" class="form-control" id="floatingMail" name="mail" placeholder="Ingresa tu Email">  
-                    </div>
-
-                    <div class="form-floating mb-3">
-                        <input type="tel" class="form-control" id="floatingTelefono" name="telefono" placeholder="Número de Teléfono">
-                        <label for="floatingTelefono">Número de Teléfono</label>
-                    </div>
-                                        
-                    <div class="form-floating mb-3">
-                        <textarea class="form-control" id="floatingConsulta" name="consulta"
-                            placeholder="Escribe tu consulta aquí"></textarea>
-                        <label for="floatingConsulta">Consulta</label>
-                    </div>
-
-                    <button class="w-100 btn btn-lg btnEnviar" type="submit">Enviar</button>
-                    <hr class="my-4">
-                    <small class=" textoEnviar">Al hacer clic en Enviar, aceptas los términos de uso.</small>
-                </form>
+        <div class="item">
+            <figure>
+                <img src="../img/Isabel.png" alt="Borvego Isabel " />
+            </figure>
+            <div class="info-product">
+                <h2>Borcego Isabel </h2>
+                <p class="price">$100000</p>
+                <div class="circulos">
+                    <!-- <span>Color Suela: </span> -->
+                    <div class="circulo" style="background-color: #784212 ;"></div>
+                    <div class="circulo" style="background-color: black;"></div>
+                </div>
+                <div class="size">
+                    <span class="btnTalles">39</span>
+                    <span class="btnTalles">40</span>
+                    <span class="btnTalles">41</span>
+                    <span class="btnTalles">42</span>
+                    <span class="btnTalles">43</span>
+                    <span class="btnTalles">44</span>
+                    <span class="btnTalles">45</span>
+                </div>
+                <button class="btn-add-cart">Añadir al carrito</button>
             </div>
+        </div>
+
+        <div class="item">
+            <figure>
+                <img src="../img/Greta Negro.png" alt="Borcego Greta " />
+            </figure>
+            <div class="info-product">
+                <h2>Borcego Greta </h2>
+                <p class="price">$100000</p>
+                <div class="circulos">
+                    <!-- <span>Color Suela: </span> -->
+                    <div class="circulo" style="background-color: #784212 ;"></div>
+                    <div class="circulo" style="background-color: black;"></div>
+                </div>
+                <div class="size">
+                    <span class="btnTalles">39</span>
+                    <span class="btnTalles">40</span>
+                    <span class="btnTalles">41</span>
+                    <span class="btnTalles">42</span>
+                    <span class="btnTalles">43</span>
+                    <span class="btnTalles">44</span>
+                    <span class="btnTalles">45</span>
+                </div>
+                <button class="btn-add-cart">Añadir al carrito</button>
+            </div>
+        </div>
+
+        <div class="item">
+            <figure>
+                <img src="../img/Greta Marron.png" alt="Zapato container-items" />
+            </figure>
+            <div class="info-product">
+                <h2>Borcego Greta</h2>
+                <p class="price">$100000</p>
+                <div class="circulos">
+                    <div class="circulo" style="background-color: #784212 ;"></div>
+                    <div class="circulo" style="background-color: black;"></div>
+                </div>
+                <div class="size">
+                    <span class="btnTalles">39</span>
+                    <span class="btnTalles">40</span>
+                    <span class="btnTalles">41</span>
+                    <span class="btnTalles">42</span>
+                    <span class="btnTalles">43</span>
+                    <span class="btnTalles">44</span>
+                    <span class="btnTalles">45</span>
+                </div>
+            </div>
+            <button class="btn-add-cart">Añadir al carrito</button>
         </div>
     </div>
 
+    <!-- fin de seccion oulet -->
+    </div>
 
-    <!-- Logo Whatsapp -->
+
     <nav>
         <a href="https://wa.link/4vb8i2" target="_blank">
             <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" fill="currentColor"
@@ -135,8 +236,8 @@
     </nav>
     
 
-     <!-- Footer -->
-     <footer>
+    <!-- Footer -->
+    <footer>
         <div class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
             <div class="container">
                 <section class="py-5">
@@ -152,7 +253,7 @@
                                         class="nav-link p-0 text-body-secondary">Zapatillas</a></li>
                                 <li class="nav-item mb-2"><a href="../pages/botinetas.html"
                                         class="nav-link p-0 text-body-secondary">Botinetas</a></li>
-                                <li class="nav-item mb-2"><a href="../pages/sale.html"
+                                <li class="nav-item mb-2"><a href="./pages/sale.html"
                                         class="nav-link p-0 text-body-secondary">Oulet</a></li>
                             </ul>
                         </div>
@@ -176,7 +277,7 @@
                         <div class="col-6 col-md-2 mb-3">
                             <h5>Contacto</h5>
                             <ul class="nav flex-column">
-                                <li class="nav-item mb-2"><a href="./pages/contacto.html"
+                                <li class="nav-item mb-2"><a href="../pages/contacto.html"
                                         class="nav-link p-0 text-body-secondary">Déjanos tu consulta</a></li>
                                 <li class="nav-item mb-2">
                                     <a href="#suscripcion-form" class="nav-link p-0 text-body-secondary">Suscribirse</a>

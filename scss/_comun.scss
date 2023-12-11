@@ -96,7 +96,7 @@ header {
 //Carousel
 /* Estilo para todas las pantallas */
 .imgCarousel {
-    height: 500px; /* Ajusta este valor según tus necesidades */
+    height: auto; /* Ajusta este valor según tus necesidades */
     object-fit: cover;
 }
 
@@ -241,11 +241,13 @@ footer {
     background-color: gray;
     border-radius: 10px;
     box-shadow: 0px 10px 10px black;
-    background-image: url(../img/banner-zapatos.jpg);
+    background-image: url(../img/zapato.nuevo.jpg);
+    background-size: cover; /* Asegura que la imagen cubra todo el contenedor */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
     color: rgb(235, 231, 227);
     font-weight: 500;
-
 }
+
 
 
 .tituloContacto {
