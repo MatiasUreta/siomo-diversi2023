@@ -177,6 +177,14 @@ header {
     flex-grow: 1;
 }
 
+@media (max-width: 576px) {
+    .cardsGeneral .card {
+        width: 80%;
+        margin: 0 auto;
+    }
+}
+
+
 
 //TALLES
 .btnTalles {
@@ -238,17 +246,19 @@ footer {
 
 //Formulario
 .contenedorFormulario {
-    background-color: gray;
+    background-color: black;
     border-radius: 10px;
     box-shadow: 0px 10px 10px black;
-    background-image: url(../img/zapato.nuevo.jpg);
+    background-image: url(../img/zapato-blano-negro.jpg);
     background-size: cover; /* Asegura que la imagen cubra todo el contenedor */
     background-repeat: no-repeat; /* Evita que la imagen se repita */
     color: rgb(235, 231, 227);
     font-weight: 500;
 }
-
-
+.pFormulario {
+    font-weight: 600;
+    text-shadow: 1px 1px 2px black;
+}
 
 .tituloContacto {
     color: white;
@@ -642,4 +652,16 @@ del {
     line-height: 20px;
     /* Esto centrará verticalmente el texto dentro del botón */
     background-color: white;
+}
+
+@media (max-width: 767px) {
+    .cardsGeneral {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    .cardsGeneral .card {
+        width: 200px;
+        height: auto;
+    }
 }

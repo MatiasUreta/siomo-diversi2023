@@ -50,7 +50,10 @@ productsList.addEventListener('click', e => {
 			allProducts = [...products];
 		} else {
 			allProducts = [...allProducts, infoProduct];
-		}
+		};
+
+		localStorage.setItem('cartProducts', JSON.stringify(allProducts));
+
 
 		showHTML();
 	}
@@ -67,6 +70,19 @@ rowProduct.addEventListener('click', e => {
 
 		console.log(allProducts);
 
+		localStorage.setItem('cartProducts', JSON.stringify(allProducts));
+
+		showHTML();
+	}
+});
+
+// Cuando se carga la página
+document.addEventListener('DOMContentLoaded', () => {
+	// Recupera los productos del almacenamiento local
+	const savedProducts = JSON.parse(localStorage.getItem('cartProducts'));
+
+	if (savedProducts) {
+		allProducts = savedProducts;
 		showHTML();
 	}
 });
@@ -94,35 +110,34 @@ const showHTML = () => {
 		containerProduct.classList.add('cart-product');
 
 		containerProduct.innerHTML = `
-            <div class="info-cart-product">
-                <span class="cantidad-producto-carrito">${product.quantity}</span>
-                <p class="titulo-producto-carrito">${product.title}</p>
-                <span class="precio-producto-carrito">${product.price}</span>
-            </div>
-            <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke-width="1.5"
-                stroke="currentColor"
-                class="icon-close"
-            >
-                <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    d="M6 18L18 6M6 6l12 12"
-                />
-            </svg>
-        `;
+			<div class="info-cart-product">
+				<span class="cantidad-producto-carrito">${product.quantity}</span>
+				<p class="titulo-producto-carrito">${product.title}</p>
+				<span class="precio-producto-carrito">${product.price}</span>
+			</div>
+			<svg
+				xmlns="http://www.w3.org/2000/svg"
+				fill="none"
+				viewBox="0 0 24 24"
+				stroke-width="1.5"
+				stroke="currentColor"
+				class="icon-close"
+			>
+				<path
+					stroke-linecap="round"
+					stroke-linejoin="round"
+					d="M6 18L18 6M6 6l12 12"
+				/>
+			</svg>
+		`;
 
 		rowProduct.append(containerProduct);
 
-		total =
-			total + parseInt(product.quantity * product.price.slice(1));
+		total = total + parseFloat((product.quantity * product.price.slice(1)).toFixed(3));
 		totalOfProducts = totalOfProducts + product.quantity;
 	});
 
-	valorTotal.innerText = `$${total}`;
+	valorTotal.innerText = `$${total.toFixed(3)}`; // Redondea a 3 decimales
 	countProducts.innerText = totalOfProducts;
 };
 
