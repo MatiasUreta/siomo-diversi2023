@@ -159,3 +159,14 @@ var searchText = 'Zapatos';  // Reemplaza esto con el texto de búsqueda real
 var filteredProducts = allProducts.filter(product => product.title.includes(searchText));
 
 
+//SweetAlert
+document.getElementById('botonDescuento').addEventListener('click', function() {
+    Swal.fire({
+        title: '¡Descuento especial!',
+        text: 'Aquí tienes una imagen especial',
+        imageUrl: `../img/promo30porciento.jpg`,
+        imageWidth: 600,
+        imageHeight: 400,
+        imageAlt: 'Imagen de descuento',
+    });
+});
