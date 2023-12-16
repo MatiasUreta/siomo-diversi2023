@@ -587,6 +587,22 @@ del {
     height: auto;
   }
 }
+/* Estilo para pantallas de celular */
+@media (max-width: 576px) {
+  .iconos {
+    width: 80px;
+    height: 80px;
+    max-width: 100%; /* Asegura que los iconos no sean más grandes que su contenedor */
+  }
+}
+/* Estilo para pantallas de tablet */
+@media (min-width: 577px) and (max-width: 992px) {
+  .iconos {
+    width: 100px;
+    height: 100px;
+    max-width: 100%; /* Asegura que los iconos no sean más grandes que su contenedor */
+  }
+}
 .btnEnviar {
   color: white;
   background-color: rgb(36, 36, 241);
