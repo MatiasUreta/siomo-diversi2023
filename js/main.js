@@ -162,11 +162,10 @@ var filteredProducts = allProducts.filter(product => product.title.includes(sear
 //SweetAlert
 document.getElementById('botonDescuento').addEventListener('click', function() {
     Swal.fire({
-        title: '¡Descuento especial!',
-        text: 'Aquí tienes una imagen especial',
-        imageUrl: `../img/promo30porciento.jpg`,
-        imageWidth: 600,
-        imageHeight: 400,
+        title: '¡Promos de Marzo!',
+        imageUrl: `../img/descuentos_marzo_siamo.jpeg`,
+        imageWidth: 900,
+        imageHeight: 700,
         imageAlt: 'Imagen de descuento',
     });
 });

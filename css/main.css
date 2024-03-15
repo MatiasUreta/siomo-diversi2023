@@ -592,7 +592,7 @@ del {
   .iconos {
     width: 80px;
     height: 80px;
-    max-width: 100%; /* Asegura que los iconos no sean más grandes que su contenedor */
+    max-width: 100%;
   }
 }
 /* Estilo para pantallas de tablet */
@@ -600,9 +600,23 @@ del {
   .iconos {
     width: 100px;
     height: 100px;
-    max-width: 100%; /* Asegura que los iconos no sean más grandes que su contenedor */
+    max-width: 100%;
   }
 }
+.modal-dialog {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.modal-body img {
+  max-width: 100%; /* Ajusta este valor según lo que desees */
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
 .btnEnviar {
   color: white;
   background-color: rgb(36, 36, 241);
