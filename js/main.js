@@ -169,3 +169,34 @@ document.getElementById('botonDescuento').addEventListener('click', function() {
         imageAlt: 'Imagen de descuento',
     });
 });
+
+
+document.addEventListener("DOMContentLoaded", function() {
+	// Crear un objeto con los precios por categoría
+	let preciosPorCategoria = {
+		"zapatos": 82.990,
+		"borcegos": 94.990,
+		"botas": 89.990,
+		"panchas": 78.990,
+		"zapatillasgianni": 79.990,
+		"zapatillasgino": 84.990,
+		"botinetas": 89.990
+	};
+  
+	// Función para actualizar los precios por categoría
+	function actualizarPreciosPorCategoria() {
+		for (let categoria in preciosPorCategoria) {
+			let precio = preciosPorCategoria[categoria];
+			let elementos = document.getElementsByClassName(categoria);
+  
+			for (let i = 0; i < elementos.length; i++) {
+				let elementoPrecio = elementos[i].getElementsByClassName('price')[0];
+				elementoPrecio.textContent = "$" + precio.toFixed(3);
+			}
+		}
+	}
+  
+	// Llamar a la función para actualizar los precios
+	actualizarPreciosPorCategoria();
+  });
+  
